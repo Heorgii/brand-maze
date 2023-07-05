@@ -52,15 +52,15 @@ export const Home = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-    }, 2000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+  //   }, 2000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [slides]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const nextSlide = () => {
     setCurrentSlide(prevSlide =>
