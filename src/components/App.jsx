@@ -3,7 +3,7 @@ import { Home } from './Sections/Home/Home';
 import { SharedLayout } from './SharedLayout/SharedLayout';
 import { About } from './Sections/About/About';
 import { Contact } from './Sections/Contact/Contact';
-import { Projects } from './Sections/Projects/Projects';
+// import { Projects } from './Sections/Projects/Projects';
 import { Services } from './Sections/Services/Services';
 import { Project } from "./Projects/Projects";
 
