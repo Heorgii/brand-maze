@@ -1,7 +1,9 @@
+import { Box, Title } from "./Home.styled";
+
 export const Home = () => {
   return (
-    <>
-      <h1>Home </h1>
-    </>
+    <Box>
+      <Title>BUILDING BETTER BRANDS</Title>
+    </Box>
   );
 };

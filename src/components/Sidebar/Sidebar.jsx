@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom';
 import {
   ContactList,
   ContactListItem,
+  ContactListLink,
   Logo,
   NavList,
   NavListLink,
@@ -53,7 +54,9 @@ export const Sidebar = () => {
       </NavList>
 
       <ContactList>
-        <ContactListItem>contact@brandmaze.com</ContactListItem>
+        <ContactListItem>
+          <ContactListLink href="mailto:contact@brandmaze.com">contact@brandmaze.com</ContactListLink>
+        </ContactListItem>
         <li>socilas</li>
       </ContactList>
     </SidebarBox>
