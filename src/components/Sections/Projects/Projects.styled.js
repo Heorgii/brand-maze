@@ -7,7 +7,7 @@ const SlideContainer = styled.div`
   align-items: center;
   font-family: "Manrope";
   font-style: normal;
-  width: 1210px;
+  /* width: 1210px; */
   min-height: 441px;
   overflow: hidden;
 `;
