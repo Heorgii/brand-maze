@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const SidebarBox = styled.div`
   margin-top: 10px;
   margin-left: 20px;
-  width: 376px;
+  margin-right: 50px;
 `;
 
 export const Logo = styled.nav`
@@ -35,7 +35,7 @@ export const NavListLink = styled(NavLink)`
   text-transform: uppercase;
   text-decoration: none;
 
-  &:not(:first-child){
+  &:not(:first-child) {
     margin-top: 10px;
   }
 
@@ -61,10 +61,35 @@ export const NavListLink = styled(NavLink)`
 
 export const ContactList = styled.ul`
   padding: 0;
+  position: fixed;
+  bottom: 30px;
   list-style: none;
 `;
 
 export const ContactListItem = styled.li`
+  color: #000;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+    height: 1px;
+    background-color: #111;
+  }
+`;
+
+export const ContactListLink = styled.a`
+  text-decoration: none;
   color: #000;
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
