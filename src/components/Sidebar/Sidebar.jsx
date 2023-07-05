@@ -1,25 +1,61 @@
-import { NavLink } from 'react-router-dom';
-import { NavList, SidebarBox } from './Sidebar.styled';
+import { useLocation } from 'react-router-dom';
+import {
+  ContactList,
+  ContactListItem,
+  Logo,
+  NavList,
+  NavListLink,
+  SidebarBox,
+} from './Sidebar.styled';
 
 export const Sidebar = () => {
+  const location = useLocation();
+
   return (
     <SidebarBox>
-      <p>Brand maze</p>
+      <Logo>Brand maze</Logo>
 
-      <nav>
-        <NavList>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/services">Services</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-        </NavList>
-      </nav>
+      <NavList>
+        <NavListLink
+          className={`link ${location.pathname === '/' ? 'active' : ''}`}
+          to="/"
+        >
+          Home
+        </NavListLink>
+        <NavListLink
+          className={`link ${location.pathname === '/about' ? 'active' : ''}`}
+          to="/about"
+        >
+          About
+        </NavListLink>
+        <NavListLink
+          className={`link ${
+            location.pathname === '/services' ? 'active' : ''
+          }`}
+          to="/services"
+        >
+          Services
+        </NavListLink>
+        <NavListLink
+          className={`link ${
+            location.pathname === '/projects' ? 'active' : ''
+          }`}
+          to="/projects"
+        >
+          Projects
+        </NavListLink>
+        <NavListLink
+          className={`link ${location.pathname === '/contact' ? 'active' : ''}`}
+          to="/contact"
+        >
+          Contact
+        </NavListLink>
+      </NavList>
 
-      <ul>
-        <li>contact@brandmaze.com</li>
+      <ContactList>
+        <ContactListItem>contact@brandmaze.com</ContactListItem>
         <li>socilas</li>
-      </ul>
+      </ContactList>
     </SidebarBox>
   );
 };
