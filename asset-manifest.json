@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/brand-maze/static/css/main.4796ef52.css",
-    "main.js": "/brand-maze/static/js/main.77ff8f98.js",
+    "main.js": "/brand-maze/static/js/main.abd49fa0.js",
     "index.html": "/brand-maze/index.html",
     "main.4796ef52.css.map": "/brand-maze/static/css/main.4796ef52.css.map",
-    "main.77ff8f98.js.map": "/brand-maze/static/js/main.77ff8f98.js.map"
+    "main.abd49fa0.js.map": "/brand-maze/static/js/main.abd49fa0.js.map"
   },
   "entrypoints": [
     "static/css/main.4796ef52.css",
-    "static/js/main.77ff8f98.js"
+    "static/js/main.abd49fa0.js"
   ]
 }
