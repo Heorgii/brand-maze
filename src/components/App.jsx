@@ -1,3 +1,6 @@
+import { Project } from "./Projects/Projects";
+
 export const App = () => {
-  return <div>React homework template</div>;
+  return <div><h1>React homework template</h1>
+  <Project/></div>;
 };
