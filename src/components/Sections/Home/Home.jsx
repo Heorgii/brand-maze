@@ -14,7 +14,7 @@ import {
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 export const Home = () => {
   const slides = [
