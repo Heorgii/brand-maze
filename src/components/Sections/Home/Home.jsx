@@ -60,7 +60,7 @@ export const Home = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [slides]);
 
   const nextSlide = () => {
     setCurrentSlide(prevSlide =>
