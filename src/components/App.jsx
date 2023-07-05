@@ -5,6 +5,7 @@ import { About } from './Sections/About/About';
 import { Contact } from './Sections/Contact/Contact';
 import { Projects } from './Sections/Projects/Projects';
 import { Services } from './Sections/Services/Services';
+import { Project } from "./Projects/Projects";
 
 export const App = () => {
   return (
@@ -14,7 +15,7 @@ export const App = () => {
 
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="*" element={<Home />} />
