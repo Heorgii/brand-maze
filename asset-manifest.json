@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/brand-maze/static/css/main.6b04c05f.css",
-    "main.js": "/brand-maze/static/js/main.8079df73.js",
+    "main.css": "/brand-maze/static/css/main.1bb2ea5d.css",
+    "main.js": "/brand-maze/static/js/main.e8fd41c3.js",
     "static/media/filmoteka_project.webp": "/brand-maze/static/media/filmoteka_project.2bec8113289975675b3b.webp",
     "static/media/homePage.png": "/brand-maze/static/media/homePage.f265c15e227bf568dc7a.png",
     "static/media/animal_welfare_project.webp": "/brand-maze/static/media/animal_welfare_project.180cb798d0af78c06a5a.webp",
@@ -9,11 +9,11 @@
     "static/media/ice_cream_project.webp": "/brand-maze/static/media/ice_cream_project.f4cc36397ad12a3bb988.webp",
     "static/media/sprite.svg": "/brand-maze/static/media/sprite.4c1b6e6dff4869a323e89acb6d65fbd5.svg",
     "index.html": "/brand-maze/index.html",
-    "main.6b04c05f.css.map": "/brand-maze/static/css/main.6b04c05f.css.map",
-    "main.8079df73.js.map": "/brand-maze/static/js/main.8079df73.js.map"
+    "main.1bb2ea5d.css.map": "/brand-maze/static/css/main.1bb2ea5d.css.map",
+    "main.e8fd41c3.js.map": "/brand-maze/static/js/main.e8fd41c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b04c05f.css",
-    "static/js/main.8079df73.js"
+    "static/css/main.1bb2ea5d.css",
+    "static/js/main.e8fd41c3.js"
   ]
 }
