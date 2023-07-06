@@ -1,14 +1,17 @@
 import { styled } from 'styled-components';
 
 export const WrapperText = styled.div`
-  margin-bottom: 30px;
+  margin-bottom: 55px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+    max-width: 1200px;
   }
 `;
 
@@ -23,8 +26,7 @@ export const WrapperBox = styled.div`
   }
 
   @media screen and (min-width: 1280px) {
-    flex-direction: row;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
 `;
 
@@ -63,7 +65,9 @@ export const ListSkills = styled.ul`
 `;
 
 export const Subtitle = styled.h2`
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 30px;
+
   color: #323543;
   text-align: center;
   font-size: 26px;
@@ -77,7 +81,36 @@ export const Subtitle = styled.h2`
   }
 
   @media screen and (min-width: 1280px) {
+    font-size: 45px;
+  }
+
+  &::before {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      content: '';
+      top: -20px;
+      left: 50px;
+
+      width: 150px;
+      height: 4px;
+
+      border-radius: 2px;
+      background: linear-gradient(
+        rgba(65, 45, 183, 1),
+        rgba(219, 47, 47, 1) 100%
+      );
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+  }
+`;
+
+export const SubtitleSkills = styled(Subtitle)`
+  @media screen and (min-width: 1280px) {
     font-size: 40px;
+  }
+  &::before {
+    display: none;
   }
 `;
 
@@ -131,12 +164,12 @@ export const Text = styled.p`
   text-align: start;
 
   @media screen and (min-width: 768px) {
-    font-size: 24px;
+    font-size: 20px;
     text-align: left;
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 28px;
+    font-size: 24px;
   }
 `;
 
@@ -192,10 +225,18 @@ export const Step = styled.li`
   align-items: center;
 `;
 
+export const StepBenefits = styled(Step)`
+  @media screen and (min-width: 768px) {
+    &:nth-child(2n) {
+      margin-left: 80px;
+    }
+  }
+`;
+
 export const Number = styled.span`
   color: rgba(0, 0, 0, 0.19);
   font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -233,7 +274,7 @@ export const Heading = styled.h3`
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 40px;
+    font-size: 36px;
   }
 `;
 
@@ -243,7 +284,12 @@ export const HeadingSmall = styled(Heading)`
   text-align: start;
 
   @media screen and (min-width: 768px) {
+    margin-left: 15px;
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 32px;
   }
 `;
 
@@ -252,8 +298,22 @@ export const HeadingBox = styled.div`
   align-items: center;
 `;
 
+export const ListBenefits = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 40px;
+  }
+`;
+
 export const ListQuestions = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    gap: 40px;
+  }
 `;

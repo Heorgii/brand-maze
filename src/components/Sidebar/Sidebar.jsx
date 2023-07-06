@@ -15,18 +15,22 @@ export const Sidebar = () => {
 
   return (
     <SidebarBox>
-      <Logo>Brand maze</Logo>
+      <Logo href="/brand-maze" aria-label="logo company">
+        Brand maze
+      </Logo>
 
       <NavList>
         <NavListLink
           className={`link ${location.pathname === '/' ? 'active' : ''}`}
           to="/"
+          aria-label="Home"
         >
           Home
         </NavListLink>
         <NavListLink
           className={`link ${location.pathname === '/about' ? 'active' : ''}`}
           to="/about"
+          aria-label="About"
         >
           About
         </NavListLink>
@@ -35,6 +39,7 @@ export const Sidebar = () => {
             location.pathname === '/services' ? 'active' : ''
           }`}
           to="/services"
+          aria-label="Services"
         >
           Services
         </NavListLink>
@@ -43,12 +48,14 @@ export const Sidebar = () => {
             location.pathname === '/projects' ? 'active' : ''
           }`}
           to="/projects"
+          aria-label="Projects"
         >
           Projects
         </NavListLink>
         <NavListLink
           className={`link ${location.pathname === '/contact' ? 'active' : ''}`}
           to="/contact"
+          aria-label="Contact"
         >
           Contact
         </NavListLink>
@@ -60,14 +67,14 @@ export const Sidebar = () => {
             contact@brandmaze.com
           </ContactListLink>
         </ContactListItem>
-          <li>
-            <svg width="20" height="20">
-              <use href={instagram + '#instagram'}></use>
-            </svg>
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
+        <li>
+          <svg width="20" height="20">
+            <use href={instagram + '#instagram'}></use>
+          </svg>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ContactList>
     </SidebarBox>
   );

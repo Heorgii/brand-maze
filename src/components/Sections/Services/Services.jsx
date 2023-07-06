@@ -1,3 +1,5 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
 import {
   BoxSkills,
@@ -8,11 +10,14 @@ import {
   Label,
   ListSkills,
   ListQuestions,
+  ListBenefits,
   Number,
   NumberSmall,
   Step,
   StepsSlider,
+  StepBenefits,
   Subtitle,
+  SubtitleSkills,
   Text,
   TextCenter,
   TableData,
@@ -24,12 +29,14 @@ import {
 import { Button } from 'components/baseStyles/Button.styled';
 
 export const Services = () => {
+  AOS.init();
+
   return (
     <Container>
       <Title as="h1">Services</Title>
       <WrapperBoxSkills>
         <BoxSkills>
-          <Subtitle>Skills that we have mastered so far</Subtitle>
+          <SubtitleSkills>Skills that we have mastered so far</SubtitleSkills>
           <DescriptionSkills>
             With our extensive experience and expertise, we offer a full range
             of services that include creating websites, Instagram accounts,
@@ -160,8 +167,8 @@ export const Services = () => {
       </WrapperText>
       <WrapperBox>
         <Subtitle>Why Brand Maze?</Subtitle>
-        <StepsSlider>
-          <Step>
+        <ListBenefits>
+          <StepBenefits data-aos="zoom-in-left" data-aos-delay="150">
             <HeadingBox>
               <NumberSmall>01</NumberSmall>
               <HeadingSmall>
@@ -174,8 +181,8 @@ export const Services = () => {
               appearance - together with aesthetics, you get an expanded set of
               functions and capabilities.
             </Text>
-          </Step>
-          <Step>
+          </StepBenefits>
+          <StepBenefits data-aos="zoom-in-right" data-aos-delay="250">
             <HeadingBox>
               <NumberSmall>02</NumberSmall>
               <HeadingSmall>We keep secrets within the company</HeadingSmall>
@@ -187,12 +194,12 @@ export const Services = () => {
               your sensitive information will be kept confidential. If
               necessary, we may also enter into a non-disclosure agreement.
             </Text>
-          </Step>
-          <Step>
+          </StepBenefits>
+          <StepBenefits data-aos="zoom-in-left" data-aos-delay="350">
             <HeadingBox>
               <NumberSmall>03</NumberSmall>
               <HeadingSmall>
-                We are vigilant guardians of your technical task.
+                We are vigilant guardians of your technical task
               </HeadingSmall>
             </HeadingBox>
             <Text>
@@ -203,8 +210,8 @@ export const Services = () => {
               needs, fix all the details in the technical task and do not
               deviate from the given course.
             </Text>
-          </Step>
-          <Step>
+          </StepBenefits>
+          <StepBenefits data-aos="zoom-in-right" data-aos-delay="450">
             <HeadingBox>
               <NumberSmall>04</NumberSmall>
               <HeadingSmall>
@@ -217,8 +224,8 @@ export const Services = () => {
               risk will thank us later. Maybe you will find the courage to
               accept this challenge?
             </Text>
-          </Step>
-        </StepsSlider>
+          </StepBenefits>
+        </ListBenefits>
       </WrapperBox>
       <WrapperBox>
         <Subtitle>What we can also do</Subtitle>

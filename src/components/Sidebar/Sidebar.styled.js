@@ -2,26 +2,39 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const SidebarBox = styled.div`
-  margin-top: 10px;
-  margin-left: 20px;
-  /* margin-right: 50px; */
-  width: 320px;
+  display: block;
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 100%;
+  max-width: 320px;
 `;
 
-export const Logo = styled.nav`
+export const Logo = styled.a`
   color: #111;
-  font-size: 45px;
+  font-size: 25px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
   letter-spacing: -3.2px;
   text-transform: uppercase;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  @media screen and (min-width: 768px) {
+    font-size: 45px;
+  }
 `;
+
 export const NavList = styled.nav`
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
 `;
 
 export const NavListLink = styled(NavLink)`
@@ -61,10 +74,16 @@ export const NavListLink = styled(NavLink)`
 `;
 
 export const ContactList = styled.ul`
-  padding: 0;
-  position: fixed;
-  bottom: 30px;
-  list-style: none;
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+
+    padding: 0;
+    list-style: none;
+  }
 `;
 
 export const ContactListItem = styled.li`

@@ -1,6 +1,5 @@
 import {
   // Box,
-  Title,
   List,
   ListItem,
   ListItemImg,
@@ -13,7 +12,7 @@ import {
   ItemDiscr,
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
-import { Container } from 'components/baseStyles/CommonStyle.styled';
+import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
 // import { useState } from 'react';
 // import { Carousel } from './Carousel/Carousel';
 
