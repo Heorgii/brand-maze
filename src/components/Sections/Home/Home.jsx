@@ -13,43 +13,44 @@ import {
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
-import { useState } from 'react';
+// import { useState } from 'react';
+// import { Carousel } from './Carousel/Carousel';
 
 export const Home = () => {
-  const slides = [
-    {
-      id: 1,
-      title: 'Logo',
-      number: '01',
-      text: ' It is a key element, helps to establish brand identity, enhances recognition and contributes to creating a positive impression.',
-    },
-    {
-      id: 2,
-      title: 'Web designs',
-      number: '02',
-      text: ' It is responsible for creating an attractive and user-friendly interface that affects the first impression of the user.',
-    },
-    {
-      id: 3,
-      title: 'Web development',
-      number: '03',
-      text: 'Allows you to create interactive and dynamic websites that attract customers, improve user interaction and achieve business goals.',
-    },
-    {
-      id: 4,
-      title: 'Instagram',
-      number: '04',
-      text: ' Allows you to effectively promote products or services, demonstrate a unique style, establish contacts with consumers and develop faithful to the brand.',
-    },
-    {
-      id: 5,
-      title: 'TikTok',
-      number: '05',
-      text: ' Allows you to create viral videos, maintain interactivity and communicate with consumers. To attract attention and create a positive image among a wide audience.',
-    },
-  ];
+  // const slides = [
+  //   {
+  //     id: 1,
+  //     title: 'Logo',
+  //     number: '01',
+  //     text: ' It is a key element, helps to establish brand identity, enhances recognition and contributes to creating a positive impression.',
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Web designs',
+  //     number: '02',
+  //     text: ' It is responsible for creating an attractive and user-friendly interface that affects the first impression of the user.',
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'Web development',
+  //     number: '03',
+  //     text: 'Allows you to create interactive and dynamic websites that attract customers, improve user interaction and achieve business goals.',
+  //   },
+  //   {
+  //     id: 4,
+  //     title: 'Instagram',
+  //     number: '04',
+  //     text: ' Allows you to effectively promote products or services, demonstrate a unique style, establish contacts with consumers and develop faithful to the brand.',
+  //   },
+  //   {
+  //     id: 5,
+  //     title: 'TikTok',
+  //     number: '05',
+  //     text: ' Allows you to create viral videos, maintain interactivity and communicate with consumers. To attract attention and create a positive image among a wide audience.',
+  //   },
+  // ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -61,17 +62,17 @@ export const Home = () => {
   //   };
   // }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide(prevSlide =>
-      prevSlide === slides.length - 1 ? 0 : prevSlide + 1
-    );
-  };
+  // const nextSlide = () => {
+  //   setCurrentSlide(prevSlide =>
+  //     prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+  //   );
+  // };
 
-  const prevSlide = () => {
-    setCurrentSlide(prevSlide =>
-      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
-    );
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide(prevSlide =>
+  //     prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+  //   );
+  // };
 
   return (
     <Container>
@@ -106,16 +107,18 @@ export const Home = () => {
       <ProductionText>©brand maze productions</ProductionText>
 
       <CompList>
-        <CompListItem>
+        {/* <CompListItem>
           <ItemTitle>{slides[currentSlide].title}</ItemTitle>
           <ItemNumber>{slides[currentSlide].number}</ItemNumber>
           <ItemDiscr>{slides[currentSlide].text}</ItemDiscr>
-        </CompListItem>
-        <button onClick={prevSlide}>Previous</button>
-        <button onClick={nextSlide}>Next</button>
-        {/* <CompListItem>
+        </CompListItem> */}
+        {/* <button onClick={prevSlide}>Previous</button>
+      <button onClick={nextSlide}>Next</button> */}
+        {/* <Carousel slides={slides}/> */}
+
+        <CompListItem>
           <ItemTitle>Logo</ItemTitle>
-          <pItemNumber>01</pItemNumber>
+          <ItemNumber>01</ItemNumber>
           <ItemDiscr>
             It is a key element, helps to establish brand identity, enhances
             recognition and contributes to creating a positive impression.
@@ -158,7 +161,7 @@ export const Home = () => {
             communicate with consumers. To attract attention and create a
             positive image among a wide audience.
           </ItemDiscr>
-        </CompListItem> */}
+        </CompListItem>
       </CompList>
     </Container>
   );

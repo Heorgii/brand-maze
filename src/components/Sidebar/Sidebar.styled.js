@@ -6,7 +6,7 @@ export const SidebarBox = styled.div`
   padding-top: 10px;
   padding-left: 20px;
   width: 100%;
-  max-width: 380px;
+  max-width: 320px;
 `;
 
 export const Logo = styled.a`

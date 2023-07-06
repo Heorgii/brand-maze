@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-
 export const Box = styled.div``;
 
 export const List = styled.ul`
@@ -35,6 +34,7 @@ export const ListItemText = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  margin-bottom: 35px;
 
   &:nth-child(3) {
     width: 758px;
@@ -60,10 +60,19 @@ export const ProductionText = styled.p`
 `;
 
 export const CompList = styled.ul`
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  width: 663px;
 `;
 
-export const CompListItem = styled.li``;
+export const CompListItem = styled.li`
+  &:nth-child(2) {
+    text-align: -webkit-right;
+  }
+  &:nth-child(4) {
+    text-align: -webkit-right;
+  }
+`;
 
 export const ItemTitle = styled.h5`
   color: rgba(0, 0, 0, 0.88);
@@ -91,4 +100,5 @@ export const ItemDiscr = styled.p`
   font-weight: 400;
   line-height: 170%;
   width: 319px;
+  text-align: left;
 `;
