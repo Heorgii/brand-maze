@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/brand-maze/static/css/main.661ec9d0.css",
-    "main.js": "/brand-maze/static/js/main.11119c5d.js",
+    "main.js": "/brand-maze/static/js/main.ec8e17e7.js",
     "static/media/filmoteka_project.webp": "/brand-maze/static/media/filmoteka_project.2bec8113289975675b3b.webp",
     "static/media/homePage.png": "/brand-maze/static/media/homePage.f265c15e227bf568dc7a.png",
     "static/media/animal_welfare_project.webp": "/brand-maze/static/media/animal_welfare_project.180cb798d0af78c06a5a.webp",
     "static/media/barber_project.webp": "/brand-maze/static/media/barber_project.73b8ab5cddc4fa96fbd8.webp",
     "static/media/ice_cream_project.webp": "/brand-maze/static/media/ice_cream_project.f4cc36397ad12a3bb988.webp",
+    "static/media/sprite.svg": "/brand-maze/static/media/sprite.4c1b6e6dff4869a323e89acb6d65fbd5.svg",
     "index.html": "/brand-maze/index.html",
     "main.661ec9d0.css.map": "/brand-maze/static/css/main.661ec9d0.css.map",
-    "main.11119c5d.js.map": "/brand-maze/static/js/main.11119c5d.js.map"
+    "main.ec8e17e7.js.map": "/brand-maze/static/js/main.ec8e17e7.js.map"
   },
   "entrypoints": [
     "static/css/main.661ec9d0.css",
-    "static/js/main.11119c5d.js"
+    "static/js/main.ec8e17e7.js"
   ]
 }
