@@ -75,6 +75,16 @@ header {
 .image-gallery-thumbnails-container{
   margin-top: 20px;
 }
+
+.image-gallery-slide .image-gallery-description{
+  top:0;
+  color: white;
+  background-color: black;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image{
+  padding-top: 40px;
+}
 @media only screen and (min-device-width: 375px) {
   .header-wrapper {
     padding: 1rem;
