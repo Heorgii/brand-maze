@@ -1,5 +1,10 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
 import {
   BoxSkills,
@@ -13,8 +18,6 @@ import {
   ListBenefits,
   Number,
   NumberSmall,
-  Step,
-  StepsSlider,
   StepBenefits,
   Subtitle,
   SubtitleSkills,
@@ -25,8 +28,9 @@ import {
   WrapperBox,
   WrapperBoxSkills,
   WrapperText,
+  ButtonOrder,
+  TextSlider,
 } from './Services.styled';
-import { Button } from 'components/baseStyles/Button.styled';
 
 export const Services = () => {
   AOS.init();
@@ -96,55 +100,63 @@ export const Services = () => {
           user-friendly web presence that will help you attract customers and
           grow your business.
         </TextCenter>
-        <Button type="button" style={{ marginTop: '25px' }}>
+        <ButtonOrder type="button" style={{ marginTop: '25px' }}>
           Order Now
-        </Button>
+        </ButtonOrder>
       </WrapperText>
       <WrapperText>
         <Subtitle>Development by Steps</Subtitle>
-        <StepsSlider>
-          <Step>
+        <Swiper
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          mousewheel={true}
+          keyboard={true}
+        >
+          <SwiperSlide>
             <Number>01</Number>
             <Heading>The importance of the first meeting</Heading>
-            <Text>
+            <TextSlider>
               During our first meeting, we will have an introductory
               conversation where we will learn about your goals, objectives and
               expectations. We'll also find out what role your website should
               play. This information will be extremely useful for us as it will
               help us to develop a detailed plan of work in the future.
-            </Text>
-          </Step>
-          <Step>
+            </TextSlider>
+          </SwiperSlide>
+          <SwiperSlide>
             <Number>02</Number>
             <Heading>Create Layouts</Heading>
-            <Text>
+            <TextSlider>
               At this stage, the main role is played by the designer, who
               carefully examines the technical task and reproduces his artistic
               vision of the project. His creativity allows you to create the
               interface of your website to be the best in the world.
-            </Text>
-          </Step>
-          <Step>
+            </TextSlider>
+          </SwiperSlide>
+          <SwiperSlide>
             <Number>03</Number>
             <Heading>The programmer gives life to the design</Heading>
-            <Text>
+            <TextSlider>
               The role of the programmer is to ensure flawless operation of the
               site's functionality, maintaining its coherence with the design.
               The work of the coder is crucial and affects many aspects of the
               project. We make sure that our maestro can work without rushing to
               achieve the best results.
-            </Text>
-          </Step>
-          <Step>
+            </TextSlider>
+          </SwiperSlide>
+          <SwiperSlide>
             <Number>04</Number>
             <Heading>Unrelenting attention to detail</Heading>
-            <Text>
+            <TextSlider>
               We provide harmony in our symphony. By conducting tests, we make
               sure that the application works flawlessly and does not have any
               bugs when the site opens to everyone.
-            </Text>
-          </Step>
-        </StepsSlider>
+            </TextSlider>
+          </SwiperSlide>
+        </Swiper>
       </WrapperText>
       <WrapperText>
         <Subtitle>Technologies</Subtitle>
@@ -277,7 +289,7 @@ export const Services = () => {
       </WrapperBox>
       <WrapperText>
         <Subtitle>We look forward to working with you</Subtitle>
-        <Button type="button">Order Now</Button>
+        <ButtonOrder type="button">Order Now</ButtonOrder>
       </WrapperText>
     </Container>
   );

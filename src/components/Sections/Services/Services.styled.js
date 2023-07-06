@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { Button } from 'components/baseStyles/Button.styled';
 
 export const WrapperText = styled.div`
   margin-bottom: 55px;
@@ -177,6 +178,10 @@ export const TextCenter = styled(Text)`
   text-align: center;
 `;
 
+export const TextSlider = styled(Text)`
+  padding-bottom: 20px;
+`;
+
 export const TableHeading = styled.th`
   color: #000;
   text-align: center;
@@ -216,8 +221,6 @@ export const TableData = styled.td`
   }
 `;
 
-export const StepsSlider = styled.ul``;
-
 export const Step = styled.li`
   display: flex;
   flex-direction: column;
@@ -243,7 +246,7 @@ export const Number = styled.span`
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 900;
-  line-height: normal;
+  line-height: 1;
   letter-spacing: -7px;
   text-transform: uppercase;
 
@@ -320,4 +323,9 @@ export const ListQuestions = styled.ul`
   @media screen and (min-width: 768px) {
     gap: 40px;
   }
+`;
+
+export const ButtonOrder = styled(Button)`
+  width: 200px;
+  height: 50px;
 `;
