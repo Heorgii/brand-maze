@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 50px 35px 70px;
 
   @media screen and (min-width: 768px) {
     padding: 90px 60px;
@@ -11,7 +11,6 @@ const Container = styled.div`
 
   @media screen and (min-width: 1280px) {
     padding: 100px 100px 100px 30px;
-    /* max-width: 1200px; */
   }
 `;
 
