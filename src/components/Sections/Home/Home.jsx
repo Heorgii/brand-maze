@@ -14,7 +14,7 @@ import {
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Carousel } from './Carousel/Carousel';
 
 export const Home = () => {
