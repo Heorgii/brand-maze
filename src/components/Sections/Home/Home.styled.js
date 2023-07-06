@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-
+import { ReactComponentElement } from 'react';
 export const Box = styled.div``;
 
 export const Title = styled.h1`
@@ -9,7 +9,7 @@ export const Title = styled.h1`
   font-style: normal;
   font-weight: 900;
   line-height: 65px;
-  letter-spacing: -6.88px;
+  letter-spacing: -6.5px;
   text-transform: uppercase;
   background: linear-gradient(rgba(65, 45, 183, 1), rgba(219, 47, 47, 1) 100%);
   -webkit-background-clip: text;
@@ -51,6 +51,7 @@ export const ListItemText = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+  margin-bottom: 35px;
 
   &:nth-child(3) {
     width: 758px;
@@ -76,10 +77,19 @@ export const ProductionText = styled.p`
 `;
 
 export const CompList = styled.ul`
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  width: 663px;
 `;
 
-export const CompListItem = styled.li``;
+export const CompListItem = styled.li`
+  &:nth-child(2) {
+    text-align: -webkit-right;
+  }
+  &:nth-child(4) {
+    text-align: -webkit-right;
+  }
+`;
 
 export const ItemTitle = styled.h5`
   color: rgba(0, 0, 0, 0.88);
@@ -107,4 +117,5 @@ export const ItemDiscr = styled.p`
   font-weight: 400;
   line-height: 170%;
   width: 319px;
+  text-align: left;
 `;

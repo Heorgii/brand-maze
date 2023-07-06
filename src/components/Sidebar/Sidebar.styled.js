@@ -5,7 +5,7 @@ export const SidebarBox = styled.div`
   margin-top: 10px;
   margin-left: 20px;
   /* margin-right: 50px; */
-  width: 370px;
+  width: 320px;
 `;
 
 export const Logo = styled.nav`

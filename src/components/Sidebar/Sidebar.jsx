@@ -8,6 +8,7 @@ import {
   NavListLink,
   SidebarBox,
 } from './Sidebar.styled';
+import instagram from '../../images/sprite.svg';
 
 export const Sidebar = () => {
   const location = useLocation();
@@ -55,9 +56,18 @@ export const Sidebar = () => {
 
       <ContactList>
         <ContactListItem>
-          <ContactListLink href="mailto:contact@brandmaze.com">contact@brandmaze.com</ContactListLink>
+          <ContactListLink href="mailto:contact@brandmaze.com">
+            contact@brandmaze.com
+          </ContactListLink>
         </ContactListItem>
-        <li>socilas</li>
+          <li>
+            <svg width="20" height="20">
+              <use href={instagram + '#instagram'}></use>
+            </svg>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
       </ContactList>
     </SidebarBox>
   );
