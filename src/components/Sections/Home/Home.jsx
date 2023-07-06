@@ -14,7 +14,8 @@ import {
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
-import {  useState } from 'react';
+import { useState } from 'react';
+import { Carousel } from './Carousel/Carousel';
 
 export const Home = () => {
   const slides = [
@@ -107,13 +108,16 @@ export const Home = () => {
       <ProductionText>©brand maze productions</ProductionText>
 
       <CompList>
-        <CompListItem>
+        {/* <CompListItem>
           <ItemTitle>{slides[currentSlide].title}</ItemTitle>
           <ItemNumber>{slides[currentSlide].number}</ItemNumber>
           <ItemDiscr>{slides[currentSlide].text}</ItemDiscr>
         </CompListItem>
         <button onClick={prevSlide}>Previous</button>
-      <button onClick={nextSlide}>Next</button>
+      <button onClick={nextSlide}>Next</button> */}
+
+        <Carousel slides={slides}/>
+
         {/* <CompListItem>
           <ItemTitle>Logo</ItemTitle>
           <pItemNumber>01</pItemNumber>
