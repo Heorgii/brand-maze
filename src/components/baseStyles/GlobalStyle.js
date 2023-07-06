@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Roboto', 'Poppins',
-    'Manrope', 'Oswald', 'Montserrat', 'Bungee Shade', 'Open Sans', sans-serif;
+    'Manrope', 'Oswald', 'Montserrat', 'Bungee', 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  
