@@ -17,6 +17,14 @@ export const Button = styled.button`
   background: #000;
   border-radius: 3px;
 
+  cursor: pointer;
+  transition: all 150ms linear;
+
+  &:hover,
+  &:focus {
+    background: #686f81;
+  }
+
   @media screen and (min-width: 768px) {
     width: 250px;
     height: 70px;

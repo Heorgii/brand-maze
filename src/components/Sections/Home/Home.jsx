@@ -1,6 +1,5 @@
 import {
   // Box,
-  Title,
   List,
   ListItem,
   ListItemImg,
@@ -13,8 +12,8 @@ import {
   ItemDiscr,
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
-import { Container } from 'components/baseStyles/CommonStyle.styled';
-import {  useState } from 'react';
+import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
+import { useState } from 'react';
 
 export const Home = () => {
   const slides = [
@@ -113,7 +112,7 @@ export const Home = () => {
           <ItemDiscr>{slides[currentSlide].text}</ItemDiscr>
         </CompListItem>
         <button onClick={prevSlide}>Previous</button>
-      <button onClick={nextSlide}>Next</button>
+        <button onClick={nextSlide}>Next</button>
         {/* <CompListItem>
           <ItemTitle>Logo</ItemTitle>
           <pItemNumber>01</pItemNumber>
