@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 30px;
 
   @media screen and (min-width: 768px) {
     margin-top: 90px;
@@ -36,8 +36,7 @@ const Title = styled.h1`
   @media screen and (min-width: 768px) {
     margin: 0 0 25px 0;
     font-size: 55px;
-    line-height: 65px;
-    letter-spacing: -6.88px;
+    letter-spacing: -4.88px;
   }
 
   @media screen and (min-width: 1280px) {
