@@ -7,10 +7,10 @@ import {
   ListItemText,
   ProductionText,
   CompList,
-  CompListItem,
-  ItemTitle,
-  ItemNumber,
-  ItemDiscr,
+  // CompListItem,
+  // ItemTitle,
+  // ItemNumber,
+  // ItemDiscr,
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
@@ -51,7 +51,7 @@ export const Home = () => {
     },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -63,17 +63,17 @@ export const Home = () => {
   //   };
   // }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide(prevSlide =>
-      prevSlide === slides.length - 1 ? 0 : prevSlide + 1
-    );
-  };
+  // const nextSlide = () => {
+  //   setCurrentSlide(prevSlide =>
+  //     prevSlide === slides.length - 1 ? 0 : prevSlide + 1
+  //   );
+  // };
 
-  const prevSlide = () => {
-    setCurrentSlide(prevSlide =>
-      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
-    );
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide(prevSlide =>
+  //     prevSlide === 0 ? slides.length - 1 : prevSlide - 1
+  //   );
+  // };
 
   return (
     <Container>

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ActionKind, usePony } from 'pony-props';
 import { Box, ItemDiscr, ItemNumber, ItemTitle } from '../Home.styled';
 import {
   BoxSlider,
