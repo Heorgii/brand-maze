@@ -212,7 +212,7 @@ export const TableData = styled.td`
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: 28px;
+    font-size: 36px;
   }
 `;
 
@@ -226,9 +226,13 @@ export const Step = styled.li`
 `;
 
 export const StepBenefits = styled(Step)`
+  &:nth-child(2n) {
+    margin-left: 50px;
+  }
   @media screen and (min-width: 768px) {
+    width: 50%;
     &:nth-child(2n) {
-      margin-left: 80px;
+      margin-left: auto;
     }
   }
 `;
