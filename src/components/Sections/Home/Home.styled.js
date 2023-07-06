@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-import { ReactComponentElement } from 'react';
 export const Box = styled.div``;
 
 export const Title = styled.h1`
