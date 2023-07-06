@@ -35,13 +35,8 @@ img {
   height: auto;
 }
 
-<<<<<<< HEAD
-/* header {
-=======
-//-----images-----//
 
-header {
->>>>>>> e02d3204dd1f8e3189c12bea31ceadc9e8c3b6ef
+/* header {
   background-color: #5c0080;
   margin-bottom: 4rem;
 } */
