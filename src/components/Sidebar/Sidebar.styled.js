@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export const SidebarBox = styled.div`
   margin-top: 10px;
   margin-left: 20px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
+  width: 370px;
 `;
 
 export const Logo = styled.nav`
