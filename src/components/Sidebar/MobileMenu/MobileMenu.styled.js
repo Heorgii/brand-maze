@@ -11,7 +11,7 @@ export const MobileMenuBox = styled.div`
   transition: transform 250ms ease-in-out;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: ${props => props.theme.white};
 
   &.is-expanded {
     transform: translateX(0);
@@ -23,10 +23,11 @@ export const MobileMenuBox = styled.div`
 `;
 
 export const HeaderSvgMobile = styled.svg`
-  cursor: pointer;
+  fill: currentColor;
   position: absolute;
   top: 15px;
   right: 20px;
+  cursor: pointer;
 `;
 
 export const MobileBox = styled.nav`

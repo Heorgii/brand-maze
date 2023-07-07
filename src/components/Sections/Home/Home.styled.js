@@ -29,7 +29,7 @@ export const ListItemImg = styled.img`
 
 export const ListItemText = styled.p`
   width: 369px;
-  color: rgba(0, 0, 0, 0.8);
+  color: ${props => props.theme.blackOpacity};
   font-size: 21px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -86,7 +86,7 @@ export const ProductionText = styled.p`
   bottom: 224px;
   transform: rotate(-90deg);
   text-align: center;
-  color: #000;
+  color: ${props => props.theme.white};
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -112,7 +112,7 @@ export const CompListItem = styled.li`
 `;
 
 export const ItemTitle = styled.h5`
-  color: rgba(0, 0, 0, 0.88);
+  color: ${props => props.theme.blackOpacity};
   font-size: 22px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -127,7 +127,7 @@ export const ItemNumber = styled(Number)`
 `;
 
 export const ItemDiscr = styled.p`
-  color: rgba(0, 0, 0, 0.88);
+  color: ${props => props.theme.blackOpacity};
   font-size: 13px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;

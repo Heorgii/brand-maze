@@ -23,13 +23,13 @@ import {
   SubtitleSkills,
   Text,
   TextCenter,
+  TextSlider,
   TableData,
   TableHeading,
   WrapperBox,
   WrapperBoxSkills,
   WrapperText,
   ButtonOrder,
-  TextSlider,
 } from './Services.styled';
 
 export const Services = () => {

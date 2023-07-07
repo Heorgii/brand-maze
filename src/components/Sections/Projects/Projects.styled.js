@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const SlideContainer = styled.div`
   display: flex;
@@ -9,6 +9,7 @@ const SlideContainer = styled.div`
   width: 90%;
   min-height: 441px;
   overflow: hidden;
+
   @media screen and (max-width: 768px) {
     min-height: 200px;
   }

@@ -1,5 +1,5 @@
-import "modern-normalize";
-import { createGlobalStyle } from "styled-components";
+import 'modern-normalize';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  
-  background-color: #FFFFFF;
+  background-color: ${props => props.theme.white};
   }
 
   code {
@@ -48,7 +48,7 @@ main{
   margin: 0 auto;
   display: flex;
   padding: 1rem 0;
-  color: #ffffff;
+  color: ${props => props.theme.white};
 }
 
 .header-wrapper h1 {
@@ -169,18 +169,18 @@ main{
   }
 
   .swiper-button-next::after {
-  color: rgba(65, 45, 183, 1);
+  color: ${props => props.theme.accentBlue};
 }
 
 .swiper-button-prev::after {
-  color: rgba(65, 45, 183, 1);
+  color: ${props => props.theme.accentBlue};
 }
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet{
-  background-color: rgba(65, 45, 183, 1)!important;
+  background-color: ${props => props.theme.accentBlue}!important;
 }
 .swiper-pagination-bullet {
-  background-color:rgba(219, 47, 47, 1)!important;
+  background-color:${props => props.theme.accentRed}!important;
 }
 
 `;

@@ -17,12 +17,16 @@ export const SidebarBox = styled.div`
 `;
 
 export const Header = styled.header`
+  color: ${props => props.theme.black};
+
   @media screen and (max-width: 1279px) {
     display: flex;
   }
 `;
 
 export const HeaderSvg = styled.svg`
+  fill: currentColor;
+
   @media screen and (max-width: 1280px) {
     cursor: pointer;
     position: absolute;
@@ -35,7 +39,7 @@ export const HeaderSvg = styled.svg`
 `;
 
 export const Logo = styled.p`
-  color: #111;
+  color: ${props => props.theme.black};
   font-size: 45px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -84,7 +88,7 @@ export const NavList = styled.nav`
 export const NavListLink = styled(NavLink)`
   position: relative;
   display: inline-block;
-  color: #111;
+  color: ${props => props.theme.black};
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -108,7 +112,7 @@ export const NavListLink = styled(NavLink)`
     left: 0;
     width: 240px;
     height: 2px;
-    background-color: #000;
+    background-color: ${props => props.theme.black};
     transform: scaleX(0);
     transition: transform 0.2s ease-in-out;
     transform-origin: left center;
@@ -135,7 +139,7 @@ export const ContactList = styled.ul`
 `;
 
 export const ContactListItem = styled.li`
-  color: #000;
+  color: ${props => props.theme.black};
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -153,13 +157,13 @@ export const ContactListItem = styled.li`
     left: 0;
     width: 240px;
     height: 1px;
-    background-color: #111;
+    background-color: ${props => props.theme.black};
   }
 `;
 
 export const ContactListLink = styled.a`
   text-decoration: none;
-  color: #000;
+  color: ${props => props.theme.black};
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -190,11 +194,17 @@ export const SocialsList = styled.ul`
 export const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
+  color: ${props => props.theme.black};
+
   &:not(:last-child) {
     margin-right: 20px;
   }
   & > *:hover,
   & > *:focus {
-    fill: rgba(219, 47, 47, 1);
+    fill: ${props => props.theme.accentRed};
+  }
+
+  & svg {
+    fill: currentColor;
   }
 `;
