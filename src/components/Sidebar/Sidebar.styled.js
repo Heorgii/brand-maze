@@ -21,20 +21,24 @@ export const SidebarBox = styled.div`
 export const Header = styled.header`
   color: ${props => props.theme.black};
 
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1280px) {
     display: flex;
   }
 `;
 
 export const HeaderSvg = styled.svg`
   fill: currentColor;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 
-  @media screen and (max-width: 1280px) {
+  /* @media screen and (max-width: 1280px) {
     cursor: pointer;
     position: absolute;
     top: 20px;
     right: 20px;
-  }
+  } */
 
   @media screen and (min-width: 1280px) {
     display: none;
@@ -43,14 +47,16 @@ export const HeaderSvg = styled.svg`
 
 export const Logo = styled.p`
   color: ${props => props.theme.black};
-  font-size: 45px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
-  letter-spacing: -3.2px;
   text-transform: uppercase;
   text-decoration: none;
+
+  position: absolute;
+  font-size: 25px;
+  letter-spacing: -1.2px;
 
   cursor: pointer;
   text-decoration: none;
@@ -59,16 +65,17 @@ export const Logo = styled.p`
   margin-top: 10px;
   margin-left: 20px;
 
-  @media screen and (min-width: 767px) and (max-width: 1280px) {
+  @media screen and (min-width: 1280px)  {
     position: absolute;
     font-size: 45px;
+    letter-spacing: -3.2px;
   }
 
-  @media screen and (max-width: 767px) {
+  /* @media screen and (max-width: 767px) {
     position: absolute;
     font-size: 25px;
     letter-spacing: -1.2px;
-  }
+  } */
 `;
 
 export const LogoBox = styled.a`
@@ -78,7 +85,7 @@ export const LogoBox = styled.a`
 export const NavList = styled.nav`
   display: none;
 
-  @media screen and (min-width: 1279px) {
+  @media screen and (min-width: 1280px) {
     display: flex;
     flex-direction: column;
 
@@ -114,7 +121,7 @@ export const NavListLink = styled(NavLink)`
     bottom: -2px;
     left: 0;
     width: 240px;
-    height: 2px;
+    height: 1px;
     background-color: ${props => props.theme.black};
     transform: scaleX(0);
     transition: transform 0.2s ease-in-out;

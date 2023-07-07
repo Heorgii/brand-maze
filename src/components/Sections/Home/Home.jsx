@@ -11,7 +11,7 @@ import {
   ItemNumber,
   ItemDiscr,
   ConclusionText,
-  ListBox,
+  // ListBox,
   ListBoxSwaper,
   ListItemTextSwiper,
   TitleHome
@@ -23,67 +23,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
-// import { useState } from 'react';
-// import { Carousel } from './Carousel/Carousel';
 
 export const Home = () => {
-  // const slides = [
-  //   {
-  //     id: 1,
-  //     title: 'Logo',
-  //     number: '01',
-  //     text: ' It is a key element, helps to establish brand identity, enhances recognition and contributes to creating a positive impression.',
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Web designs',
-  //     number: '02',
-  //     text: ' It is responsible for creating an attractive and user-friendly interface that affects the first impression of the user.',
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'Web development',
-  //     number: '03',
-  //     text: 'Allows you to create interactive and dynamic websites that attract customers, improve user interaction and achieve business goals.',
-  //   },
-  //   {
-  //     id: 4,
-  //     title: 'Instagram',
-  //     number: '04',
-  //     text: ' Allows you to effectively promote products or services, demonstrate a unique style, establish contacts with consumers and develop faithful to the brand.',
-  //   },
-  //   {
-  //     id: 5,
-  //     title: 'TikTok',
-  //     number: '05',
-  //     text: ' Allows you to create viral videos, maintain interactivity and communicate with consumers. To attract attention and create a positive image among a wide audience.',
-  //   },
-  // ];
-
-  // const [currentSlide, setCurrentSlide] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-  //   }, 2000);
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
-
-  // const nextSlide = () => {
-  //   setCurrentSlide(prevSlide =>
-  //     prevSlide === slides.length - 1 ? 0 : prevSlide + 1
-  //   );
-  // };
-
-  // const prevSlide = () => {
-  //   setCurrentSlide(prevSlide =>
-  //     prevSlide === 0 ? slides.length - 1 : prevSlide - 1
-  //   );
-  // };
-
+  
   return (
     <Container>
       <TitleHome>BUILDING BETTER BRANDS</TitleHome>
@@ -98,7 +40,6 @@ export const Home = () => {
           mousewheel={true}
           keyboard={true}
         >
-          <List>
             <SwiperSlide>
               <ListItemImg src={homePage} alt="" />
             </SwiperSlide>
@@ -123,11 +64,10 @@ export const Home = () => {
                 <span> we build better brands. </span>
               </ListItemTextSwiper>
             </SwiperSlide>
-          </List>
         </Swiper>
       </ListBoxSwaper>
 
-      <ListBox>
+      {/* <ListBox> */}
         <List>
           <ListItem>
             <ListItemImg src={homePage} alt="" />
@@ -149,7 +89,7 @@ export const Home = () => {
             <ListItemImg src={homePage} alt="" />
           </ListItem>
         </List>
-      </ListBox>
+      {/* </ListBox> */}
 
       <ConclusionText>
         <span>At Brand Maze </span>- we carefully implement a well-designed

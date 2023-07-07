@@ -10,32 +10,39 @@ export const List = styled.ul`
   justify-content: center;
   margin-top: 35px;
 
-  @media screen and (max-width: 1279px) {
-    flex-wrap: wrap;
+  @media screen and (max-width: 1280px) {
+    display: none;
+
   }
 `;
 
 export const TitleHome = styled(Title)`
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1280px) {
     flex-wrap: wrap;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 320px) and(max-width: 768px) {
     line-height: 35px;
   }
 `;
 
-export const ListBox = styled.ul`
+export const ListBox = styled.div`
   @media screen and (max-width: 1279px) {
     display: none;
   }
 `;
+
 export const ListBoxSwaper = styled.div`
   margin-top: 25px;
   @media screen and (min-width: 1280px) {
     display: none;
   }
+
+  /* @media screen and (min-width: 320px) and(max-width: 1280px) {
+    display: none;
+  } */
 `;
+
 export const ListItem = styled.li`
   &:nth-child(2) {
     margin-left: 20px;
@@ -43,7 +50,7 @@ export const ListItem = styled.li`
 `;
 
 export const ListItemImg = styled.img`
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1280px) {
     width: 200px;
     height: 150px;
   }
@@ -83,10 +90,6 @@ export const ListItemText = styled.p`
     color: transparent;
   }
 
-  @media screen and (max-width: 1280px) {
-    margin: 0;
-  }
-
   @media screen and (max-width: 768px) {
     font-size: 15px;
     font-weight: 400;
@@ -115,10 +118,6 @@ export const ListItemTextSwiper = styled.p`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-  }
-
-  @media screen and (max-width: 1280px) {
-    margin: 0;
   }
 
   @media screen and (max-width: 768px) {
@@ -156,14 +155,15 @@ export const ConclusionText = styled.p`
   @media screen and (max-width: 768px) {
     font-size: 15px;
     font-weight: 400;
+    margin-bottom: 55px;
 
     & > * {
       font-size: 20px;
     }
-  }
 
-  @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
     margin-bottom: 55px;
+  }
   }
 `;
 
