@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { NavListLink } from '../Sidebar.styled';
 
 export const MobileMenuBox = styled.div`
   position: fixed;
@@ -37,6 +38,12 @@ export const NavListMobile = styled.nav`
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+`;
+
+export const NavListMobileItem = styled(NavListLink)`
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const ContactListMobile = styled.ul`
