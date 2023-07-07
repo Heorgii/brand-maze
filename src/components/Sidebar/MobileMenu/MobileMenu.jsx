@@ -1,7 +1,6 @@
 import {
   ContactListItem,
   ContactListLink,
-  NavListLink,
   SocialsList,
   SocialsListItem,
 } from '../Sidebar.styled';
@@ -10,6 +9,7 @@ import {
   HeaderSvgMobile,
   MobileBox,
   NavListMobile,
+  NavListMobileItem,
 } from './MobileMenu.styled';
 import instagram from 'images/sprite.svg';
 import telegram from 'images/sprite.svg';
@@ -30,49 +30,54 @@ export const MobileMenu = ({ isOpen, toggleMenu }) => {
       {isOpen && (
         <MobileBox>
           <NavListMobile>
-            <NavListLink
+            <NavListMobileItem
               className={`link ${location.pathname === '/' ? 'active' : ''}`}
               to="/"
               aria-label="Home"
+              onClick={toggleMenu}
             >
               Home
-            </NavListLink>
-            <NavListLink
+            </NavListMobileItem>
+            <NavListMobileItem
               className={`link ${
                 location.pathname === '/about' ? 'active' : ''
               }`}
               to="/about"
               aria-label="About"
+              onClick={toggleMenu}
             >
               About
-            </NavListLink>
-            <NavListLink
+            </NavListMobileItem>
+            <NavListMobileItem
               className={`link ${
                 location.pathname === '/services' ? 'active' : ''
               }`}
               to="/services"
               aria-label="Services"
+              onClick={toggleMenu}
             >
               Services
-            </NavListLink>
-            <NavListLink
+            </NavListMobileItem>
+            <NavListMobileItem
               className={`link ${
                 location.pathname === '/projects' ? 'active' : ''
               }`}
               to="/projects"
               aria-label="Projects"
+              onClick={toggleMenu}
             >
               Projects
-            </NavListLink>
-            <NavListLink
+            </NavListMobileItem>
+            <NavListMobileItem
               className={`link ${
                 location.pathname === '/contact' ? 'active' : ''
               }`}
               to="/contact"
               aria-label="Contact"
+              onClick={toggleMenu}
             >
               Contact
-            </NavListLink>
+            </NavListMobileItem>
           </NavListMobile>
           <ContactListMobile>
             <ul>

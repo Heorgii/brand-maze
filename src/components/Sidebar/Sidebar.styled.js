@@ -2,10 +2,12 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const SidebarContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-left: 20px;
+  /* display: flex;
+  flex-direction: column; */
+  @media screen and (min-width: 1280px) {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
 `;
 
 export const SidebarBox = styled.div`
@@ -30,6 +32,7 @@ export const HeaderSvg = styled.svg`
   @media screen and (max-width: 1280px) {
     cursor: pointer;
     position: absolute;
+    top: 20px;
     right: 20px;
   }
 
