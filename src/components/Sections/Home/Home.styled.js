@@ -16,7 +16,6 @@ export const List = styled.ul`
 `;
 
 export const TitleHome = styled(Title)`
-  margin-top: 35px;
   @media screen and (max-width: 1279px) {
     flex-wrap: wrap;
   }
