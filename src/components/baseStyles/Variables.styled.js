@@ -14,8 +14,6 @@ export const theme = {
     form: '#8D8D8D',
   },
 
-  // ${props => props.theme.black}
-
   dark: {
     white: '#323543',
     black: '#FFFFFF',

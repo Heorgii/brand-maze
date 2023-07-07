@@ -86,7 +86,7 @@ export const ProductionText = styled.p`
   bottom: 224px;
   transform: rotate(-90deg);
   text-align: center;
-  color: ${props => props.theme.white};
+  color: ${props => props.theme.blackOpacity};
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
