@@ -199,6 +199,12 @@ const InputForFile = styled.input`
   & ~ label {
     margin: 0;
   }
+
+  &:hover,
+  &:focus {
+    background: ${props => props.theme.greyLight};
+    box-shadow: 1px -1px 10px -2px ${props => props.theme.blackOpacity} inset;
+  }
 `;
 const LabelForInputForFile = styled.label`
   display: flex;

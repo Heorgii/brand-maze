@@ -6,7 +6,7 @@ const SlideContainer = styled.div`
   justify-content: center;
   align-items: center;
   font-style: normal;
-  width: 90%;
+  /* width: 90%; */
   min-height: 441px;
   overflow: hidden;
 
