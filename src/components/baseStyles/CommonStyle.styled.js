@@ -15,6 +15,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
+  display: inline;
   margin: 0 0 15px 0;
 
   font-size: 32px;
@@ -22,7 +23,7 @@ const Title = styled.h1`
   font-style: normal;
   font-weight: 900;
   line-height: 65px;
-  letter-spacing: -2.88px;
+  letter-spacing: -1px;
   text-transform: uppercase;
   background: linear-gradient(
     to left,
@@ -37,13 +38,13 @@ const Title = styled.h1`
   @media screen and (min-width: 768px) {
     margin: 0 0 25px 0;
     font-size: 55px;
-    letter-spacing: -4.88px;
+    /* letter-spacing: -4.88px; */
   }
 
   @media screen and (min-width: 1280px) {
     margin: 0 0 35px 0;
     font-size: 55px;
-    letter-spacing: -6.58px;
+    /* letter-spacing: -6.58px; */
   }
 `;
 

@@ -93,7 +93,6 @@ export const Project = () => {
           originalAlt={images}
           onClick={hendleClickProject}
         />
-        ;
       </SlideContainer>
       <Button style={{ marginTop: '20px', padding: '10px 20px' }}>
         Order Now
