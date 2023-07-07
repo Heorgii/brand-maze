@@ -1,5 +1,5 @@
-import 'modern-normalize';
-import { createGlobalStyle } from 'styled-components';
+import "modern-normalize";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -35,7 +35,9 @@ img {
   height: auto;
 }
 
-
+main{
+  width: 100%;
+}
 /* header {
   background-color: #5c0080;
   margin-bottom: 4rem;
@@ -79,38 +81,32 @@ img {
 
 .image-gallery-slide .image-gallery-description{
   top: 0;
+  left: 15px;
   bottom: auto;
   color: white;
-  background-color: black;
+  background-color: rgba(65, 45, 83, 1);
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 5px;
+  width: 90%;
+
 }
 
 .image-gallery-content .image-gallery-slide .image-gallery-image{
   padding-top: 40px;
+  @media screen and (max-width: 768px) {
+    height: 300px;
+
+  }
 }
 
 .input-file-container {
   position: relative;
   width: 156px;
 } 
-/* .js .input-file-trigger {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  color: white;
-  font-size: 1em;
-  transition: all .4s;
-  cursor: pointer;
-  width: 156px;
-  height: 40px;
-  margin: 0 auto;
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  border-radius: 3px;
-} */
 .js .input-file {
   position: absolute;
   top: 0; left: 0;

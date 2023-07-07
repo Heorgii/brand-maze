@@ -5,11 +5,13 @@ const SlideContainer = styled.div`
   position: relative;
   justify-content: center;
   align-items: center;
-  font-family: "Manrope";
   font-style: normal;
-  width: 1210px;
+  width: 90%;
   min-height: 441px;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    min-height: 200px;
+  }
 `;
 
 export { SlideContainer };
