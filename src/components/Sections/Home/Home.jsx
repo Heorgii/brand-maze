@@ -14,7 +14,6 @@ import {
   ListBox,
   ListBoxSwaper,
   ListItemTextSwiper,
-  Title,
   TitleHome
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
