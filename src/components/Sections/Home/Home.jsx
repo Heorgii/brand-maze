@@ -11,9 +11,19 @@ import {
   ItemNumber,
   ItemDiscr,
   ConclusionText,
+  ListBox,
+  ListBoxSwaper,
+  ListItemTextSwiper,
+  Title,
+  TitleHome
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
-import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
+import { Container,  } from 'components/baseStyles/CommonStyle.styled';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css';
+import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
 // import { useState } from 'react';
 // import { Carousel } from './Carousel/Carousel';
 
@@ -77,29 +87,70 @@ export const Home = () => {
 
   return (
     <Container>
-      <Title>BUILDING BETTER BRANDS</Title>
+      <TitleHome>BUILDING BETTER BRANDS</TitleHome>
 
-      <List>
-        <ListItem>
-          <ListItemImg src={homePage} alt="" />
+      <ListBoxSwaper>
+        <Swiper
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          mousewheel={true}
+          keyboard={true}
+        >
+          <List>
+            <SwiperSlide>
+              <ListItemImg src={homePage} alt="" />
+            </SwiperSlide>
 
-          <ListItemText>
-            We work tirelessly to develop long-term relationships with our
-            partners, just as you strive to create strong bonds with the
-            customers who purchase your products or use your services.
-          </ListItemText>
-        </ListItem>
+            <SwiperSlide>
+              <ListItemTextSwiper>
+                We work tirelessly to develop long-term relationships with our
+                partners, just as you strive to create strong bonds with the
+                customers who purchase your products or use your services.
+              </ListItemTextSwiper>
+            </SwiperSlide>
 
-        <ListItem>
-          <ListItemText>
-            We are creators of exceptional brands. This is the embodiment of our
-            business. Under one virtual roof, we do incredible things to achieve
-            this goal:<span> we build better brands. </span>
-          </ListItemText>
+            <SwiperSlide>
+              <ListItemImg src={homePage} alt="" />
+            </SwiperSlide>
 
-          <ListItemImg src={homePage} alt="" />
-        </ListItem>
-      </List>
+            <SwiperSlide>
+              <ListItemTextSwiper>
+                We are creators of exceptional brands. This is the embodiment of
+                our business. Under one virtual roof, we do incredible things to
+                achieve this goal:
+                <span> we build better brands. </span>
+              </ListItemTextSwiper>
+            </SwiperSlide>
+          </List>
+        </Swiper>
+      </ListBoxSwaper>
+
+      <ListBox>
+        <List>
+          <ListItem>
+            <ListItemImg src={homePage} alt="" />
+
+            <ListItemText>
+              We work tirelessly to develop long-term relationships with our
+              partners, just as you strive to create strong bonds with the
+              customers who purchase your products or use your services.
+            </ListItemText>
+          </ListItem>
+
+          <ListItem>
+            <ListItemText>
+              We are creators of exceptional brands. This is the embodiment of
+              our business. Under one virtual roof, we do incredible things to
+              achieve this goal:<span> we build better brands. </span>
+            </ListItemText>
+
+            <ListItemImg src={homePage} alt="" />
+          </ListItem>
+        </List>
+      </ListBox>
 
       <ConclusionText>
         <span>At Brand Maze </span>- we carefully implement a well-designed
