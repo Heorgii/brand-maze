@@ -10,6 +10,7 @@ import {
   ItemTitle,
   ItemNumber,
   ItemDiscr,
+  ConclusionText,
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
@@ -93,17 +94,17 @@ export const Home = () => {
           <ListItemText>
             We are creators of exceptional brands. This is the embodiment of our
             business. Under one virtual roof, we do incredible things to achieve
-            this goal:<b> we build better brands. </b>
+            this goal:<span> we build better brands. </span>
           </ListItemText>
 
           <ListItemImg src={homePage} alt="" />
         </ListItem>
       </List>
 
-      <ListItemText>
-        At Brand Maze - we carefully implement a well-designed process that
-        helps us achieve excellence in everything we do.
-      </ListItemText>
+      <ConclusionText>
+        <span>At Brand Maze </span>- we carefully implement a well-designed
+        process that helps us achieve excellence in everything we do.
+      </ConclusionText>
       <ProductionText>©brand maze productions</ProductionText>
 
       <CompList>
@@ -117,8 +118,8 @@ export const Home = () => {
         {/* <Carousel slides={slides}/> */}
 
         <CompListItem>
-          <ItemTitle>Logo</ItemTitle>
           <ItemNumber>01</ItemNumber>
+          <ItemTitle>Logo</ItemTitle>
           <ItemDiscr>
             It is a key element, helps to establish brand identity, enhances
             recognition and contributes to creating a positive impression.
@@ -126,8 +127,8 @@ export const Home = () => {
         </CompListItem>
 
         <CompListItem>
-          <ItemTitle>Web designs</ItemTitle>
           <ItemNumber>02</ItemNumber>
+          <ItemTitle>Web designs</ItemTitle>
           <ItemDiscr>
             It is responsible for creating an attractive and user-friendly
             interface that affects the first impression of the user.
@@ -135,8 +136,8 @@ export const Home = () => {
         </CompListItem>
 
         <CompListItem>
-          <ItemTitle>Web development</ItemTitle>
           <ItemNumber>03</ItemNumber>
+          <ItemTitle>Web development</ItemTitle>
           <ItemDiscr>
             Allows you to create interactive and dynamic websites that attract
             customers, improve user interaction and achieve business goals.
@@ -144,8 +145,8 @@ export const Home = () => {
         </CompListItem>
 
         <CompListItem>
-          <ItemTitle>Instagram</ItemTitle>
           <ItemNumber>04</ItemNumber>
+          <ItemTitle>Instagram</ItemTitle>
           <ItemDiscr>
             Allows you to effectively promote products or services, demonstrate
             a unique style, establish contacts with consumers and develop
@@ -154,8 +155,8 @@ export const Home = () => {
         </CompListItem>
 
         <CompListItem>
-          <ItemTitle>TikTok</ItemTitle>
           <ItemNumber>05</ItemNumber>
+          <ItemTitle>TikTok</ItemTitle>
           <ItemDiscr>
             Allows you to create viral videos, maintain interactivity and
             communicate with consumers. To attract attention and create a

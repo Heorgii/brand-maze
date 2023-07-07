@@ -12,7 +12,7 @@ import {
   NavListMobile,
 } from './MobileMenu.styled';
 import instagram from '../../../images/sprite.svg';
-import facebook from '../../../images/sprite.svg';
+import telegram from '../../../images/sprite.svg';
 import twitter from '../../../images/sprite.svg';
 import linkedin from '../../../images/sprite.svg';
 import close from '../../../images/sprite.svg';
@@ -96,8 +96,8 @@ export const MobileMenu = ({ isOpen, toggleMenu }) => {
                 </svg>
               </SocialsListItem>
               <SocialsListItem>
-                <svg width="20" height="20">
-                  <use href={facebook + '#facebook'}></use>
+                <svg width="24" height="24">
+                  <use href={telegram + '#telegram'}></use>
                 </svg>
               </SocialsListItem>
               <SocialsListItem>

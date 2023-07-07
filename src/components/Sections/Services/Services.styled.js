@@ -241,7 +241,7 @@ export const StepBenefits = styled(Step)`
 `;
 
 export const Number = styled.span`
-  color: rgba(0, 0, 0, 0.19);
+  /* color: rgba(0, 0, 0, 0.19); */
   font-size: 100px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -249,6 +249,13 @@ export const Number = styled.span`
   line-height: 1;
   letter-spacing: -7px;
   text-transform: uppercase;
+
+  background-color: rgba(0, 0, 0, 0.19);
+  color: transparent;
+  text-shadow: 2px 6px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 
   @media screen and (min-width: 768px) {
     font-size: 200px;

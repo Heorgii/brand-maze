@@ -47,3 +47,9 @@ export const ContactListMobile = styled.ul`
   padding: 0;
   list-style: none;
 `;
+
+export const ContactListTel = styled.li`
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+`;

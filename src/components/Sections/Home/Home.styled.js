@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { Number } from '../Services/Services.styled';
 export const Box = styled.div``;
 
 export const List = styled.ul`
@@ -40,6 +41,42 @@ export const ListItemText = styled.p`
     width: 758px;
     margin-top: 35px;
     text-align: center;
+  }
+
+  & > * {
+    font-weight: bold;
+    background: linear-gradient(
+      to left,
+      rgba(65, 45, 183, 1),
+      rgba(219, 47, 47, 1) 120%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media screen and (max-width: 768px) {
+    /* text-align: center; */
+    font-size: 15px;
+    /* font-style: normal; */
+    font-weight: 400;
+    /* line-height: 180%; */
+  }
+`;
+
+export const ConclusionText = styled(ListItemText)`
+  & > * {
+    font-weight: bold;
+    background: linear-gradient(
+      to left,
+      rgba(65, 45, 183, 1),
+      rgba(219, 47, 47, 1) 120%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
 `;
 
@@ -83,13 +120,10 @@ export const ItemTitle = styled.h5`
   line-height: 170%;
 `;
 
-export const ItemNumber = styled.p`
-  color: rgba(0, 0, 0, 0.88);
-  font-size: 14px;
+export const ItemNumber = styled(Number)`
+  font-size: 30px;
   font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  letter-spacing: 0;
 `;
 
 export const ItemDiscr = styled.p`

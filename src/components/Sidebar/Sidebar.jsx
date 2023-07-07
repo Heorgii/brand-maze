@@ -12,9 +12,10 @@ import {
   SidebarContainer,
   HeaderSvg,
   Header,
+  LogoBox,
 } from './Sidebar.styled';
 import instagram from '../../images/sprite.svg';
-import facebook from '../../images/sprite.svg';
+import telegram from '../../images/sprite.svg';
 import twitter from '../../images/sprite.svg';
 import linkedin from '../../images/sprite.svg';
 import menu from '../../images/sprite.svg';
@@ -33,13 +34,12 @@ export const Sidebar = () => {
   return (
     <SidebarContainer>
       <Header>
-        <a href="/brand-maze" aria-label="logo company">
+        <LogoBox href="/brand-maze" aria-label="logo company">
           <Logo>Brand maze</Logo>
-        </a>
+        </LogoBox>
         <HeaderSvg width="24" height="24" onClick={toggleMenu}>
           <use href={menu + '#menu'}></use>
         </HeaderSvg>
-        {/* <button onClick={toggleMenu}>Toggle Menu</button> */}
         <MobileMenuBox className={`collapsed ${isOpen ? 'is-expanded' : ''}`}>
           <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
         </MobileMenuBox>
@@ -111,8 +111,8 @@ export const Sidebar = () => {
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={facebook + '#facebook'}></use>
+              <svg width="27" height="27">
+                <use href={telegram + '#telegram'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
