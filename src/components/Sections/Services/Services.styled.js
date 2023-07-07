@@ -1,5 +1,4 @@
 import { styled } from 'styled-components';
-import { Button } from 'components/baseStyles/Button.styled';
 
 export const WrapperText = styled.div`
   margin-bottom: 55px;
@@ -246,7 +245,7 @@ export const Number = styled.span`
   font-style: normal;
   font-weight: 900;
   line-height: 1;
-  letter-spacing: -7px;
+  letter-spacing: -5px;
   text-transform: uppercase;
 
   background-color: rgba(0, 0, 0, 0.19);
@@ -263,7 +262,7 @@ export const Number = styled.span`
 
 export const NumberSmall = styled(Number)`
   font-size: 48px;
-  letter-spacing: -4.8px;
+  letter-spacing: -2px;
 
   @media screen and (min-width: 768px) {
     font-size: 96px;
@@ -329,9 +328,4 @@ export const ListQuestions = styled.ul`
   @media screen and (min-width: 768px) {
     gap: 40px;
   }
-`;
-
-export const ButtonOrder = styled(Button)`
-  width: 200px;
-  height: 50px;
 `;
