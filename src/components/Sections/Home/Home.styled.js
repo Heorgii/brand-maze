@@ -16,9 +16,6 @@ export const List = styled.ul`
 `;
 
 export const TitleHome = styled(Title)`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   margin-top: 35px;
   @media screen and (max-width: 1279px) {
     flex-wrap: wrap;
