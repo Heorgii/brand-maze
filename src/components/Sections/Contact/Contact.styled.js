@@ -164,13 +164,6 @@ const ContainerForInputForFile = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
-
-  & .file-return {
-    font-style: normal;
-    font-size: 0.7em;
-    font-weight: 400;
-    color: ${props => props.theme.black};
-  }
 `;
 
 const InputForFile = styled.input`
@@ -180,7 +173,7 @@ const InputForFile = styled.input`
   display: block;
 
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -198,12 +191,6 @@ const InputForFile = styled.input`
 
   & ~ label {
     margin: 0;
-  }
-
-  &:hover,
-  &:focus {
-    background: ${props => props.theme.greyLight};
-    box-shadow: 1px -1px 10px -2px ${props => props.theme.blackOpacity} inset;
   }
 `;
 const LabelForInputForFile = styled.label`
@@ -235,16 +222,7 @@ const LabelForInputForFile = styled.label`
 `;
 
 const ButtonSend = styled(Button)`
-  width: 156px;
-  height: 40px;
   margin: 20px 0 0 auto;
-  font-size: 16px;
-
-  @media screen and (max-width: 768px) {
-    width: 100px;
-    height: 40px;
-    font-size: 10px;
-  }
 `;
 
 export {

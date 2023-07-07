@@ -22,7 +22,7 @@ const SwitcherWrapper = styled.div`
   align-items: center;
 
   position: absolute;
-  top: 12px;
+  top: 21px;
   right: 55px;
   height: auto;
 

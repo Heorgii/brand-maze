@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
+import { ButtonLink } from 'components/baseStyles/Button.styled';
 import {
   BoxSkills,
   DescriptionSkills,
@@ -29,7 +30,6 @@ import {
   WrapperBox,
   WrapperBoxSkills,
   WrapperText,
-  ButtonOrder,
 } from './Services.styled';
 
 export const Services = () => {
@@ -100,9 +100,13 @@ export const Services = () => {
           user-friendly web presence that will help you attract customers and
           grow your business.
         </TextCenter>
-        <ButtonOrder type="button" style={{ marginTop: '25px' }}>
-          Order Now
-        </ButtonOrder>
+        <ButtonLink
+          to="/contact"
+          aria-label="Open order form"
+          style={{ marginTop: '25px' }}
+        >
+          Order
+        </ButtonLink>
       </WrapperText>
       <WrapperText>
         <Subtitle>Development by Steps</Subtitle>
@@ -289,7 +293,9 @@ export const Services = () => {
       </WrapperBox>
       <WrapperText>
         <Subtitle>We look forward to working with you</Subtitle>
-        <ButtonOrder type="button">Order Now</ButtonOrder>
+        <ButtonLink to="/contact" aria-label="Open order form">
+          Order
+        </ButtonLink>
       </WrapperText>
     </Container>
   );
