@@ -24,7 +24,11 @@ const Title = styled.h1`
   line-height: 65px;
   letter-spacing: -2.88px;
   text-transform: uppercase;
-  background: linear-gradient( to left,rgba(65, 45, 183, 1), rgba(219, 47, 47, 1) 120%);
+  background: linear-gradient(
+    to left,
+    rgba(65, 45, 183, 1),
+    rgba(219, 47, 47, 1) 120%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

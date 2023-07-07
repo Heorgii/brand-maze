@@ -18,10 +18,11 @@ import instagram from '../../images/sprite.svg';
 import telegram from '../../images/sprite.svg';
 import twitter from '../../images/sprite.svg';
 import linkedin from '../../images/sprite.svg';
-import menu from '../../images/sprite.svg';
+import menu from 'images/sprite.svg';
 import { MobileMenu } from './MobileMenu/MobileMenu';
 import { useState } from 'react';
 import { MobileMenuBox } from './MobileMenu/MobileMenu.styled';
+import { SwitchTheme } from 'components/ThemeStatus/SwitcherTheme/SwitchTheme';
 
 export const Sidebar = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ export const Sidebar = () => {
         <LogoBox href="/brand-maze" aria-label="logo company">
           <Logo>Brand maze</Logo>
         </LogoBox>
+        <SwitchTheme />
         <HeaderSvg width="24" height="24" onClick={toggleMenu}>
           <use href={menu + '#menu'}></use>
         </HeaderSvg>

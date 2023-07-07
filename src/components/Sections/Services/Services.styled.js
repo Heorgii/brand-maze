@@ -69,7 +69,7 @@ export const Subtitle = styled.h2`
   position: relative;
   margin-bottom: 30px;
 
-  color: #323543;
+  color: ${props => props.theme.heading};
   text-align: center;
   font-size: 26px;
   font-family: 'Inter', sans-serif;
@@ -116,7 +116,7 @@ export const SubtitleSkills = styled(Subtitle)`
 `;
 
 export const DescriptionSkills = styled.p`
-  color: #686f81;
+  color: ${props => props.theme.text};
   text-align: center;
   font-size: 14px;
   font-family: 'Inter', sans-serif;
@@ -137,7 +137,7 @@ export const Label = styled.label`
   display: flex;
   justify-content: space-between;
 
-  color: #686f81;
+  color: ${props => props.theme.text};
   font-size: 14px;
   font-family: 'Manrope', sans-serif;
   font-style: normal;
@@ -156,7 +156,7 @@ export const Label = styled.label`
 `;
 
 export const Text = styled.p`
-  color: #686f81;
+  color: ${props => props.theme.text};
   font-size: 15px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -183,7 +183,7 @@ export const TextSlider = styled(Text)`
 `;
 
 export const TableHeading = styled.th`
-  color: #000;
+  color: ${props => props.theme.black};
   text-align: center;
   font-size: 20px;
   font-family: 'Inter', sans-serif;
@@ -202,7 +202,7 @@ export const TableHeading = styled.th`
 
 export const TableData = styled.td`
   padding-left: 10px;
-  color: #686f81;
+  color: ${props => props.theme.text};
   font-size: 20px;
   font-family: 'Bungee', sans-serif;
   font-style: normal;
@@ -241,7 +241,6 @@ export const StepBenefits = styled(Step)`
 `;
 
 export const Number = styled.span`
-  /* color: rgba(0, 0, 0, 0.19); */
   font-size: 100px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -274,7 +273,7 @@ export const NumberSmall = styled(Number)`
 export const Heading = styled.h3`
   margin-bottom: 15px;
 
-  color: #000;
+  color: ${props => props.theme.black};
   text-align: center;
   font-size: 20px;
   font-family: 'Inter', sans-serif;

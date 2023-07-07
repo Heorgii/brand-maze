@@ -66,7 +66,7 @@ export const ListItemText = styled.p`
   flex-wrap: wrap;
 
   width: 369px;
-  color: rgba(0, 0, 0, 0.8);
+  color: ${props => props.theme.blackOpacity};
   font-size: 21px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -177,7 +177,7 @@ export const ProductionText = styled.p`
   bottom: 224px;
   transform: rotate(-90deg);
   text-align: center;
-  color: #000;
+  color: ${props => props.theme.blackOpacity};
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -222,7 +222,7 @@ export const ItemNumber = styled(Number)`
 
 export const ItemTitle = styled.h3`
   margin-bottom: 15px;
-  color: #000;
+  color: ${props => props.theme.black};
   font-size: 20px;
   font-family: 'Inter', sans-serif;
   font-style: normal;

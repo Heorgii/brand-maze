@@ -4,7 +4,7 @@ export const Button = styled.button`
   margin: 0 auto;
   display: block;
 
-  color: #fff;
+  color: ${props => props.theme.white};
   text-align: center;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -12,7 +12,7 @@ export const Button = styled.button`
   font-weight: 700;
   line-height: normal;
 
-  background: #000;
+  background: ${props => props.theme.black};
   border-radius: 3px;
 
   cursor: pointer;
@@ -20,7 +20,7 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    background: #686f81;
+    background: ${props => props.theme.greyLight};
   }
 
   @media screen and (min-width: 768px) {

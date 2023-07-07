@@ -11,11 +11,11 @@ import {
   NavListMobile,
   NavListMobileItem,
 } from './MobileMenu.styled';
-import instagram from '../../../images/sprite.svg';
-import telegram from '../../../images/sprite.svg';
-import twitter from '../../../images/sprite.svg';
-import linkedin from '../../../images/sprite.svg';
-import close from '../../../images/sprite.svg';
+import instagram from 'images/sprite.svg';
+import telegram from 'images/sprite.svg';
+import twitter from 'images/sprite.svg';
+import linkedin from 'images/sprite.svg';
+import close from 'images/sprite.svg';
 import { useLocation } from 'react-router';
 
 export const MobileMenu = ({ isOpen, toggleMenu }) => {
