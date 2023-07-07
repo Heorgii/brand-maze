@@ -1,13 +1,45 @@
 import { styled } from 'styled-components';
-import { Number } from '../Services/Services.styled';
+import { Number, Text } from '../Services/Services.styled';
+import { Title } from 'components/baseStyles/CommonStyle.styled';
+
 export const Box = styled.div``;
 
 export const List = styled.ul`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 35px;
+
+  @media screen and (max-width: 1279px) {
+    flex-wrap: wrap;
+  }
 `;
 
+export const TitleHome = styled(Title)`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 35px;
+  @media screen and (max-width: 1279px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 768px) {
+    line-height: 35px;
+  }
+`;
+
+export const ListBox = styled.ul`
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+`;
+export const ListBoxSwaper = styled.div`
+  margin-top: 25px;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+`;
 export const ListItem = styled.li`
   &:nth-child(2) {
     margin-left: 20px;
@@ -15,8 +47,10 @@ export const ListItem = styled.li`
 `;
 
 export const ListItemImg = styled.img`
-  /* width: 200px;
-  height: 200px; */
+  @media screen and (max-width: 1279px) {
+    width: 200px;
+    height: 150px;
+  }
 
   &:nth-child(1) {
     margin-bottom: 88px;
@@ -28,6 +62,9 @@ export const ListItemImg = styled.img`
 `;
 
 export const ListItemText = styled.p`
+  display: flex;
+  flex-wrap: wrap;
+
   width: 369px;
   color: ${props => props.theme.blackOpacity};
   font-size: 21px;
@@ -37,11 +74,75 @@ export const ListItemText = styled.p`
   line-height: 150%;
   margin-bottom: 35px;
 
-  &:nth-child(3) {
-    width: 758px;
-    margin-top: 35px;
-    text-align: center;
+  & > * {
+    font-weight: bold;
+    background: linear-gradient(
+      to left,
+      rgba(65, 45, 183, 1),
+      rgba(219, 47, 47, 1) 120%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
   }
+
+  @media screen and (max-width: 1280px) {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+    font-weight: 400;
+  }
+`;
+
+export const ListItemTextSwiper = styled.p`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 21px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  & > * {
+    font-weight: bold;
+    background: linear-gradient(
+      to left,
+      rgba(65, 45, 183, 1),
+      rgba(219, 47, 47, 1) 120%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media screen and (max-width: 1280px) {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+    font-weight: 400;
+  }
+`;
+
+export const ConclusionText = styled.p`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 21px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 80px;
 
   & > * {
     font-weight: bold;
@@ -57,26 +158,16 @@ export const ListItemText = styled.p`
   }
 
   @media screen and (max-width: 768px) {
-    /* text-align: center; */
     font-size: 15px;
-    /* font-style: normal; */
     font-weight: 400;
-    /* line-height: 180%; */
-  }
-`;
 
-export const ConclusionText = styled(ListItemText)`
-  & > * {
-    font-weight: bold;
-    background: linear-gradient(
-      to left,
-      rgba(65, 45, 183, 1),
-      rgba(219, 47, 47, 1) 120%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    & > * {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 55px;
   }
 `;
 
@@ -94,15 +185,23 @@ export const ProductionText = styled.p`
   line-height: normal;
   letter-spacing: 5.4px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
 `;
 
 export const CompList = styled.ul`
   display: flex;
   flex-direction: column;
-  width: 663px;
+  flex-wrap: wrap;
+  /* width: 663px; */
 `;
 
 export const CompListItem = styled.li`
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
   &:nth-child(2) {
     text-align: -webkit-right;
   }
@@ -111,28 +210,41 @@ export const CompListItem = styled.li`
   }
 `;
 
-export const ItemTitle = styled.h5`
-  color: ${props => props.theme.blackOpacity};
-  font-size: 22px;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 170%;
-`;
-
 export const ItemNumber = styled(Number)`
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 80px;
+  }
 `;
 
-export const ItemDiscr = styled.p`
-  color: ${props => props.theme.blackOpacity};
-  font-size: 13px;
-  font-family: 'Roboto', sans-serif;
+export const ItemTitle = styled.h3`
+  margin-bottom: 15px;
+  color: ${props => props.theme.black};
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 400;
-  line-height: 170%;
+  font-weight: 700;
+  line-height: normal;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 36px;
+  }
+`;
+
+export const ItemDiscr = styled(Text)`
+  color: rgba(0, 0, 0, 0.88);
   width: 319px;
   text-align: left;
+
+  @media screen and (min-width: 768px) {
+    width: 600px;
+  }
 `;
