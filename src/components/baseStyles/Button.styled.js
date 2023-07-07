@@ -13,7 +13,9 @@ export const Button = styled.button`
   line-height: normal;
 
   background: ${props => props.theme.black};
+  /* box-shadow: 2px -1px 10px -2px ${props => props.theme.blackOpacity}; */
   border-radius: 3px;
+  border: none;
 
   cursor: pointer;
   transition: all 150ms linear;
@@ -21,6 +23,7 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     background: ${props => props.theme.greyLight};
+    box-shadow: 1px -1px 10px -2px ${props => props.theme.blackOpacity} inset;
   }
 
   @media screen and (min-width: 768px) {
