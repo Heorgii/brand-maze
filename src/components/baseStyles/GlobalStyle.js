@@ -87,6 +87,61 @@ header {
   padding-top: 40px;
 }
 
+.input-file-container {
+  position: relative;
+  width: 156px;
+} 
+/* .js .input-file-trigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  font-size: 1em;
+  transition: all .4s;
+  cursor: pointer;
+  width: 156px;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 3px;
+} */
+.js .input-file {
+  position: absolute;
+  top: 0; left: 0;
+  width: 156px;
+  opacity: 0;
+  cursor: pointer;
+}
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+  background: grey;
+  color: white;
+}
+
+.file-return {
+  margin: 0;
+}
+.file-return:not(:empty) {
+  margin: 1em 0;
+}
+.js .file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+}
+.js .file-return:not(:empty):before {
+  content: " ";
+  font-style: normal;
+  font-weight: normal;
+}
+
 @media only screen and (min-device-width: 375px) {
   .header-wrapper {
     padding: 1rem;
