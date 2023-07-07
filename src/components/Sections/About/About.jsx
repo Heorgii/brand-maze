@@ -1,10 +1,16 @@
 import { Container, Title } from "components/baseStyles/CommonStyle.styled";
-import { ContainerForAbout, ContainerForDiv, Img, ItemImgText, PaddingItem } from "./About.styled";
+import { ContainerForAbout, ContainerForDiv, Img, ItemImgText, PaddingItem, ContainerForTeam, ItemWrap, TitleItem, JobItem, SocialsList, SocialsListItem } from "./About.styled";
 
-import chartbar from "../../../images/about/mdi_light_chart-bar.svg"
-import chartpie from "../../../images/about/mdi_light_chart-pie.svg"
-import flask from "../../../images/about/mdi_light_flask.svg"
-import gift from "../../../images/about/mdi_light_gift.svg"
+import chartbar from "../../../images/about/mdi_light_chart-bar.svg";
+import chartpie from "../../../images/about/mdi_light_chart-pie.svg";
+import flask from "../../../images/about/mdi_light_flask.svg";
+import gift from "../../../images/about/mdi_light_gift.svg";
+
+import heorhii from "../../../images/about/team/heorhii.jpg";
+import julia from "../../../images/about/team/julia.jpg";
+import vlad from "../../../images/about/team/vlad.jpg";
+
+import sprite from '../../../images/sprite.svg';
 
 export const About = () => {
   return <Container>
@@ -34,5 +40,89 @@ export const About = () => {
       <PaddingItem>Technical Supervision</PaddingItem>
     </ItemImgText>
   </ContainerForDiv>
+    <h2>OUR PROFESSIONAL TEAM</h2>
+  <ContainerForTeam>
+    <ItemWrap>
+      <img src={heorhii} alt="heorhii"/>
+      <TitleItem>Heorhii rushchak</TitleItem>
+      <JobItem>Co-founder</JobItem>
+      <SocialsList>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#instagram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="27" height="27">
+                <use href={sprite + '#telegram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#twitter'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#linkedin'}></use>
+              </svg>
+            </SocialsListItem>
+      </SocialsList>
+    </ItemWrap>
+    <ItemWrap>
+      <img src={julia} alt="julia"/>
+      <TitleItem>Julia golban</TitleItem>
+      <JobItem>Manager</JobItem>
+      <SocialsList>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#instagram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="27" height="27">
+                <use href={sprite + '#telegram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#twitter'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#linkedin'}></use>
+              </svg>
+            </SocialsListItem>
+      </SocialsList>
+    </ItemWrap>
+    <ItemWrap>
+      <img src={vlad} alt="vlad"/>
+      <TitleItem>Vlad popov</TitleItem>
+      <JobItem>Fittings specialist</JobItem>
+      <SocialsList>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#instagram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="27" height="27">
+                <use href={sprite + '#telegram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#twitter'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#linkedin'}></use>
+              </svg>
+            </SocialsListItem>
+      </SocialsList>
+    </ItemWrap>
+  </ContainerForTeam>
   </Container>
 };
