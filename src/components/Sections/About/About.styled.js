@@ -11,36 +11,62 @@ const ContainerForAbout = styled.div`
   width: 100%;
   overflow: hidden;
   padding: 20px 30px;
+  color: ${(props) => props.theme.black};
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
-const ContainerForDiv = styled.div`
-  display: flex;
+
+const ContainerForAboutForMobile = styled.div`
+  display: none;
   position: relative;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   width: 100%;
   overflow: hidden;
-`;
-const Img = styled.img`
-  width: 45px;
-  height: 45px;
-`;
-const ItemImgText = styled.div`
-  width: 170px;
-  height: 60px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-`;
-const PaddingItem = styled.p`
-padding: 16px;
+  padding: 20px 30px;
+  color: ${(props) => props.theme.black};
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
 `;
 
-const ContainerForTeam = styled.div`
+const ContainerForTeamForMobile = styled.div`
   display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 30px;
+  @media screen and (min-width: 799.9px) {
+    display: none;
+  }
+`;
+
+const ContainerForTeamForTablet = styled.div`
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 30px;
+  @media screen and (min-width: 800px) and (max-width: 999.9px) {
+    display: flex;
+  }
+`;
+const ContainerForTeam = styled.div`
+  display: none;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -50,6 +76,71 @@ const ContainerForTeam = styled.div`
   width: 100%;
   overflow: hidden;
   padding: 20px 30px;
+  @media screen and (min-width: 1000px) {
+    display: flex;
+  }
+`;
+const ContainerForIcon = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+const ContainerForIconTablet = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+  @media screen and (max-width: 490px) {
+    flex-direction: column;
+  }
+`;
+
+const TitleTeam = styled.h3`
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: ${(props) => props.theme.black};
+`;
+
+const Img = styled.img`
+  width: 45px;
+  height: 45px;
+  /* or to blue */
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+`;
+
+const ImgForTeam = styled.img`
+  width: 250px;
+  height: 357px;
+  @media screen and (max-width: 490px) {
+    width: 150px;
+    height: 257px;
+  }
+`;
+
+const ItemImgText = styled.div`
+  width: 170px;
+  height: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: ${(props) => props.theme.black};
+`;
+const PaddingItem = styled.p`
+  padding: 16px;
 `;
 
 const ItemWrap = styled.div`
@@ -65,16 +156,21 @@ const ItemWrap = styled.div`
   overflow: hidden;
   padding: 20px 30px;
 `;
-const TitleItem = styled.h3`
+const TitleItem = styled.div`
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 32px;
   letter-spacing: 4%;
   font-weight: 700;
   text-transform: uppercase;
-  color: black;
+  color: ${(props) => props.theme.black};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding-top: 15px;
   padding-bottom: 4px;
+  min-height: 100px;
 `;
 
 const JobItem = styled.h5`
@@ -83,7 +179,8 @@ const JobItem = styled.h5`
   font-size: 18px;
   letter-spacing: 4%;
   font-weight: 500;
-  color: grey;
+  color: ${(props) => props.theme.grey};
+  min-height: 42px;
 `;
 const SocialsList = styled.ul`
   display: flex;
@@ -92,14 +189,37 @@ const SocialsList = styled.ul`
 const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
-  padding-top: 15px;
+  color: ${(props) => props.theme.black};
+
   &:not(:last-child) {
     margin-right: 20px;
   }
   & > *:hover,
   & > *:focus {
-    fill: rgba(219, 47, 47, 1);
+    fill: ${(props) => props.theme.accentRed};
+  }
+
+  & svg {
+    fill: currentColor;
   }
 `;
 
-export {ContainerForAbout, ContainerForDiv, Img, ItemImgText, PaddingItem,ContainerForTeam, ItemWrap, TitleItem, JobItem, SocialsList, SocialsListItem}
+export {
+  ContainerForAbout,
+  ContainerForIcon,
+  Img,
+  ItemImgText,
+  PaddingItem,
+  ContainerForTeam,
+  ItemWrap,
+  TitleItem,
+  JobItem,
+  SocialsList,
+  SocialsListItem,
+  ContainerForAboutForMobile,
+  ContainerForIconTablet,
+  ImgForTeam,
+  ContainerForTeamForMobile,
+  ContainerForTeamForTablet,
+  TitleTeam
+};
