@@ -66,7 +66,7 @@ export const ListSkills = styled.ul`
 
 export const Subtitle = styled.h2`
   position: relative;
-  margin-bottom: 30px;
+  margin: 30px 0;
 
   color: ${props => props.theme.heading};
   text-align: center;

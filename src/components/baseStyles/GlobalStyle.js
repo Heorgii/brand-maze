@@ -160,6 +160,10 @@ img {
   .swiper-wrapper{
     width: 100%;
     padding: 20px;
+
+    @media only screen and (min-width: 1280px) {
+      width: 100px;
+    }
   }
 
   .swiper-slide, .swiper-slide-active{
@@ -167,6 +171,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .swiper-pagination-fraction,
