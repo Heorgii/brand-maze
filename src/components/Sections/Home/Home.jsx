@@ -14,8 +14,10 @@ import {
   ListItemTextSwiper,
   TitleHome,
   ListBox,
+  SwiperSvg,
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
+// import _Шар_2 from '../../../images/home/icon.svg'
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
@@ -52,6 +54,9 @@ export const Home = () => {
             </ListItemText>
 
             <ListItemImg src={homePage} alt="" />
+            {/* <SwiperSvg width="240" height="240">
+              <use href={_Шар_2 + '#_Шар_2'}></use>
+            </SwiperSvg> */}
           </ListItem>
         </List>
       </ListBox>
@@ -83,6 +88,9 @@ export const Home = () => {
 
           <SwiperSlide>
             <ListItemImg src={homePage} alt="" />
+            {/* <SwiperSvg width="240" height="240">
+              <use href={_Шар_2 + '#_Шар_2'}></use>
+            </SwiperSvg> */}
           </SwiperSlide>
 
           <SwiperSlide>

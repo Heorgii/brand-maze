@@ -84,6 +84,10 @@ export const ListBoxSwaper = styled.div`
   }
 `;
 
+export const SwiperSvg = styled.svg`
+  fill: ${props => props.theme.blackOpacity};
+`;
+
 export const ListItem = styled.li`
   &:nth-child(2) {
     margin-left: 20px;
