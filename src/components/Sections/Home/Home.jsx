@@ -1,5 +1,4 @@
 import {
-  // Box,
   List,
   ListItem,
   ListItemImg,
@@ -11,63 +10,29 @@ import {
   ItemNumber,
   ItemDiscr,
   ConclusionText,
-  // ListBox,
   ListBoxSwaper,
   ListItemTextSwiper,
-  TitleHome
+  TitleHome,
+  ListBox,
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
-import { Container,  } from 'components/baseStyles/CommonStyle.styled';
+import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export const Home = () => {
-  
+  Aos.init();
+
   return (
     <Container>
       <TitleHome>BUILDING BETTER BRANDS</TitleHome>
 
-      <ListBoxSwaper>
-        <Swiper
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          mousewheel={true}
-          keyboard={true}
-        >
-            <SwiperSlide>
-              <ListItemImg src={homePage} alt="" />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ListItemTextSwiper>
-                We work tirelessly to develop long-term relationships with our
-                partners, just as you strive to create strong bonds with the
-                customers who purchase your products or use your services.
-              </ListItemTextSwiper>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ListItemImg src={homePage} alt="" />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <ListItemTextSwiper>
-                We are creators of exceptional brands. This is the embodiment of
-                our business. Under one virtual roof, we do incredible things to
-                achieve this goal:
-                <span> we build better brands. </span>
-              </ListItemTextSwiper>
-            </SwiperSlide>
-        </Swiper>
-      </ListBoxSwaper>
-
-      {/* <ListBox> */}
+      <ListBox>
         <List>
           <ListItem>
             <ListItemImg src={homePage} alt="" />
@@ -89,7 +54,47 @@ export const Home = () => {
             <ListItemImg src={homePage} alt="" />
           </ListItem>
         </List>
-      {/* </ListBox> */}
+      </ListBox>
+
+      <ListBoxSwaper>
+        <Swiper
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          mousewheel={true}
+          keyboard={true}
+          loop={true}
+          loopPreventsSliding={true}
+          loopedSlides={1}
+        >
+          <SwiperSlide>
+            <ListItemImg src={homePage} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <ListItemTextSwiper>
+              We work tirelessly to develop long-term relationships with our
+              partners, just as you strive to create strong bonds with the
+              customers who purchase your products or use your services.
+            </ListItemTextSwiper>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <ListItemImg src={homePage} alt="" />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <ListItemTextSwiper>
+              We are creators of exceptional brands. This is the embodiment of
+              our business. Under one virtual roof, we do incredible things to
+              achieve this goal:
+              <span> we build better brands. </span>
+            </ListItemTextSwiper>
+          </SwiperSlide>
+        </Swiper>
+      </ListBoxSwaper>
 
       <ConclusionText>
         <span>At Brand Maze </span>- we carefully implement a well-designed
@@ -98,16 +103,7 @@ export const Home = () => {
       <ProductionText>©brand maze productions</ProductionText>
 
       <CompList>
-        {/* <CompListItem>
-          <ItemTitle>{slides[currentSlide].title}</ItemTitle>
-          <ItemNumber>{slides[currentSlide].number}</ItemNumber>
-          <ItemDiscr>{slides[currentSlide].text}</ItemDiscr>
-        </CompListItem> */}
-        {/* <button onClick={prevSlide}>Previous</button>
-      <button onClick={nextSlide}>Next</button> */}
-        {/* <Carousel slides={slides}/> */}
-
-        <CompListItem>
+        <CompListItem data-aos="zoom-in-left" data-aos-delay="150">
           <ItemNumber>01</ItemNumber>
           <ItemTitle>Logo</ItemTitle>
           <ItemDiscr>
@@ -116,7 +112,7 @@ export const Home = () => {
           </ItemDiscr>
         </CompListItem>
 
-        <CompListItem>
+        <CompListItem data-aos="zoom-in-right" data-aos-delay="250">
           <ItemNumber>02</ItemNumber>
           <ItemTitle>Web designs</ItemTitle>
           <ItemDiscr>
@@ -125,7 +121,7 @@ export const Home = () => {
           </ItemDiscr>
         </CompListItem>
 
-        <CompListItem>
+        <CompListItem data-aos="zoom-in-left" data-aos-delay="350">
           <ItemNumber>03</ItemNumber>
           <ItemTitle>Web development</ItemTitle>
           <ItemDiscr>
@@ -134,7 +130,7 @@ export const Home = () => {
           </ItemDiscr>
         </CompListItem>
 
-        <CompListItem>
+        <CompListItem data-aos="zoom-in-right" data-aos-delay="450">
           <ItemNumber>04</ItemNumber>
           <ItemTitle>Instagram</ItemTitle>
           <ItemDiscr>
@@ -144,7 +140,7 @@ export const Home = () => {
           </ItemDiscr>
         </CompListItem>
 
-        <CompListItem>
+        <CompListItem data-aos="zoom-in-left" data-aos-delay="550">
           <ItemNumber>05</ItemNumber>
           <ItemTitle>TikTok</ItemTitle>
           <ItemDiscr>

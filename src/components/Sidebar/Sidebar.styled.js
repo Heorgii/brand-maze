@@ -1,5 +1,38 @@
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
+
+const fadeInLeftAnimation = keyframes`
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const fadeInBottomAnimation = keyframes`
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+const fadeInTopAnimation = keyframes`
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 export const SidebarContainer = styled.div`
   /* display: flex;
@@ -23,6 +56,17 @@ export const Header = styled.header`
 
   @media screen and (max-width: 1280px) {
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+    /* transform: translateY(${({ isVisible }) =>
+      isVisible ? '0' : '-100%'}); */
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 999;
   }
 `;
 
@@ -32,6 +76,7 @@ export const HeaderSvg = styled.svg`
   position: absolute;
   top: 20px;
   right: 20px;
+  animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
   /* @media screen and (max-width: 1280px) {
     cursor: pointer;
@@ -40,7 +85,7 @@ export const HeaderSvg = styled.svg`
     right: 20px;
   } */
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1281px) {
     display: none;
   }
 `;
@@ -53,6 +98,7 @@ export const Logo = styled.p`
   line-height: normal;
   text-transform: uppercase;
   text-decoration: none;
+  animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
   position: absolute;
   font-size: 25px;
@@ -61,21 +107,15 @@ export const Logo = styled.p`
   cursor: pointer;
   text-decoration: none;
 
-  position: fixed;
+  /* position: fixed; */
   margin-top: 10px;
   margin-left: 20px;
 
-  @media screen and (min-width: 1280px)  {
-    position: absolute;
+  @media screen and (min-width: 1281px) {
+    position: fixed;
     font-size: 45px;
     letter-spacing: -3.2px;
   }
-
-  /* @media screen and (max-width: 767px) {
-    position: absolute;
-    font-size: 25px;
-    letter-spacing: -1.2px;
-  } */
 `;
 
 export const LogoBox = styled.a`
@@ -106,6 +146,25 @@ export const NavListLink = styled(NavLink)`
   line-height: 35px;
   text-transform: uppercase;
   text-decoration: none;
+  &:nth-child(1) {
+    animation: ${fadeInLeftAnimation} 0.5s ease-in both;
+  }
+
+  &:nth-child(2) {
+    animation: ${fadeInLeftAnimation} 0.6s ease-in both;
+  }
+
+  &:nth-child(3) {
+    animation: ${fadeInLeftAnimation} 0.7s ease-in both;
+  }
+
+  &:nth-child(4) {
+    animation: ${fadeInLeftAnimation} 0.8s ease-in both;
+  }
+
+  &:nth-child(5) {
+    animation: ${fadeInLeftAnimation} 0.9s ease-in both;
+  }
 
   @media screen and (max-width: 1280px) {
     font-size: 25px;
@@ -137,7 +196,8 @@ export const NavListLink = styled(NavLink)`
 
 export const ContactList = styled.ul`
   display: none;
-
+  animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
   @media screen and (min-width: 1280px) {
     display: block;
     position: fixed;

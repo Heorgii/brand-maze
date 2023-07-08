@@ -10,6 +10,7 @@ import {
   ContainerForInputForFile,
   LabelForInputForFile,
   ButtonSend,
+  TextForInputForFile,
 } from './Contact.styled';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
 
@@ -169,10 +170,10 @@ export const Contact = () => {
               Add a file...
             </LabelForInputForFile>
           </div>
-          <p className="file-return">
+          <TextForInputForFile className="file-return">
             (Allowed file formats - pdf doc docx odt ods. Maximum file size - 5
             mb)
-          </p>
+          </TextForInputForFile>
         </ContainerForInputForFile>
         <ButtonSend type="submit">Send message</ButtonSend>
       </ContactForm>

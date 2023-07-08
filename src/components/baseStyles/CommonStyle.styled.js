@@ -1,4 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const puffInCenterAnimation = keyframes`
+  0% {
+    transform: scale(2);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+`;
 
 const Container = styled.div`
   width: 100%;
@@ -17,7 +30,8 @@ const Container = styled.div`
 const Title = styled.h1`
   display: inline;
   margin: 0 0 15px 0;
-
+  animation: ${puffInCenterAnimation} 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  
   font-size: 32px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
