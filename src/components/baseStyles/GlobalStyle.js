@@ -158,7 +158,8 @@ img {
 
 //-----swiper-----//
   .swiper-wrapper{
-    width: 100px;
+    width: 100%;
+    padding: 20px;
   }
 
   .swiper-slide, .swiper-slide-active{
@@ -193,4 +194,17 @@ img {
   background-color:${props => props.theme.accentRed}!important;
 }
 
+.containerJustifyEnd {
+  justify-content: end;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  };
+}
+
+.containerJustifyStart {
+  justify-content: start;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  };
+}
 `;

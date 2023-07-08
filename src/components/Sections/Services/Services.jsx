@@ -118,6 +118,9 @@ export const Services = () => {
           pagination={{ clickable: true }}
           mousewheel={true}
           keyboard={true}
+          loop={true}
+          loopPreventsSliding={true}
+          loopedSlides={1}
         >
           <SwiperSlide>
             <Number>01</Number>
