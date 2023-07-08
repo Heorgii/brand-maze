@@ -14,7 +14,7 @@ import {
   ListItemTextSwiper,
   TitleHome,
   ListBox,
-  SwiperSvg,
+  // SwiperSvg,
 } from './Home.styled';
 import homePage from '../../../images/homePage.png';
 // import _Шар_2 from '../../../images/home/icon.svg'
