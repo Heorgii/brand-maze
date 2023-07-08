@@ -53,18 +53,17 @@ export const SidebarBox = styled.div`
 
 export const Header = styled.header`
   color: ${props => props.theme.black};
+  background-color: ${props => props.theme.white};
 
   @media screen and (max-width: 1280px) {
+
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background-color: #fff;
+    height: 45px;
     opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-    /* transform: translateY(${({ isVisible }) =>
-      isVisible ? '0' : '-100%'}); */
     transition: opacity 0.3s, transform 0.3s;
     z-index: 999;
   }

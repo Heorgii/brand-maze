@@ -58,7 +58,7 @@ export const List = styled.ul`
 export const TitleHome = styled(Title)`
   line-height: 35px;
   flex-wrap: wrap;
-  
+
   @media screen and (min-width: 1280px) {
     line-height: 65px;
   }
@@ -100,12 +100,20 @@ export const ListItemImg = styled.img`
     margin-bottom: 88px;
     animation: ${flipInVerLeftAnimation} 0.7s
       cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @media screen and (max-width: 1280px) {
+      margin-bottom: 20px;
+    }
   }
 
   &:nth-child(2) {
     margin-top: 88px;
     animation: ${flipInVerRightAnimation} 0.7s
       cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @media screen and (max-width: 1280px) {
+      margin-bottom: 20px;
+    }
   }
 `;
 

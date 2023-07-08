@@ -159,7 +159,7 @@ img {
 //-----swiper-----//
   .swiper-wrapper{
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
 
     @media only screen and (min-width: 1280px) {
       width: 100px;

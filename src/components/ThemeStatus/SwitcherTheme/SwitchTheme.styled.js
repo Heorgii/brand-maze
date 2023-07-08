@@ -34,7 +34,7 @@ const SwitcherWrapper = styled.div`
   animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
   position: fixed;
-  top: 21px;
+  top: 20px;
   right: 55px;
   height: auto;
 
@@ -45,7 +45,7 @@ const SwitcherWrapper = styled.div`
     right: 55px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1281px) {
     top: 30px;
     right: 55px;
   }
