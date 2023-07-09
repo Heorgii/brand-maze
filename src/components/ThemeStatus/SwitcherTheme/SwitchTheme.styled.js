@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeInTopAnimation = keyframes`
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 const BtnChangeTheme = styled.button`
   color: ${props => props.theme.black};
@@ -20,9 +31,10 @@ const SwitcherWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
-  position: absolute;
-  top: 12px;
+  position: fixed;
+  top: 20px;
   right: 55px;
   height: auto;
 
@@ -33,7 +45,7 @@ const SwitcherWrapper = styled.div`
     right: 55px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1281px) {
     top: 30px;
     right: 55px;
   }
