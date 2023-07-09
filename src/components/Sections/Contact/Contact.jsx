@@ -23,7 +23,6 @@ export const Contact = () => {
   const [file, setFile] = useState('');
 
   document.querySelector('html').classList.add('js');
-  console.log(handleSubmit,file);
 
   const handleSubmit = () => {
     setUserFirstName('');
@@ -35,6 +34,7 @@ export const Contact = () => {
     document.querySelectorAll('.file-return')[0].innerHTML =
       '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
   };
+  console.log(handleSubmit,file);
 
   const handleChange = e => {
     e.preventDefault();
