@@ -62,7 +62,7 @@ export const Sidebar = () => {
           <use href={menu + '#menu'}></use>
         </HeaderSvg>
         <MobileMenuBox className={`collapsed ${isOpen ? 'is-expanded' : ''}`}>
-          <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+          <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} setIsOpen={setIsOpen}/>
         </MobileMenuBox>
       </Header>
 

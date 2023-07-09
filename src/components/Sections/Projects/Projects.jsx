@@ -6,9 +6,21 @@ import Animal_welfare_img from 'images/projects/animal_welfare_project.webp';
 import Filmoteka_img from 'images/projects/filmoteka_project.webp';
 import Ice_cream_img from 'images/projects/ice_cream_project.webp';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
+import { Button } from 'components/baseStyles/Button.styled';
+import { useEffect } from 'react';
 import { ButtonLink } from 'components/baseStyles/Button.styled';
 
+
 export const Project = () => {
+  
+  useEffect(()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+    },[])
+
   const hendleClickProject = e => {
     e.preventDefault();
     switch (e.target.alt) {

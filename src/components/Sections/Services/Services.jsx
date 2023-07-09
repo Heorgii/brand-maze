@@ -31,9 +31,19 @@ import {
   WrapperBoxSkills,
   WrapperText,
 } from './Services.styled';
+import { useEffect } from 'react';
 
 export const Services = () => {
   AOS.init();
+
+  useEffect(()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+    },[])
+    
 
   return (
     <Container>

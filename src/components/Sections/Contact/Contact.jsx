@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   ContactForm,
   InputWrapper,
@@ -23,6 +23,14 @@ export const Contact = () => {
   const [file, setFile] = useState('');
 
   document.querySelector('html').classList.add('js');
+
+  useEffect(()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+    },[])
 
   const handleSubmit = () => {
     setUserFirstName('');

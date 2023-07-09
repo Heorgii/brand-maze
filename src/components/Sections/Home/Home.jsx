@@ -24,11 +24,21 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
+import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
+
 export const Home = () => {
   Aos.init();
+
+  useEffect(()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+    },[])
 
   return (
     <Container>
