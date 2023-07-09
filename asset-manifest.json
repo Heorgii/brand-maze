@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/brand-maze/static/css/main.095281ad.css",
-    "main.js": "/brand-maze/static/js/main.28d313a9.js",
+    "main.js": "/brand-maze/static/js/main.4804e9af.js",
     "static/media/vlad.jpg": "/brand-maze/static/media/vlad.3f49357ce39ceed746ce.jpg",
     "static/media/heorhii.jpg": "/brand-maze/static/media/heorhii.89b710d89a2c75f44553.jpg",
     "static/media/julia.jpg": "/brand-maze/static/media/julia.386a2d596c318d772626.jpg",
@@ -10,17 +10,17 @@
     "static/media/animal_welfare_project.webp": "/brand-maze/static/media/animal_welfare_project.180cb798d0af78c06a5a.webp",
     "static/media/barber_project.webp": "/brand-maze/static/media/barber_project.73b8ab5cddc4fa96fbd8.webp",
     "static/media/ice_cream_project.webp": "/brand-maze/static/media/ice_cream_project.f4cc36397ad12a3bb988.webp",
-    "static/media/sprite.svg": "/brand-maze/static/media/sprite.b73883f4d0f49fb7a59cfc1f5be56009.svg",
+    "static/media/sprite.svg": "/brand-maze/static/media/sprite.741ab116da0844bcdfe07e2111e8b694.svg",
     "static/media/mdi_light_flask.svg": "/brand-maze/static/media/mdi_light_flask.7609e70b400637f20ff905513016d470.svg",
     "index.html": "/brand-maze/index.html",
     "static/media/mdi_light_gift.svg": "/brand-maze/static/media/mdi_light_gift.e03b0021908503d87058b82b6b6b0ccf.svg",
     "static/media/mdi_light_chart-pie.svg": "/brand-maze/static/media/mdi_light_chart-pie.8ab8da0cea2054c17744fd4120678ed3.svg",
     "static/media/mdi_light_chart-bar.svg": "/brand-maze/static/media/mdi_light_chart-bar.4b99fcbf4f0881024811e2bd5961c271.svg",
     "main.095281ad.css.map": "/brand-maze/static/css/main.095281ad.css.map",
-    "main.28d313a9.js.map": "/brand-maze/static/js/main.28d313a9.js.map"
+    "main.4804e9af.js.map": "/brand-maze/static/js/main.4804e9af.js.map"
   },
   "entrypoints": [
     "static/css/main.095281ad.css",
-    "static/js/main.28d313a9.js"
+    "static/js/main.4804e9af.js"
   ]
 }
