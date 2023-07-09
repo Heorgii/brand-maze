@@ -24,13 +24,13 @@ export const Contact = () => {
 
   document.querySelector('html').classList.add('js');
 
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    })
-    },[])
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   const handleSubmit = () => {
     setUserFirstName('');
@@ -42,7 +42,7 @@ export const Contact = () => {
     document.querySelectorAll('.file-return')[0].innerHTML =
       '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
   };
-  console.log(handleSubmit,file);
+  console.log(handleSubmit, file);
 
   const handleChange = e => {
     e.preventDefault();
@@ -94,8 +94,6 @@ export const Contact = () => {
             />
             <NameOfItem>First Name</NameOfItem>
           </LabelOfItem>
-          <input type="hidden" name="_captcha" value="true" />
-          <input type="hidden" name="_subject" value="New Message!!!!" />
           <LabelOfItem aria-label="LastName">
             <InputOfItem
               type="text"
@@ -107,6 +105,8 @@ export const Contact = () => {
             />
             <NameOfItem>Last Name</NameOfItem>
           </LabelOfItem>
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_subject" value="New Message!!!!" />
           <LabelOfItem aria-label="Email">
             <InputOfItem
               type="email"

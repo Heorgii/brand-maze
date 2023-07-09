@@ -90,7 +90,7 @@ const LabelOfItem = styled.label`
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
   }
 
-  &:nth-child(3) {
+  &:nth-child(5) {
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
   }
 
@@ -98,7 +98,7 @@ const LabelOfItem = styled.label`
     animation: ${fadeInRightAnimation} 0.5s ease-in both;
   }
 
-  &:nth-child(4) {
+  &:nth-child(6) {
     animation: ${fadeInRightAnimation} 0.5s ease-in both;
   }
 
@@ -272,8 +272,7 @@ const LabelForInputForFile = styled.label`
 
 const TextForInputForFile = styled.p`
   animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
-
-`
+`;
 
 const ButtonSend = styled(Button)`
   margin: 20px 0 0 auto;
