@@ -57,11 +57,8 @@ export const List = styled.ul`
 `;
 
 export const TitleHome = styled(Title)`
-  color: ${(props) => props.theme.black};
-  @media screen and (max-width: 1279px) {
-    flex-wrap: wrap;
-  }
-
+  line-height: 35px;
+  flex-wrap: wrap;
 
   @media screen and (min-width: 1280px) {
     line-height: 65px;
@@ -200,7 +197,7 @@ export const ConclusionText = styled.p`
   margin-top: 35px;
   text-align: center;
   color: ${(props) => props.theme.blackOpacity};
-  font-size: 21px;
+  font-size: 35px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -274,7 +271,7 @@ export const ItemNumber = styled(Number)`
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0;
-  color: ${(props) => props.theme.black};
+  /* color: ${(props) => props.theme.black}; */
   @media screen and (min-width: 768px) {
     font-size: 80px;
   }

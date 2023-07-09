@@ -132,7 +132,7 @@ export const About = () => {
     <TitleTeam>OUR PROFESSIONAL TEAM</TitleTeam>
     </div>
   <ContainerForTeam>
-    <ItemWrap>
+    <ItemWrap data-aos="flip-up" data-aos-delay="150">
       <ImgForTeam src={vlad} alt="vlad"/>
       <TitleItem>Vlad popov</TitleItem>
       <JobItem>Full-Stack Developer</JobItem>
@@ -206,7 +206,7 @@ export const About = () => {
             </SocialsListItem>
       </SocialsList>
     </ItemWrap>
-    <ItemWrap>
+    <ItemWrap data-aos="flip-up" data-aos-delay="150">
       <ImgForTeam src={heorhii} alt="heorhii"/>
       <TitleItem>Heorhii rushchak</TitleItem>
       <JobItem>Full-Stack Developer</JobItem>

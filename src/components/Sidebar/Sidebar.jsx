@@ -16,6 +16,7 @@ import {
 } from './Sidebar.styled';
 import sprite from '../../images/sprite.svg';
 import menu from 'images/sprite.svg';
+import { FaTiktok } from 'react-icons/fa';
 import { MobileMenu } from './MobileMenu/MobileMenu';
 import { useEffect, useState } from 'react';
 import { MobileMenuBox } from './MobileMenu/MobileMenu.styled';
@@ -136,10 +137,7 @@ export const Sidebar = () => {
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#twitter'}></use>
-              </svg>
-
+              <FaTiktok />
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">

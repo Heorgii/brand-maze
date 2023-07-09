@@ -18,7 +18,7 @@ export const MobileMenuBox = styled.div`
     transform: translateX(0);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1281px) {
     display: none;
   }
 `;
