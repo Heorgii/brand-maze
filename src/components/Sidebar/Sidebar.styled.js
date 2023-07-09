@@ -258,6 +258,7 @@ export const ContactListLink = styled.a`
 
 export const SocialsList = styled.ul`
   display: flex;
+  align-items: center;
 `;
 
 export const SocialsListItem = styled.li`

@@ -16,7 +16,7 @@ import {
 } from './Sidebar.styled';
 import instagram from '../../images/sprite.svg';
 import telegram from '../../images/sprite.svg';
-import twitter from '../../images/sprite.svg';
+import { FaTiktok } from 'react-icons/fa';
 import linkedin from '../../images/sprite.svg';
 import menu from 'images/sprite.svg';
 import { MobileMenu } from './MobileMenu/MobileMenu';
@@ -134,14 +134,12 @@ export const Sidebar = () => {
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="27" height="27">
+              <svg width="22" height="22">
                 <use href={telegram + '#telegram'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={twitter + '#twitter'}></use>
-              </svg>
+              <FaTiktok />
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">

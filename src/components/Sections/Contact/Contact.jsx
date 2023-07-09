@@ -23,18 +23,18 @@ export const Contact = () => {
   const [file, setFile] = useState('');
 
   document.querySelector('html').classList.add('js');
-  console.log(file);
+  // console.log(file);
 
-  const handleSubmit = () => {
-    setUserFirstName('');
-    setUserLastName('');
-    setUserEmail('');
-    setUserPhone('');
-    setUserMessage('');
-    setFile('');
-    document.querySelectorAll('.file-return')[0].innerHTML =
-      '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
-  };
+  // const handleSubmit = () => {
+  //   setUserFirstName('');
+  //   setUserLastName('');
+  //   setUserEmail('');
+  //   setUserPhone('');
+  //   setUserMessage('');
+  //   setFile('');
+  //   document.querySelectorAll('.file-return')[0].innerHTML =
+  //     '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
+  // };
 
   const handleChange = e => {
     e.preventDefault();
@@ -63,13 +63,16 @@ export const Contact = () => {
     <Container>
       <Title>Contact</Title>
       <ContactForm
+        action="https://formsubmit.co/drivezone36@gmail.com"
+        method="POST"
+        enctype="multipart/form-data"
         className="contact-form"
         name="form-contacts"
         autoComplete="on"
-        onSubmit={e => {
-          e.preventDefault();
-          handleSubmit();
-        }}
+        // onSubmit={e => {
+        //   e.preventDefault();
+        //   handleSubmit();
+        // }}
       >
         <InputWrapper>
           <LabelOfItem aria-label="Name">
@@ -83,6 +86,8 @@ export const Contact = () => {
             />
             <NameOfItem>First Name</NameOfItem>
           </LabelOfItem>
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_subject" value="New Message!!!!" />
           <LabelOfItem aria-label="LastName">
             <InputOfItem
               type="text"
@@ -136,7 +141,8 @@ export const Contact = () => {
               className="input-file"
               id="my-file"
               type="file"
-              accept="image/png, image/jpeg, .pdf, .doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              name="attachment"
+              accept="image/png, image/jpeg, application/pdf, .xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               onChange={e => {
                 if (e.target.value === '' || e.target.value === undefined) {
                   document.querySelectorAll(

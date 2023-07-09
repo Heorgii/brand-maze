@@ -13,9 +13,9 @@ import {
 } from './MobileMenu.styled';
 import instagram from 'images/sprite.svg';
 import telegram from 'images/sprite.svg';
-import twitter from 'images/sprite.svg';
 import linkedin from 'images/sprite.svg';
 import close from 'images/sprite.svg';
+import { FaTiktok } from 'react-icons/fa';
 import { useLocation } from 'react-router';
 
 export const MobileMenu = ({ isOpen, toggleMenu }) => {
@@ -101,14 +101,12 @@ export const MobileMenu = ({ isOpen, toggleMenu }) => {
                 </svg>
               </SocialsListItem>
               <SocialsListItem>
-                <svg width="24" height="24">
+                <svg width="22" height="22">
                   <use href={telegram + '#telegram'}></use>
                 </svg>
               </SocialsListItem>
               <SocialsListItem>
-                <svg width="20" height="20">
-                  <use href={twitter + '#twitter'}></use>
-                </svg>
+                <FaTiktok />
               </SocialsListItem>
               <SocialsListItem>
                 <svg width="20" height="20">
