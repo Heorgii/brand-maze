@@ -1,5 +1,38 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Button } from 'components/baseStyles/Button.styled';
+
+const fadeInLeftAnimation = keyframes`
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const fadeInRightAnimation = keyframes`
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const fadeInBottomAnimation = keyframes`
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 const ContactForm = styled.form`
   position: relative;
@@ -51,8 +84,23 @@ const LabelOfItem = styled.label`
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: ${props => props.theme.form};
-
   cursor: pointer;
+
+  &:nth-child(1) {
+    animation: ${fadeInLeftAnimation} 0.5s ease-in both;
+  }
+
+  &:nth-child(3) {
+    animation: ${fadeInLeftAnimation} 0.5s ease-in both;
+  }
+
+  &:nth-child(2) {
+    animation: ${fadeInRightAnimation} 0.5s ease-in both;
+  }
+
+  &:nth-child(4) {
+    animation: ${fadeInRightAnimation} 0.5s ease-in both;
+  }
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -122,6 +170,7 @@ const TextareaOfItem = styled.textarea`
   width: 100%;
   height: 40px;
   padding-top: 20px;
+  animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
 
   color: ${props => props.theme.form};
   background-color: transparent;
@@ -164,13 +213,6 @@ const ContainerForInputForFile = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
-
-  & .file-return {
-    font-style: normal;
-    font-size: 0.7em;
-    font-weight: 400;
-    color: ${props => props.theme.black};
-  }
 `;
 
 const InputForFile = styled.input`
@@ -180,7 +222,7 @@ const InputForFile = styled.input`
   display: block;
 
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -199,21 +241,15 @@ const InputForFile = styled.input`
   & ~ label {
     margin: 0;
   }
-
-  &:hover,
-  &:focus {
-    background: ${props => props.theme.greyLight};
-    box-shadow: 1px -1px 10px -2px ${props => props.theme.blackOpacity} inset;
-  }
 `;
 const LabelForInputForFile = styled.label`
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 156px;
   height: 40px;
   margin: 0 auto;
+  animation: ${fadeInLeftAnimation} 0.5s ease-in both;
 
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -234,17 +270,14 @@ const LabelForInputForFile = styled.label`
   }
 `;
 
-const ButtonSend = styled(Button)`
-  width: 156px;
-  height: 40px;
-  margin: 20px 0 0 auto;
-  font-size: 16px;
+const TextForInputForFile = styled.p`
+  animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
 
-  @media screen and (max-width: 768px) {
-    width: 100px;
-    height: 40px;
-    font-size: 10px;
-  }
+`
+
+const ButtonSend = styled(Button)`
+  margin: 20px 0 0 auto;
+  animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
 `;
 
 export {
@@ -258,4 +291,5 @@ export {
   ButtonSend,
   ContainerForInputForFile,
   LabelForInputForFile,
+  TextForInputForFile,
 };

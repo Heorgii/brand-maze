@@ -26,7 +26,7 @@ export const MobileMenuBox = styled.div`
 export const HeaderSvgMobile = styled.svg`
   fill: currentColor;
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 20px;
   cursor: pointer;
 `;

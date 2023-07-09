@@ -4,32 +4,71 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 
-import { Container, Title } from "components/baseStyles/CommonStyle.styled";
-import { ContainerForAbout, ContainerForIcon, Img, ItemImgText, PaddingItem, ContainerForTeam, ItemWrap, TitleItem, JobItem, SocialsList, SocialsListItem, ContainerForAboutForMobile, ContainerForIconTablet, ImgForTeam, ContainerForTeamForMobile, ContainerForTeamForTablet, TitleTeam } from "./About.styled";
+import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
+import {
+  ContainerForAbout,
+  ContainerForIcon,
+  Img,
+  ItemImgText,
+  PaddingItem,
+  ContainerForTeam,
+  ItemWrap,
+  TitleItem,
+  JobItem,
+  SocialsList,
+  SocialsListItem,
+  ContainerForAboutForMobile,
+  ContainerForIconTablet,
+  ImgForTeam,
+  ContainerForTeamForMobile,
+  ContainerForTeamForTablet,
+  TitleTeam,
+  ContainerForIconText,
+} from './About.styled';
 
-import chartbar from "../../../images/about/mdi_light_chart-bar.svg";
-import chartpie from "../../../images/about/mdi_light_chart-pie.svg";
-import flask from "../../../images/about/mdi_light_flask.svg";
-import gift from "../../../images/about/mdi_light_gift.svg";
+import chartbar from '../../../images/about/mdi_light_chart-bar.svg';
+import chartpie from '../../../images/about/mdi_light_chart-pie.svg';
+import flask from '../../../images/about/mdi_light_flask.svg';
+import gift from '../../../images/about/mdi_light_gift.svg';
 
-import heorhii from "../../../images/about/team/heorhii.jpg";
-import julia from "../../../images/about/team/julia.jpg";
-import vlad from "../../../images/about/team/vlad.jpg";
+import heorhii from '../../../images/about/team/heorhii.jpg';
+import julia from '../../../images/about/team/julia.jpg';
+import vlad from '../../../images/about/team/vlad.jpg';
 
 import sprite from '../../../images/sprite.svg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export const About = () => {
-  return <Container>
-  <Title>ABOUT</Title>
-  <ContainerForAbout>
-  <ContainerForIcon>
-    <div style={{padding:"20px"}}>Our approach to marketing is a holistic approach that includes strategic planning, creative design, effective marketing campaigns and an emphasis on building lasting relationships with clients. We work tirelessly to ensure the success and growth of our clients.</div>
-    <div style={{padding:"20px"}}>At Brand Maze, we pride ourselves on our ability to create exceptional brands that capture attention, demonstrate quality and leave a lasting impression. Our team of talented professionals work together, combining strategy, creativity and technology to achieve the best results for our clients.</div>
-    </ContainerForIcon>
-    <div style={{padding:"20px"}}>Join us at Brand Maze and let us be your trusted partner in developing your brand. Together we can create the magic that will make your brand stand out and attract more success.</div>
-  </ContainerForAbout>
-  <ContainerForAboutForMobile>
-  <Swiper
+  Aos.init();
+
+  return (
+    <Container>
+      <Title>ABOUT</Title>
+      <ContainerForAbout>
+        <ContainerForIcon>
+          <div style={{ padding: '20px' }}>
+            Our approach to marketing is a holistic approach that includes
+            strategic planning, creative design, effective marketing campaigns
+            and an emphasis on building lasting relationships with clients. We
+            work tirelessly to ensure the success and growth of our clients.
+          </div>
+          <div style={{ padding: '20px' }}>
+            At Brand Maze, we pride ourselves on our ability to create
+            exceptional brands that capture attention, demonstrate quality and
+            leave a lasting impression. Our team of talented professionals work
+            together, combining strategy, creativity and technology to achieve
+            the best results for our clients.
+          </div>
+        </ContainerForIcon>
+        <ContainerForIconText style={{ padding: '20px' }}>
+          Join us at Brand Maze and let us be your trusted partner in developing
+          your brand. Together we can create the magic that will make your brand
+          stand out and attract more success.
+        </ContainerForIconText>
+      </ContainerForAbout>
+      <ContainerForAboutForMobile>
+        <Swiper
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           spaceBetween={50}
           slidesPerView={1}
@@ -42,13 +81,28 @@ export const About = () => {
           loopedSlides={1}
         >
           <SwiperSlide>
-          <div style={{padding:"20px"}}>Our approach to marketing is a holistic approach that includes strategic planning, creative design, effective marketing campaigns and an emphasis on building lasting relationships with clients. We work tirelessly to ensure the success and growth of our clients.</div>
+            <div style={{ padding: '20px' }}>
+              Our approach to marketing is a holistic approach that includes
+              strategic planning, creative design, effective marketing campaigns
+              and an emphasis on building lasting relationships with clients. We
+              work tirelessly to ensure the success and growth of our clients.
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div style={{padding:"20px"}}>At Brand Maze, we pride ourselves on our ability to create exceptional brands that capture attention, demonstrate quality and leave a lasting impression. Our team of talented professionals work together, combining strategy, creativity and technology to achieve the best results for our clients.</div>
+            <div style={{ padding: '20px' }}>
+              At Brand Maze, we pride ourselves on our ability to create
+              exceptional brands that capture attention, demonstrate quality and
+              leave a lasting impression. Our team of talented professionals
+              work together, combining strategy, creativity and technology to
+              achieve the best results for our clients.
+            </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div style={{padding:"20px"}}>Join us at Brand Maze and let us be your trusted partner in developing your brand. Together we can create the magic that will make your brand stand out and attract more success.</div>
+            <div style={{ padding: '20px' }}>
+              Join us at Brand Maze and let us be your trusted partner in
+              developing your brand. Together we can create the magic that will
+              make your brand stand out and attract more success.
+            </div>
           </SwiperSlide>
         </Swiper>
   </ContainerForAboutForMobile>
@@ -113,13 +167,13 @@ export const About = () => {
                 <use href={sprite + '#envelop'}></use>
               </svg>
             </SocialsListItem>
-      </SocialsList>
-    </ItemWrap>
-    <ItemWrap>
-      <ImgForTeam src={julia} alt="julia"/>
-      <TitleItem>Julia golban</TitleItem>
-      <JobItem>Full-Stack Engineer</JobItem>
-      <SocialsList>
+          </SocialsList>
+        </ItemWrap>
+        <ItemWrap data-aos="flip-up" data-aos-delay="150">
+          <ImgForTeam src={julia} alt="julia" />
+          <TitleItem>Julia golban</TitleItem>
+          <JobItem>Full-Stack Engineer</JobItem>
+          <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
                 <use href={sprite + '#linkedin'}></use>
@@ -187,11 +241,11 @@ export const About = () => {
                 <use href={sprite + '#envelop'}></use>
               </svg>
             </SocialsListItem>
-      </SocialsList>
-    </ItemWrap>
-  </ContainerForTeam>
-  <ContainerForTeamForMobile>
-  <Swiper
+          </SocialsList>
+        </ItemWrap>
+      </ContainerForTeam>
+      <ContainerForTeamForMobile>
+        <Swiper
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           spaceBetween={50}
           slidesPerView={1}
@@ -320,10 +374,10 @@ export const About = () => {
             </SocialsList>
             </ItemWrap>
           </SwiperSlide>
-  </Swiper>
-  </ContainerForTeamForMobile>
-  <ContainerForTeamForTablet>
-  <Swiper
+        </Swiper>
+      </ContainerForTeamForMobile>
+      <ContainerForTeamForTablet>
+        <Swiper
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           spaceBetween={50}
           slidesPerView={2}
@@ -449,7 +503,8 @@ export const About = () => {
         </SocialsList>
             </ItemWrap>
           </SwiperSlide>
-  </Swiper>
-  </ContainerForTeamForTablet>
-  </Container>
+        </Swiper>
+      </ContainerForTeamForTablet>
+    </Container>
+  );
 };

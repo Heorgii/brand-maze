@@ -1,5 +1,52 @@
-import { styled } from 'styled-components';
-import { Button } from 'components/baseStyles/Button.styled';
+import { keyframes, styled } from 'styled-components';
+
+const fadeInLeftAnimation = keyframes`
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const fadeInRightAnimation = keyframes`
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const fadeInTopAnimation = keyframes`
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+const trackingInExpandFwdAnimation = keyframes`
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+`;
 
 export const WrapperText = styled.div`
   margin-bottom: 55px;
@@ -54,6 +101,7 @@ export const ListSkills = styled.ul`
   flex-direction: column;
   gap: 15px;
   text-align: center;
+  animation: ${fadeInRightAnimation} 0.5s ease-in both;
 
   @media screen and (min-width: 768px) {
     width: 40%;
@@ -67,7 +115,7 @@ export const ListSkills = styled.ul`
 
 export const Subtitle = styled.h2`
   position: relative;
-  margin-bottom: 30px;
+  margin: 30px 0;
 
   color: ${props => props.theme.heading};
   text-align: center;
@@ -76,6 +124,7 @@ export const Subtitle = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  animation: ${trackingInExpandFwdAnimation} 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 
   @media screen and (min-width: 768px) {
     font-size: 34px;
@@ -107,6 +156,8 @@ export const Subtitle = styled.h2`
 `;
 
 export const SubtitleSkills = styled(Subtitle)`
+  animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
   @media screen and (min-width: 1280px) {
     font-size: 40px;
   }
@@ -123,6 +174,7 @@ export const DescriptionSkills = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+  animation: ${fadeInLeftAnimation} 0.5s ease-in both;
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -246,7 +298,7 @@ export const Number = styled.span`
   font-style: normal;
   font-weight: 900;
   line-height: 1;
-  letter-spacing: -7px;
+  letter-spacing: -5px;
   text-transform: uppercase;
 
   background-color: rgba(0, 0, 0, 0.19);
@@ -255,7 +307,8 @@ export const Number = styled.span`
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-
+  /* background-color: ${props => props.theme.black}; */
+  
   @media screen and (min-width: 768px) {
     font-size: 200px;
   }
@@ -263,7 +316,7 @@ export const Number = styled.span`
 
 export const NumberSmall = styled(Number)`
   font-size: 48px;
-  letter-spacing: -4.8px;
+  letter-spacing: -2px;
 
   @media screen and (min-width: 768px) {
     font-size: 96px;
@@ -329,9 +382,4 @@ export const ListQuestions = styled.ul`
   @media screen and (min-width: 768px) {
     gap: 40px;
   }
-`;
-
-export const ButtonOrder = styled(Button)`
-  width: 200px;
-  height: 50px;
 `;

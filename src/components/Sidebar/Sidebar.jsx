@@ -17,13 +17,33 @@ import {
 import sprite from '../../images/sprite.svg';
 import menu from 'images/sprite.svg';
 import { MobileMenu } from './MobileMenu/MobileMenu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MobileMenuBox } from './MobileMenu/MobileMenu.styled';
 import { SwitchTheme } from 'components/ThemeStatus/SwitcherTheme/SwitchTheme';
 
 export const Sidebar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  // const [scrollPos, setScrollPos] = useState(0);
+  // const [visible, setVisible] = useState(true);
+
+  const [visible, setVisible] = useState(true);
+  const [scrollPos, setScrollPos] = useState(window.pageYOffset);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isScrollingUp = currentScrollPos < scrollPos;
+
+      setVisible(isScrollingUp || currentScrollPos === 0);
+      setScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrollPos]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -31,7 +51,8 @@ export const Sidebar = () => {
 
   return (
     <SidebarContainer>
-      <Header>
+      {/* className={visible ? 'scroll-up' : 'scroll-down'} */}
+      <Header isVisible={visible}>
         <LogoBox href="/brand-maze" aria-label="logo company">
           <Logo>Brand maze</Logo>
         </LogoBox>
@@ -110,7 +131,7 @@ export const Sidebar = () => {
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="27" height="27">
+              <svg width="20" height="20">
                 <use href={sprite + '#telegram'}></use>
               </svg>
             </SocialsListItem>
@@ -118,6 +139,7 @@ export const Sidebar = () => {
               <svg width="20" height="20">
                 <use href={sprite + '#twitter'}></use>
               </svg>
+
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">

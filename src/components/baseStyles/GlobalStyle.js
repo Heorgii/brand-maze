@@ -16,6 +16,10 @@ export const GlobalStyle = createGlobalStyle`
   font-family: source-code-pro, 'Menlo', 'Monaco', 'Consolas', 'Courier New',
     monospace;
   }
+  
+  main {
+    width: 100%;
+  }
 
 //-----reset-----//
 h1, h2, h3, h4, h5, h6, p {
@@ -35,9 +39,8 @@ img {
   height: auto;
 }
 
-main{
-  width: 100%;
-}
+//-----project slider-----//
+
 /* header {
   background-color: #5c0080;
   margin-bottom: 4rem;
@@ -54,9 +57,11 @@ main{
 .header-wrapper h1 {
   font-size: 2rem;
 }
+
 .image-gallery{
   width: 100%;
 }
+
 .image-gallery-wrapper {
   margin-top: 5rem;
   max-width: 800px;
@@ -65,6 +70,7 @@ main{
   border: 1px solid rgb(146, 129, 242);
   box-shadow: #2b15453d 1px 10px 10px 5px;
 }
+
 .image-gallery-thumbnail-image{
   width: 94px;
   height: 80px;
@@ -129,10 +135,12 @@ main{
   }
 }
 
+//-----add a file-----//
 .input-file-container {
   position: relative;
   width: 156px;
 } 
+
 .js .input-file {
   position: absolute;
   top: 0; left: 0;
@@ -140,12 +148,14 @@ main{
   opacity: 0;
   cursor: pointer;
 }
+
 .js .input-file:hover + .input-file-trigger,
 .js .input-file:focus + .input-file-trigger,
 .js .input-file-trigger:hover,
 .js .input-file-trigger:focus {
-  background: grey;
-  color: white;
+  background: ${props => props.theme.accentBlue};
+  color: ${props => props.theme.white};
+  box-shadow: 1px -1px 10px -2px ${props => props.theme.blackOpacity} inset;
 }
 
 .file-return {
@@ -156,8 +166,9 @@ main{
 }
 .js .file-return {
   font-style: italic;
-  font-size: .9em;
-  font-weight: bold;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: ${props => props.theme.black};
 }
 .js .file-return:not(:empty):before {
   content: " ";
@@ -171,11 +182,14 @@ main{
   }
 }
 
-
 //-----swiper-----//
   .swiper-wrapper{
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
+
+    @media only screen and (min-width: 1280px) {
+      width: 100px;
+    }
   }
 
   .swiper-slide, .swiper-slide-active{
@@ -183,6 +197,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .swiper-pagination-fraction,

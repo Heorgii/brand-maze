@@ -6,7 +6,7 @@ import Animal_welfare_img from 'images/projects/animal_welfare_project.webp';
 import Filmoteka_img from 'images/projects/filmoteka_project.webp';
 import Ice_cream_img from 'images/projects/ice_cream_project.webp';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
-import { Button } from 'components/baseStyles/Button.styled';
+import { ButtonLink } from 'components/baseStyles/Button.styled';
 
 export const Project = () => {
   const hendleClickProject = e => {
@@ -94,9 +94,13 @@ export const Project = () => {
           onClick={hendleClickProject}
         />
       </SlideContainer>
-      <Button style={{ marginTop: '20px', padding: '10px 20px' }}>
-        Order Now
-      </Button>
+      <ButtonLink
+        to="/contact"
+        aria-label="Open order form"
+        style={{ marginTop: '50px' }}
+      >
+        Order
+      </ButtonLink>
     </Container>
   );
 };
