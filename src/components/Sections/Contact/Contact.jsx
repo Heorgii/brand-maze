@@ -23,18 +23,18 @@ export const Contact = () => {
   const [file, setFile] = useState('');
 
   document.querySelector('html').classList.add('js');
-  // console.log(file);
+  console.log(handleSubmit,file);
 
-  // const handleSubmit = () => {
-  //   setUserFirstName('');
-  //   setUserLastName('');
-  //   setUserEmail('');
-  //   setUserPhone('');
-  //   setUserMessage('');
-  //   setFile('');
-  //   document.querySelectorAll('.file-return')[0].innerHTML =
-  //     '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
-  // };
+  const handleSubmit = () => {
+    setUserFirstName('');
+    setUserLastName('');
+    setUserEmail('');
+    setUserPhone('');
+    setUserMessage('');
+    setFile('');
+    document.querySelectorAll('.file-return')[0].innerHTML =
+      '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
+  };
 
   const handleChange = e => {
     e.preventDefault();
