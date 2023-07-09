@@ -11,6 +11,7 @@ export const theme = {
     greyHover: '#D3D3D3',
     accentRed: 'rgba(219, 47, 47, 1)',
     accentBlue: 'rgba(65, 45, 183, 1)',
+    accentGrey: 'rgba(200, 200, 200, 0.5)',
     form: '#8D8D8D',
   },
 
@@ -25,7 +26,7 @@ export const theme = {
     greyLight: '#ADADAD',
     greyHover: '#f0f0f0',
     accentRed: 'rgba(219, 47, 47, 1)',
-    accentBlue: 'rgba(65, 45, 183, 1)',
+    accentGrey: 'rgba(200, 200, 200, 0.5)',
     form: '#f0f0f0',
   },
 };

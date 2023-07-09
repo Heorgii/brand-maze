@@ -1,5 +1,5 @@
-import 'modern-normalize';
-import { createGlobalStyle } from 'styled-components';
+import "modern-normalize";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  
-  background-color: ${props => props.theme.white};
+  background-color: ${(props) => props.theme.white};
   }
 
   code {
@@ -48,7 +48,7 @@ main{
   margin: 0 auto;
   display: flex;
   padding: 1rem 0;
-  color: ${props => props.theme.white};
+  color: ${(props) => props.theme.white};
 }
 
 .header-wrapper h1 {
@@ -73,6 +73,13 @@ main{
 .image-gallery-image{
   width: 1205px;
   height: 926px;
+  object-fit: cover;
+  @media screen and (min-width: 768px) and (max-width: 999.9px) {
+  object-fit: contain;
+  }
+  @media screen and (min-width: 1000px) {
+  object-fit: contain;
+  }
 }
 
 .image-gallery-thumbnails-container{
@@ -81,25 +88,44 @@ main{
 
 .image-gallery-slide .image-gallery-description{
   top: 0;
-  left: 15px;
   bottom: auto;
-  color: white;
-  background-color: rgba(65, 45, 83, 1);
+  color: ${(props) => props.theme.black};
+  background-color: ${(props) => props.theme.white};
   font-size: 10px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  border-radius: 5px;
-  width: 90%;
-
+  width: 100%;
+  @media screen and (max-width: 767.9px) {
+  font-size: 18px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 999.9px) {
+  font-size: 20px;
+  }
+  @media screen and (min-width: 1000px) {
+  font-size: 24px;
+  }
 }
 
 .image-gallery-content .image-gallery-slide .image-gallery-image{
+  object-fit: cover;
+  @media screen and (min-width: 300px) and (max-width: 399.9px) {
+  height: 550px;
+  }
+  @media screen and (min-width: 400px) and (max-width: 767.9px) {
+  height: 550px;
+  object-fit: contain;
+  }
+  @media screen and (min-width: 768px) and (max-width: 999.9px) {
+  height: 700px;
   padding-top: 40px;
-  @media screen and (max-width: 768px) {
-    height: 300px;
-
+  object-fit: contain;
+  }
+  @media screen and (min-width: 1000px) {
+  height: 100vh;
+  padding-top: 40px;
+  object-fit: contain;
   }
 }
 
@@ -170,18 +196,18 @@ main{
   }
 
   .swiper-button-next::after {
-  color: ${props => props.theme.accentBlue};
+  color: ${(props) => props.theme.accentGrey};
 }
 
 .swiper-button-prev::after {
-  color: ${props => props.theme.accentBlue};
+  color: ${(props) => props.theme.accentGrey};
 }
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet{
-  background-color: ${props => props.theme.accentBlue}!important;
+  background-color: ${(props) => props.theme.accentBlue}!important;
 }
 .swiper-pagination-bullet {
-  background-color:${props => props.theme.accentRed}!important;
+  background-color:${(props) => props.theme.accentRed}!important;
 }
 
 .containerJustifyEnd {

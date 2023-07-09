@@ -1,6 +1,6 @@
-import { styled } from 'styled-components';
-import { Number, Text } from '../Services/Services.styled';
-import { Title } from 'components/baseStyles/CommonStyle.styled';
+import { styled } from "styled-components";
+import { Number, Text } from "../Services/Services.styled";
+import { Title } from "components/baseStyles/CommonStyle.styled";
 
 export const Box = styled.div``;
 
@@ -16,6 +16,7 @@ export const List = styled.ul`
 `;
 
 export const TitleHome = styled(Title)`
+  color: ${(props) => props.theme.black};
   @media screen and (max-width: 1279px) {
     flex-wrap: wrap;
   }
@@ -60,11 +61,10 @@ export const ListItemImg = styled.img`
 export const ListItemText = styled.p`
   display: flex;
   flex-wrap: wrap;
-
   width: 369px;
-  color: ${props => props.theme.blackOpacity};
+  color: ${(props) => props.theme.blackOpacity};
   font-size: 21px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -98,9 +98,9 @@ export const ListItemTextSwiper = styled.p`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  color: rgba(0, 0, 0, 0.8);
+  color: ${(props) => props.theme.blackOpacity};
   font-size: 21px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -132,9 +132,9 @@ export const ConclusionText = styled.p`
   flex-wrap: wrap;
   margin-top: 35px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.8);
+  color: ${(props) => props.theme.blackOpacity};
   font-size: 21px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -173,9 +173,9 @@ export const ProductionText = styled.p`
   bottom: 224px;
   transform: rotate(-90deg);
   text-align: center;
-  color: ${props => props.theme.blackOpacity};
+  color: ${(props) => props.theme.blackOpacity};
   font-size: 18px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -208,9 +208,9 @@ export const CompListItem = styled.li`
 
 export const ItemNumber = styled(Number)`
   font-size: 30px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0;
-
+  color: ${(props) => props.theme.black};
   @media screen and (min-width: 768px) {
     font-size: 80px;
   }
@@ -218,9 +218,9 @@ export const ItemNumber = styled(Number)`
 
 export const ItemTitle = styled.h3`
   margin-bottom: 15px;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -236,7 +236,7 @@ export const ItemTitle = styled.h3`
 `;
 
 export const ItemDiscr = styled(Text)`
-  color: rgba(0, 0, 0, 0.88);
+  color: ${(props) => props.theme.black};
   width: 319px;
   text-align: left;
 

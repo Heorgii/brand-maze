@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 export const SidebarContainer = styled.div`
   /* display: flex;
@@ -19,7 +19,7 @@ export const SidebarBox = styled.div`
 `;
 
 export const Header = styled.header`
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 
   @media screen and (max-width: 1279px) {
     display: flex;
@@ -42,9 +42,9 @@ export const HeaderSvg = styled.svg`
 `;
 
 export const Logo = styled.p`
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 45px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -91,16 +91,19 @@ export const NavList = styled.nav`
 export const NavListLink = styled(NavLink)`
   position: relative;
   display: inline-block;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 35px;
   text-transform: uppercase;
   text-decoration: none;
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (min-width: 400px) and (max-width: 1279.9px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
     font-size: 25px;
   }
 
@@ -109,13 +112,13 @@ export const NavListLink = styled(NavLink)`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
     width: 240px;
     height: 2px;
-    background-color: ${props => props.theme.black};
+    background-color: ${(props) => props.theme.black};
     transform: scaleX(0);
     transition: transform 0.2s ease-in-out;
     transform-origin: left center;
@@ -142,9 +145,9 @@ export const ContactList = styled.ul`
 `;
 
 export const ContactListItem = styled.li`
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   display: inline-block;
@@ -154,21 +157,21 @@ export const ContactListItem = styled.li`
   margin-top: 10px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 240px;
     height: 1px;
-    background-color: ${props => props.theme.black};
+    background-color: ${(props) => props.theme.black};
   }
 `;
 
 export const ContactListLink = styled.a`
   text-decoration: none;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
 
@@ -197,14 +200,14 @@ export const SocialsList = styled.ul`
 export const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 
   &:not(:last-child) {
     margin-right: 20px;
   }
   & > *:hover,
   & > *:focus {
-    fill: ${props => props.theme.accentRed};
+    fill: ${(props) => props.theme.accentRed};
   }
 
   & svg {

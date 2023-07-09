@@ -97,6 +97,9 @@ export const Home = () => {
           pagination={{ clickable: true }}
           mousewheel={true}
           keyboard={true}
+          loop={true}
+          loopPreventsSliding={true}
+          loopedSlides={1}
         >
           <List>
             <SwiperSlide>
