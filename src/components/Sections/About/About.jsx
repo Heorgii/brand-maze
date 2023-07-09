@@ -105,56 +105,66 @@ export const About = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-      </ContainerForAboutForMobile>
-      <ContainerForIcon>
-        <ContainerForIconTablet className="containerJustifyEnd">
-          <ItemImgText>
-            <Img src={gift} alt="gift" />
-            <PaddingItem>Experienced team</PaddingItem>
-          </ItemImgText>
-          <ItemImgText>
-            <Img src={chartpie} alt="chartpie" />
-            <PaddingItem>Business Strategy</PaddingItem>
-          </ItemImgText>
-        </ContainerForIconTablet>
-        <ContainerForIconTablet className="containerJustifyStart">
-          <ItemImgText>
-            <Img src={chartbar} alt="chartbar" />
-            <PaddingItem>Amazing Growth</PaddingItem>
-          </ItemImgText>
-          <ItemImgText>
-            <Img src={flask} alt="flask" />
-            <PaddingItem>Technical Supervision</PaddingItem>
-          </ItemImgText>
-        </ContainerForIconTablet>
-      </ContainerForIcon>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <TitleTeam>OUR PROFESSIONAL TEAM</TitleTeam>
-      </div>
-      <ContainerForTeam>
-        <ItemWrap data-aos="flip-up" data-aos-delay="150">
-          <ImgForTeam src={heorhii} alt="heorhii" />
-          <TitleItem>Heorhii rushchak</TitleItem>
-          <JobItem>Full-Stack Developer</JobItem>
-          <SocialsList>
+  </ContainerForAboutForMobile>
+  <ContainerForIcon>
+    <ContainerForIconTablet className='containerJustifyEnd'>
+    <ItemImgText>
+      <Img src={gift} alt="gift"/>
+      <PaddingItem>Experienced team</PaddingItem>
+    </ItemImgText>
+    <ItemImgText>
+      <Img src={chartpie} alt="chartpie"/>
+      <PaddingItem>Business Strategy</PaddingItem>
+    </ItemImgText>
+    </ContainerForIconTablet>
+    <ContainerForIconTablet className='containerJustifyStart'>
+    <ItemImgText>
+      <Img src={chartbar} alt="chartbar"/>
+      <PaddingItem>Amazing Growth</PaddingItem>
+    </ItemImgText>
+    <ItemImgText>
+      <Img src={flask} alt="flask"/>
+      <PaddingItem>Technical Supervision</PaddingItem>
+    </ItemImgText>
+    </ContainerForIconTablet>
+  </ContainerForIcon>
+    <div style={{display:"flex", justifyContent:"center"}}>
+    <TitleTeam>OUR PROFESSIONAL TEAM</TitleTeam>
+    </div>
+  <ContainerForTeam>
+    <ItemWrap>
+      <ImgForTeam src={vlad} alt="vlad"/>
+      <TitleItem>Vlad popov</TitleItem>
+      <JobItem>Full-Stack Developer</JobItem>
+      <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#instagram'}></use>
+                <use href={sprite + '#linkedin'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="27" height="27">
+              <svg width="20" height="20">
+                <use href={sprite + '#github'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#profile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#mobile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
                 <use href={sprite + '#telegram'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#twitter'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
+                <use href={sprite + '#envelop'}></use>
               </svg>
             </SocialsListItem>
           </SocialsList>
@@ -166,49 +176,69 @@ export const About = () => {
           <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#instagram'}></use>
+                <use href={sprite + '#linkedin'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="27" height="27">
+              <svg width="20" height="20">
+                <use href={sprite + '#github'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#profile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#mobile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
                 <use href={sprite + '#telegram'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#twitter'}></use>
+                <use href={sprite + '#envelop'}></use>
               </svg>
             </SocialsListItem>
+      </SocialsList>
+    </ItemWrap>
+    <ItemWrap>
+      <ImgForTeam src={heorhii} alt="heorhii"/>
+      <TitleItem>Heorhii rushchak</TitleItem>
+      <JobItem>Full-Stack Developer</JobItem>
+      <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
                 <use href={sprite + '#linkedin'}></use>
               </svg>
             </SocialsListItem>
-          </SocialsList>
-        </ItemWrap >
-        <ItemWrap data-aos="flip-up" data-aos-delay="150">
-          <ImgForTeam src={vlad} alt="vlad" />
-          <TitleItem>Vlad popov</TitleItem>
-          <JobItem>Full-Stack Developer</JobItem>
-          <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#instagram'}></use>
+                <use href={sprite + '#github'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="27" height="27">
+              <svg width="20" height="20">
+                <use href={sprite + '#profile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#mobile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
                 <use href={sprite + '#telegram'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#twitter'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
+                <use href={sprite + '#envelop'}></use>
               </svg>
             </SocialsListItem>
           </SocialsList>
@@ -229,89 +259,119 @@ export const About = () => {
         >
           <SwiperSlide>
             <ItemWrap>
-              <ImgForTeam src={heorhii} alt="heorhii" />
-              <TitleItem>Heorhii rushchak</TitleItem>
-              <JobItem>Full-Stack Developer</JobItem>
-              <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#instagram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="27" height="27">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#twitter'}></use>
-                  </svg>
-                </SocialsListItem>
+            <ImgForTeam src={vlad} alt="vlad"/>
+            <TitleItem>Vlad popov</TitleItem>
+            <JobItem>Full-Stack Developer</JobItem>
+            <SocialsList>
                 <SocialsListItem>
                   <svg width="20" height="20">
                     <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
-              </SocialsList>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#github'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#profile'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#mobile'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#telegram'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#envelop'}></use>
+                  </svg>
+                </SocialsListItem>
+            </SocialsList>
             </ItemWrap>
           </SwiperSlide>
           <SwiperSlide>
             <ItemWrap>
-              <ImgForTeam src={julia} alt="julia" />
-              <TitleItem>Julia golban</TitleItem>
-              <JobItem>Full-Stack Engineer</JobItem>
-              <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#instagram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="27" height="27">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#twitter'}></use>
-                  </svg>
-                </SocialsListItem>
+            <ImgForTeam src={julia} alt="julia"/>
+            <TitleItem>Julia golban</TitleItem>
+            <JobItem>Full-Stack Engineer</JobItem>
+            <SocialsList>
                 <SocialsListItem>
                   <svg width="20" height="20">
                     <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
-              </SocialsList>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#github'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#profile'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#mobile'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#telegram'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#envelop'}></use>
+                  </svg>
+                </SocialsListItem>
+            </SocialsList>
             </ItemWrap>
           </SwiperSlide>
           <SwiperSlide>
             <ItemWrap>
-              <ImgForTeam src={vlad} alt="vlad" />
-              <TitleItem>Vlad popov</TitleItem>
-              <JobItem>Full-Stack Developer</JobItem>
-              <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#instagram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="27" height="27">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#twitter'}></use>
-                  </svg>
-                </SocialsListItem>
+            <ImgForTeam src={heorhii} alt="heorhii"/>
+            <TitleItem>Heorhii rushchak</TitleItem>
+            <JobItem>Full-Stack Developer</JobItem>
+            <SocialsList>
                 <SocialsListItem>
                   <svg width="20" height="20">
                     <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
-              </SocialsList>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#github'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#profile'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#mobile'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#telegram'}></use>
+                  </svg>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <svg width="20" height="20">
+                    <use href={sprite + '#envelop'}></use>
+                  </svg>
+                </SocialsListItem>
+            </SocialsList>
             </ItemWrap>
           </SwiperSlide>
         </Swiper>
@@ -328,89 +388,119 @@ export const About = () => {
         >
           <SwiperSlide>
             <ItemWrap>
-              <ImgForTeam src={heorhii} alt="heorhii" />
-              <TitleItem>Heorhii rushchak</TitleItem>
-              <JobItem>Full-Stack Developer</JobItem>
-              <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#instagram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="27" height="27">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#twitter'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-              </SocialsList>
+        <ImgForTeam src={vlad} alt="vlad"/>
+        <TitleItem>Vlad popov</TitleItem>
+        <JobItem>Full-Stack Developer</JobItem>
+        <SocialsList>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#linkedin'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#github'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#profile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#mobile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#telegram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#envelop'}></use>
+              </svg>
+            </SocialsListItem>
+        </SocialsList>
             </ItemWrap>
           </SwiperSlide>
           <SwiperSlide>
             <ItemWrap>
-              <ImgForTeam src={julia} alt="julia" />
-              <TitleItem>Julia golban</TitleItem>
-              <JobItem>Full-Stack Engineer</JobItem>
-              <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#instagram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="27" height="27">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#twitter'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-              </SocialsList>
+        <ImgForTeam src={julia} alt="julia"/>
+        <TitleItem>Julia golban</TitleItem>
+        <JobItem>Full-Stack Engineer</JobItem>
+        <SocialsList>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#linkedin'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#github'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#profile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#mobile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#telegram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#envelop'}></use>
+              </svg>
+            </SocialsListItem>
+        </SocialsList>
             </ItemWrap>
           </SwiperSlide>
           <SwiperSlide>
             <ItemWrap>
-              <ImgForTeam src={vlad} alt="vlad" />
-              <TitleItem>Vlad popov</TitleItem>
-              <JobItem>Full-Stack Developer</JobItem>
-              <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#instagram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="27" height="27">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#twitter'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-              </SocialsList>
+        <ImgForTeam src={heorhii} alt="heorhii"/>
+        <TitleItem>Heorhii rushchak</TitleItem>
+        <JobItem>Full-Stack Developer</JobItem>
+        <SocialsList>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#linkedin'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#github'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#profile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#mobile'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#telegram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#envelop'}></use>
+              </svg>
+            </SocialsListItem>
+        </SocialsList>
             </ItemWrap>
           </SwiperSlide>
         </Swiper>

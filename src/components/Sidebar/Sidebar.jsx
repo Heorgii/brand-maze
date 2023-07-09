@@ -14,10 +14,7 @@ import {
   Header,
   LogoBox,
 } from './Sidebar.styled';
-import instagram from '../../images/sprite.svg';
-import telegram from '../../images/sprite.svg';
-import { FaTiktok } from 'react-icons/fa';
-import linkedin from '../../images/sprite.svg';
+import sprite from '../../images/sprite.svg';
 import menu from 'images/sprite.svg';
 import { MobileMenu } from './MobileMenu/MobileMenu';
 import { useEffect, useState } from 'react';
@@ -130,20 +127,23 @@ export const Sidebar = () => {
           <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={instagram + '#instagram'}></use>
+                <use href={sprite + '#instagram'}></use>
               </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="22" height="22">
-                <use href={telegram + '#telegram'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <FaTiktok />
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={linkedin + '#linkedin'}></use>
+                <use href={sprite + '#telegram'}></use>
+              </svg>
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#twitter'}></use>
+              </svg>
+
+            </SocialsListItem>
+            <SocialsListItem>
+              <svg width="20" height="20">
+                <use href={sprite + '#linkedin'}></use>
               </svg>
             </SocialsListItem>
           </SocialsList>

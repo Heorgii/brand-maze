@@ -33,7 +33,47 @@ export const Home = () => {
   return (
     <Container>
       <TitleHome>BUILDING BETTER BRANDS</TitleHome>
+      <ListBoxSwaper>
+        <Swiper
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          mousewheel={true}
+          keyboard={true}
+          loop={true}
+          loopPreventsSliding={true}
+          loopedSlides={1}
+        >
+          <List>
+            <SwiperSlide>
+              <ListItemImg src={homePage} alt="" />
+            </SwiperSlide>
 
+            <SwiperSlide>
+              <ListItemTextSwiper>
+                We work tirelessly to develop long-term relationships with our
+                partners, just as you strive to create strong bonds with the
+                customers who purchase your products or use your services.
+              </ListItemTextSwiper>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <ListItemImg src={homePage} alt="" />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <ListItemTextSwiper>
+                We are creators of exceptional brands. This is the embodiment of
+                our business. Under one virtual roof, we do incredible things to
+                achieve this goal:
+                <span> we build better brands. </span>
+              </ListItemTextSwiper>
+            </SwiperSlide>
+          </List>
+        </Swiper>
+      </ListBoxSwaper>
       <ListBox>
         <List>
           <ListItem>

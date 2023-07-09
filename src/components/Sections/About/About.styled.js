@@ -41,6 +41,7 @@ const ContainerForAbout = styled.div`
   flex-wrap: wrap;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
+  font-size: 21px;
   width: 100%;
   overflow: hidden;
   padding: 20px 30px;
@@ -157,7 +158,8 @@ const ContainerForIconTablet = styled.div`
 const TitleTeam = styled.h3`
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  color: ${props => props.theme.black};
+  font-size: 32px;
+  color: ${(props) => props.theme.black};
 `;
 
 const Img = styled.img`
@@ -230,6 +232,10 @@ const JobItem = styled.h5`
 `;
 const SocialsList = styled.ul`
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 400px) {
+    flex-direction: row;
+  }
 `;
 
 const SocialsListItem = styled.li`

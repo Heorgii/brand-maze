@@ -56,7 +56,6 @@ export const Header = styled.header`
   background-color: ${props => props.theme.white};
 
   @media screen and (max-width: 1280px) {
-
     display: flex;
     position: fixed;
     top: 0;
@@ -137,9 +136,9 @@ export const NavList = styled.nav`
 export const NavListLink = styled(NavLink)`
   position: relative;
   display: inline-block;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 35px;
@@ -165,7 +164,10 @@ export const NavListLink = styled(NavLink)`
     animation: ${fadeInLeftAnimation} 0.9s ease-in both;
   }
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (min-width: 400px) and (max-width: 1279.9px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1280px) {
     font-size: 25px;
   }
 
@@ -174,7 +176,7 @@ export const NavListLink = styled(NavLink)`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -208,9 +210,9 @@ export const ContactList = styled.ul`
 `;
 
 export const ContactListItem = styled.li`
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   display: inline-block;
@@ -220,21 +222,21 @@ export const ContactListItem = styled.li`
   margin-top: 10px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 240px;
     height: 1px;
-    background-color: ${props => props.theme.black};
+    background-color: ${(props) => props.theme.black};
   }
 `;
 
 export const ContactListLink = styled.a`
   text-decoration: none;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
 
@@ -264,14 +266,14 @@ export const SocialsList = styled.ul`
 export const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 
   &:not(:last-child) {
     margin-right: 20px;
   }
   & > *:hover,
   & > *:focus {
-    fill: ${props => props.theme.accentRed};
+    fill: ${(props) => props.theme.accentRed};
   }
 
   & svg {
