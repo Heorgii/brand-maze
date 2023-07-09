@@ -23,6 +23,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
+import { useEffect } from 'react';
 // import { useState } from 'react';
 // import { Carousel } from './Carousel/Carousel';
 
@@ -83,6 +84,14 @@ export const Home = () => {
   //     prevSlide === 0 ? slides.length - 1 : prevSlide - 1
   //   );
   // };
+
+  useEffect(()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+    },[])
 
   return (
     <Container>

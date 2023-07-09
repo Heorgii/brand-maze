@@ -17,8 +17,18 @@ import julia from "../../../images/about/team/julia.jpg";
 import vlad from "../../../images/about/team/vlad.jpg";
 
 import sprite from '../../../images/sprite.svg';
+import { useEffect } from 'react';
 
 export const About = () => {
+
+  useEffect(()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+    },[])
+
   return <Container>
   <Title>ABOUT</Title>
   <ContainerForAbout>

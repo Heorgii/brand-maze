@@ -18,8 +18,13 @@ import linkedin from 'images/sprite.svg';
 import close from 'images/sprite.svg';
 import { useLocation } from 'react-router';
 
-export const MobileMenu = ({ isOpen, toggleMenu }) => {
+export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
   const location = useLocation();
+
+  if(isOpen){document.addEventListener("keydown",(e)=>{if(e.code === 'Escape'){setIsOpen(false)}});
+document.querySelector('body').style.overflow='hidden'} else {
+  document.querySelector('body').style.overflow='visible'
+}
 
   return (
     <>
