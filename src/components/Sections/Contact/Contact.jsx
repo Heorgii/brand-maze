@@ -107,6 +107,11 @@ export const Contact = () => {
           </LabelOfItem>
           <input type="hidden" name="_captcha" value="true" />
           <input type="hidden" name="_subject" value="New Message!!!!" />
+          <input
+            type="hidden"
+            name="_next"
+            value="http://localhost:3000/brand-maze/home"
+          />
           <LabelOfItem aria-label="Email">
             <InputOfItem
               type="email"
