@@ -39,15 +39,24 @@ const ContainerForAbout = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-size: 21px;
+  font-size: 14px;
   width: 100%;
   overflow: hidden;
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   color: ${props => props.theme.black};
+
   @media screen and (max-width: 768px) {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
   }
 `;
 
@@ -57,14 +66,26 @@ const ContainerForAboutForMobile = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
+  font-size: 14px;
+
   width: 100%;
+  margin-bottom: 55px;
   overflow: hidden;
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   color: ${props => props.theme.black};
+
   @media screen and (max-width: 768px) {
     display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
   }
 `;
 
@@ -74,13 +95,23 @@ const ContainerForTeamForMobile = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
+  font-size: 14px;
+
   width: 100%;
   overflow: hidden;
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   @media screen and (min-width: 799.9px) {
     display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
   }
 `;
 
@@ -90,13 +121,23 @@ const ContainerForTeamForTablet = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
+  font-size: 14px;
+
   width: 100%;
   overflow: hidden;
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   @media screen and (min-width: 800px) and (max-width: 999.9px) {
     display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
   }
 `;
 const ContainerForTeam = styled.div`
@@ -105,26 +146,39 @@ const ContainerForTeam = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   width: 100%;
   overflow: hidden;
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   @media screen and (min-width: 1000px) {
     display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
   }
 `;
 const ContainerForIcon = styled.div`
   display: flex;
   position: relative;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
+  gap: 20px;
+
   width: 100%;
+  margin-bottom: 40px;
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+
   overflow: hidden;
-  padding-bottom: 40px;
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -141,6 +195,7 @@ const ContainerForIcon = styled.div`
 `;
 const ContainerForIconText = styled.div`
   animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+  margin-bottom: 40px;
 `;
 const ContainerForIconTablet = styled.div`
   display: flex;
@@ -148,18 +203,21 @@ const ContainerForIconTablet = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+
   width: 100%;
+
   overflow: hidden;
+
   @media screen and (max-width: 490px) {
     flex-direction: column;
   }
 `;
 
 const TitleTeam = styled.h3`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-size: 32px;
-  color: ${(props) => props.theme.black};
+  font-size: 24px;
+  color: ${props => props.theme.black};
 `;
 
 const Img = styled.img`
@@ -198,31 +256,32 @@ const ItemWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   width: 100%;
   overflow: hidden;
   padding: 20px 30px;
 `;
-const TitleItem = styled.div`
-  font-family: 'Roboto', sans-serif;
+
+const TitleItem = styled.h4`
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-size: 32px;
+  font-size: 20px;
   letter-spacing: 4%;
   font-weight: 700;
   text-transform: uppercase;
   color: ${props => props.theme.black};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 4px;
-  min-height: 100px;
+
+  margin-top: 15px;
+  margin-bottom: 4px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 const JobItem = styled.h5`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 18px;
   letter-spacing: 4%;
@@ -230,12 +289,14 @@ const JobItem = styled.h5`
   color: ${props => props.theme.grey};
   min-height: 42px;
 `;
+
 const SocialsList = styled.ul`
   display: flex;
-  flex-direction: column;
-  @media screen and (min-width: 400px) {
-    flex-direction: row;
-  }
+  flex-direction: row;
+
+  /* @media screen and (min-width: 400px) {
+    flex-direction: column;
+  } */
 `;
 
 const SocialsListItem = styled.li`

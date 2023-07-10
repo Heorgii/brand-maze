@@ -124,7 +124,8 @@ export const Subtitle = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  animation: ${trackingInExpandFwdAnimation} 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: ${trackingInExpandFwdAnimation} 0.5s
+    cubic-bezier(0.215, 0.61, 0.355, 1) both;
 
   @media screen and (min-width: 768px) {
     font-size: 34px;
@@ -303,12 +304,12 @@ export const Number = styled.span`
 
   background-color: rgba(0, 0, 0, 0.19);
   color: transparent;
-  text-shadow: 2px 6px 3px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 3px 0px rgba(255, 255, 255, 0.5);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   /* background-color: ${props => props.theme.black}; */
-  
+
   @media screen and (min-width: 768px) {
     font-size: 200px;
   }

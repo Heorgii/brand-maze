@@ -46,7 +46,7 @@ const ContactForm = styled.form`
   margin-top: 25px;
   padding: 0 30px;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
 
   overflow: hidden;
@@ -223,7 +223,7 @@ const InputForFile = styled.input`
 
   text-align: center;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -252,7 +252,7 @@ const LabelForInputForFile = styled.label`
   animation: ${fadeInLeftAnimation} 0.5s ease-in both;
 
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

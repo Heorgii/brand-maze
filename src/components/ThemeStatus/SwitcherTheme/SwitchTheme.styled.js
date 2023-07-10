@@ -31,7 +31,7 @@ const SwitcherWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
   position: fixed;
   top: 20px;
@@ -45,7 +45,7 @@ const SwitcherWrapper = styled.div`
     right: 55px;
   }
 
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1280px) {
     top: 30px;
     right: 55px;
   }
