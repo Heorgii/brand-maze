@@ -13,7 +13,6 @@ import {
   HeaderSvg,
   Header,
   LogoBox,
-  SocialsListItemLink,
 } from './Sidebar.styled';
 import sprite from '../../images/sprite.svg';
 import menu from 'images/sprite.svg';
@@ -132,18 +131,18 @@ export const Sidebar = () => {
 
           <SocialsList>
             <SocialsListItem>
-                <SocialsListItemLink href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj" target="_blank" rel="noopener noreferrer">
                   <svg width="20" height="20">
                     <use href={sprite + '#instagram'}></use>
                   </svg>
-                </SocialsListItemLink>
+                </a>
             </SocialsListItem>
             <SocialsListItem>
-              <SocialsListItemLink href="https://t.me/brandmaze" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/brandmaze" target="_blank" rel="noopener noreferrer">
                 <svg width="20" height="20">
                   <use href={sprite + '#telegram'}></use>
                 </svg>
-              </SocialsListItemLink>
+              </a>
             </SocialsListItem>
             <SocialsListItem>
               <FaTiktok />
