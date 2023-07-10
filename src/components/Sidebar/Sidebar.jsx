@@ -13,6 +13,7 @@ import {
   HeaderSvg,
   Header,
   LogoBox,
+  SocialsListItemLink,
 } from './Sidebar.styled';
 import sprite from '../../images/sprite.svg';
 import menu from 'images/sprite.svg';
@@ -62,7 +63,11 @@ export const Sidebar = () => {
           <use href={menu + '#menu'}></use>
         </HeaderSvg>
         <MobileMenuBox className={`collapsed ${isOpen ? 'is-expanded' : ''}`}>
-          <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} setIsOpen={setIsOpen}/>
+          <MobileMenu
+            isOpen={isOpen}
+            toggleMenu={toggleMenu}
+            setIsOpen={setIsOpen}
+          />
         </MobileMenuBox>
       </Header>
 
@@ -127,14 +132,20 @@ export const Sidebar = () => {
 
           <SocialsList>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#instagram'}></use>
-              </svg>
+              <SocialsListItemLink>
+                <SocialsListItemLink href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj" target="_blank" rel="noopener noreferrer">
+                  <svg width="20" height="20">
+                    <use href={sprite + '#instagram'}></use>
+                  </svg>
+                </SocialsListItemLink>
+              </SocialsListItemLink>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#telegram'}></use>
-              </svg>
+              <SocialsListItemLink href="https://t.me/brandmaze" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20">
+                  <use href={sprite + '#telegram'}></use>
+                </svg>
+              </SocialsListItemLink>
             </SocialsListItem>
             <SocialsListItem>
               <FaTiktok />

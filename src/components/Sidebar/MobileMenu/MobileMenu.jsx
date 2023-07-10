@@ -3,6 +3,7 @@ import {
   ContactListLink,
   SocialsList,
   SocialsListItem,
+  SocialsListItemLink,
 } from '../Sidebar.styled';
 import {
   ContactListMobile,
@@ -21,10 +22,16 @@ import { useLocation } from 'react-router';
 export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
   const location = useLocation();
 
-  if(isOpen){document.addEventListener("keydown",(e)=>{if(e.code === 'Escape'){setIsOpen(false)}});
-document.querySelector('body').style.overflow='hidden'} else {
-  document.querySelector('body').style.overflow='visible'
-}
+  if (isOpen) {
+    document.addEventListener('keydown', e => {
+      if (e.code === 'Escape') {
+        setIsOpen(false);
+      }
+    });
+    document.querySelector('body').style.overflow = 'hidden';
+  } else {
+    document.querySelector('body').style.overflow = 'visible';
+  }
 
   return (
     <>
@@ -101,14 +108,18 @@ document.querySelector('body').style.overflow='hidden'} else {
 
             <SocialsList>
               <SocialsListItem>
-                <svg width="20" height="20">
-                  <use href={instagram + '#instagram'}></use>
-                </svg>
+                <SocialsListItemLink href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj" target="_blank" rel="noopener noreferrer">
+                  <svg width="20" height="20">
+                    <use href={instagram + '#instagram'}></use>
+                  </svg>
+                </SocialsListItemLink>
               </SocialsListItem>
               <SocialsListItem>
-                <svg width="22" height="22">
-                  <use href={telegram + '#telegram'}></use>
-                </svg>
+                <SocialsListItemLink href="https://t.me/brandmaze" target="_blank" rel="noopener noreferrer">
+                  <svg width="22" height="22">
+                    <use href={telegram + '#telegram'}></use>
+                  </svg>
+                </SocialsListItemLink>
               </SocialsListItem>
               <SocialsListItem>
                 <FaTiktok />

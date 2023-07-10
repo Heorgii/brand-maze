@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const scaleInCenter = keyframes`
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
 
 const SlideContainer = styled.div`
   display: flex;
@@ -9,6 +20,7 @@ const SlideContainer = styled.div`
   /* width: 90%; */
   min-height: 441px;
   overflow: hidden;
+  animation: ${scaleInCenter} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
   @media screen and (max-width: 768px) {
     min-height: 200px;

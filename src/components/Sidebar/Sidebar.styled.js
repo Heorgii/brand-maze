@@ -282,7 +282,18 @@ export const SocialsListItem = styled.li`
     fill: ${props => props.theme.accentRed};
   }
 
-  & svg {
+  &.svg {
     fill: currentColor;
   }
+`;
+
+export const SocialsListItemLink = styled.a`
+  text-decoration: none;
+  & > *:hover,
+  & > *:focus {
+    fill: ${props => props.theme.accentRed};
+  }
+  &:active {
+  text-decoration: none;
+}
 `;
