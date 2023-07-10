@@ -24,6 +24,7 @@ import {
   ContainerForTeamForTablet,
   TitleTeam,
   ContainerForIconText,
+  ContainerForAboutItem,
 } from './About.styled';
 
 import chartbar from '../../../images/about/mdi_light_chart-bar.svg';
@@ -54,7 +55,7 @@ export const About = () => {
     <Container>
       <Title>ABOUT</Title>
       <ContainerForAbout>
-        <ContainerForIcon>
+        <ContainerForAboutItem>
           <p>
             Our approach to marketing is a holistic approach that includes
             strategic planning, creative design, effective marketing campaigns
@@ -68,7 +69,7 @@ export const About = () => {
             together, combining strategy, creativity and technology to achieve
             the best results for our clients.
           </p>
-        </ContainerForIcon>
+        </ContainerForAboutItem>
         <ContainerForIconText>
           Join us at Brand Maze and let us be your trusted partner in developing
           your brand. Together we can create the magic that will make your brand
@@ -147,22 +148,12 @@ export const About = () => {
           <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
                 <use href={sprite + '#github'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#profile'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#mobile'}></use>
+                <use href={sprite + '#linkedin'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
@@ -184,22 +175,12 @@ export const About = () => {
           <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
                 <use href={sprite + '#github'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#profile'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#mobile'}></use>
+                <use href={sprite + '#linkedin'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
@@ -221,22 +202,12 @@ export const About = () => {
           <SocialsList>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
                 <use href={sprite + '#github'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
               <svg width="20" height="20">
-                <use href={sprite + '#profile'}></use>
-              </svg>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#mobile'}></use>
+                <use href={sprite + '#linkedin'}></use>
               </svg>
             </SocialsListItem>
             <SocialsListItem>
@@ -273,22 +244,12 @@ export const About = () => {
               <SocialsList>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#profile'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#mobile'}></use>
+                    <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
@@ -310,24 +271,14 @@ export const About = () => {
               <TitleItem>Julia golban</TitleItem>
               <JobItem>Full-Stack Engineer</JobItem>
               <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
+              <SocialsListItem>
                   <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#profile'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#mobile'}></use>
+                    <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
@@ -351,22 +302,12 @@ export const About = () => {
               <SocialsList>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#profile'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#mobile'}></use>
+                    <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
@@ -402,22 +343,12 @@ export const About = () => {
               <SocialsList>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#profile'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#mobile'}></use>
+                    <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
@@ -439,24 +370,14 @@ export const About = () => {
               <TitleItem>Julia golban</TitleItem>
               <JobItem>Full-Stack Engineer</JobItem>
               <SocialsList>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
+              <SocialsListItem>
                   <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#profile'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#mobile'}></use>
+                    <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
@@ -480,22 +401,12 @@ export const About = () => {
               <SocialsList>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>
                   <svg width="20" height="20">
-                    <use href={sprite + '#profile'}></use>
-                  </svg>
-                </SocialsListItem>
-                <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#mobile'}></use>
+                    <use href={sprite + '#linkedin'}></use>
                   </svg>
                 </SocialsListItem>
                 <SocialsListItem>

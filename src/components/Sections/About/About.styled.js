@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const fadeInLeftAnimation = keyframes`
   0% {
@@ -34,24 +34,20 @@ const fadeInBottomAnimation = keyframes`
 `;
 
 const ContainerForAbout = styled.div`
-  display: flex;
+  display: none;
   position: relative;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 14px;
   width: 100%;
   overflow: hidden;
-  /* padding: 20px 30px; */
-  color: ${props => props.theme.black};
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  color: ${(props) => props.theme.black};
 
   @media screen and (min-width: 768px) {
+    display: flex;
     font-size: 16px;
   }
 
@@ -61,27 +57,22 @@ const ContainerForAbout = styled.div`
 `;
 
 const ContainerForAboutForMobile = styled.div`
-  display: none;
+  display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 14px;
-
   width: 100%;
   margin-bottom: 55px;
   overflow: hidden;
-  /* padding: 20px 30px; */
-  color: ${props => props.theme.black};
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-  }
+  color: ${(props) => props.theme.black};
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
+    display: none;
   }
 
   @media screen and (min-width: 1280px) {
@@ -95,7 +86,7 @@ const ContainerForTeamForMobile = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 14px;
 
@@ -121,7 +112,7 @@ const ContainerForTeamForTablet = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 14px;
 
@@ -146,11 +137,10 @@ const ContainerForTeam = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   width: 100%;
   overflow: hidden;
-  /* padding: 20px 30px; */
   @media screen and (min-width: 1000px) {
     display: flex;
   }
@@ -163,24 +153,54 @@ const ContainerForTeam = styled.div`
     font-size: 18px;
   }
 `;
+const ContainerForAboutItem = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  & > * {
+    &:nth-child(2) {
+      animation: ${fadeInRightAnimation} 0.5s ease-in both;
+    }
+
+    &:nth-child(1) {
+      animation: ${fadeInLeftAnimation} 0.5s ease-in both;
+    }
+  }
+`;
 const ContainerForIcon = styled.div`
   display: flex;
   position: relative;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
-  gap: 20px;
+  flex-direction: column;
 
   width: 100%;
   margin-bottom: 40px;
 
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
 
   overflow: hidden;
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
   }
 
   & > * {
@@ -203,21 +223,21 @@ const ContainerForIconTablet = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-
+  flex-direction: column;
   width: 100%;
 
   overflow: hidden;
 
-  @media screen and (max-width: 490px) {
-    flex-direction: column;
+  @media screen and (min-width: 490px) {
+    flex-direction: row;
   }
 `;
 
 const TitleTeam = styled.h3`
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 24px;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 `;
 
 const Img = styled.img`
@@ -228,11 +248,11 @@ const Img = styled.img`
 `;
 
 const ImgForTeam = styled.img`
+  width: 150px;
+  height: 257px;
+  @media screen and (min-width: 490px) {
   width: 250px;
   height: 357px;
-  @media screen and (max-width: 490px) {
-    width: 150px;
-    height: 257px;
   }
 `;
 
@@ -243,7 +263,7 @@ const ItemImgText = styled.div`
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 `;
 const PaddingItem = styled.p`
   padding: 16px;
@@ -256,7 +276,7 @@ const ItemWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   width: 100%;
   overflow: hidden;
@@ -264,13 +284,13 @@ const ItemWrap = styled.div`
 `;
 
 const TitleItem = styled.h4`
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 4%;
   font-weight: 700;
   text-transform: uppercase;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 
   margin-top: 15px;
   margin-bottom: 4px;
@@ -281,35 +301,31 @@ const TitleItem = styled.h4`
 `;
 
 const JobItem = styled.h5`
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 18px;
   letter-spacing: 4%;
   font-weight: 500;
-  color: ${props => props.theme.grey};
+  color: ${(props) => props.theme.grey};
   min-height: 42px;
 `;
 
 const SocialsList = styled.ul`
   display: flex;
   flex-direction: row;
-
-  /* @media screen and (min-width: 400px) {
-    flex-direction: column;
-  } */
 `;
 
 const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
-  color: ${props => props.theme.black};
+  color: ${(props) => props.theme.black};
 
   &:not(:last-child) {
     margin-right: 20px;
   }
   & > *:hover,
   & > *:focus {
-    fill: ${props => props.theme.accentRed};
+    fill: ${(props) => props.theme.accentRed};
   }
 
   & svg {
@@ -336,4 +352,5 @@ export {
   ContainerForTeamForMobile,
   ContainerForTeamForTablet,
   TitleTeam,
+  ContainerForAboutItem,
 };
