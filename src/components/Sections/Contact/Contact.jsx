@@ -67,6 +67,12 @@ export const Contact = () => {
     }
   };
 
+  // const [ setShowSuccess] = useState(false);//showSuccess
+
+  // const handleSuccess = () => {
+  //   setShowSuccess(true);
+  // };
+
   return (
     <Container>
       <Title>Contact</Title>
@@ -194,7 +200,15 @@ export const Contact = () => {
             mb)
           </TextForInputForFile>
         </ContainerForInputForFile>
-        <ButtonSend type="submit">Send message</ButtonSend>
+        {/* onClick={handleSuccess} */}
+        <ButtonSend type="submit" >
+          Send message
+        </ButtonSend>
+        {/* {showSuccess && (
+          <div style={{ backgroundColor: 'red' }}>
+            <h1>We received your message and will answer you soon</h1>
+          </div>
+        )} */}
       </ContactForm>
     </Container>
   );
