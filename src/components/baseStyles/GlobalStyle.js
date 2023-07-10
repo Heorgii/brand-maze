@@ -1,5 +1,5 @@
-import "modern-normalize";
-import { createGlobalStyle } from "styled-components";
+import 'modern-normalize';
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  
-  background-color: ${(props) => props.theme.white};
+  background-color: ${props => props.theme.white};
   }
 
   code {
@@ -51,7 +51,7 @@ img {
   margin: 0 auto;
   display: flex;
   padding: 1rem 0;
-  color: ${(props) => props.theme.white};
+  color: ${props => props.theme.white};
 }
 
 .header-wrapper h1 {
@@ -95,10 +95,10 @@ img {
 .image-gallery-slide .image-gallery-description{
   top: 0;
   bottom: auto;
-  color: ${(props) => props.theme.black};
-  background-color: ${(props) => props.theme.white};
+  color: ${props => props.theme.black};
+  background-color: ${props => props.theme.white};
   font-size: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -211,18 +211,18 @@ img {
   }
 
   .swiper-button-next::after {
-  color: ${(props) => props.theme.accentGrey};
+  color: ${props => props.theme.accentGrey};
 }
 
 .swiper-button-prev::after {
-  color: ${(props) => props.theme.accentGrey};
+  color: ${props => props.theme.accentGrey};
 }
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet{
-  background-color: ${(props) => props.theme.accentBlue}!important;
+  background-color: ${props => props.theme.accentBlue}!important;
 }
 .swiper-pagination-bullet {
-  background-color:${(props) => props.theme.accentRed}!important;
+  background-color:${props => props.theme.accentRed}!important;
 }
 
 .containerJustifyEnd {

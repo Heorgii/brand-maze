@@ -28,17 +28,16 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
-
 export const Home = () => {
   Aos.init();
 
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    })
-    },[])
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   return (
     <Container>
@@ -115,7 +114,7 @@ export const Home = () => {
       </ListBoxSwaper>
 
       <ConclusionText>
-        <span>At Brand Maze </span>- we carefully implement a well-designed
+        <span>At Brand Maze </span> - we carefully implement a well-designed
         process that helps us achieve excellence in everything we do.
       </ConclusionText>
       <ProductionText>©brand maze productions</ProductionText>

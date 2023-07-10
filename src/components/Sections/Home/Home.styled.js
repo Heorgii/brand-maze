@@ -2,7 +2,6 @@ import { keyframes, styled } from 'styled-components';
 import { Number, Text } from '../Services/Services.styled';
 import { Title } from 'components/baseStyles/CommonStyle.styled';
 
-
 const flipInVerLeftAnimation = keyframes`
   0% {
     transform: rotateY(80deg);
@@ -69,19 +68,19 @@ export const TitleHome = styled(Title)`
 `;
 
 export const ListBox = styled.div`
-  display: block;
+  display: none;
 
-  @media (max-width: 1280px) {
-    display: none;
+  @media (min-width: 1280px) {
+    display: block;
   }
 `;
 
 export const ListBoxSwaper = styled.div`
-  display: none;
+  display: block;
+  margin-top: 25px;
 
-  @media (max-width: 1280px) {
-    display: block;
-    margin-top: 25px;
+  @media (min-width: 1280px) {
+    display: none;
   }
 `;
 
@@ -96,7 +95,7 @@ export const ListItem = styled.li`
 `;
 
 export const ListItemImg = styled.img`
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1279.9px) {
     width: 200px;
     height: 150px;
   }
@@ -106,7 +105,7 @@ export const ListItemImg = styled.img`
     animation: ${flipInVerLeftAnimation} 0.7s
       cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1279.9px) {
       margin-bottom: 20px;
     }
   }
@@ -116,7 +115,7 @@ export const ListItemImg = styled.img`
     animation: ${flipInVerRightAnimation} 0.7s
       cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1279.9px) {
       margin-bottom: 20px;
     }
   }
@@ -126,9 +125,9 @@ export const ListItemText = styled.p`
   display: flex;
   flex-wrap: wrap;
   width: 369px;
-  color: ${(props) => props.theme.blackOpacity};
+  color: ${props => props.theme.blackOpacity};
   font-size: 21px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -155,7 +154,7 @@ export const ListItemText = styled.p`
     color: transparent;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     font-size: 15px;
     font-weight: 400;
   }
@@ -166,9 +165,9 @@ export const ListItemTextSwiper = styled.p`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  color: ${(props) => props.theme.blackOpacity};
+  color: ${props => props.theme.blackOpacity};
   font-size: 21px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -185,7 +184,7 @@ export const ListItemTextSwiper = styled.p`
     color: transparent;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     font-size: 15px;
     font-weight: 400;
   }
@@ -196,11 +195,11 @@ export const ConclusionText = styled.p`
   flex-wrap: wrap;
   margin-top: 35px;
   text-align: center;
-  color: ${(props) => props.theme.blackOpacity};
+  color: ${props => props.theme.blackOpacity};
   font-size: 35px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 150%;
   margin-bottom: 80px;
 
@@ -217,9 +216,9 @@ export const ConclusionText = styled.p`
     color: transparent;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 55px;
 
     & > * {
@@ -229,22 +228,22 @@ export const ConclusionText = styled.p`
 `;
 
 export const ProductionText = styled.p`
-  position: absolute;
-  right: -175px;
-  bottom: 224px;
-  transform: rotate(-90deg);
-  text-align: center;
-  color: ${(props) => props.theme.blackOpacity};
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 5.4px;
-  text-transform: uppercase;
+  display: none;
 
-  @media screen and (max-width: 1280px) {
-    display: none;
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    right: -175px;
+    bottom: 224px;
+    transform: rotate(-90deg);
+    text-align: center;
+    color: ${props => props.theme.blackOpacity};
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 5.4px;
+    text-transform: uppercase;
   }
 `;
 
@@ -269,9 +268,9 @@ export const CompListItem = styled.li`
 
 export const ItemNumber = styled(Number)`
   font-size: 30px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0;
-  /* color: ${(props) => props.theme.black}; */
+  /* color: ${props => props.theme.black}; */
   @media screen and (min-width: 768px) {
     font-size: 80px;
   }
@@ -279,9 +278,9 @@ export const ItemNumber = styled(Number)`
 
 export const ItemTitle = styled.h3`
   margin-bottom: 15px;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
   font-size: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -297,7 +296,7 @@ export const ItemTitle = styled.h3`
 `;
 
 export const ItemDiscr = styled(Text)`
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
   width: 319px;
   text-align: left;
 

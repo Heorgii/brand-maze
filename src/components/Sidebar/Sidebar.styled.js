@@ -38,33 +38,34 @@ export const SidebarContainer = styled.div`
   /* display: flex;
   flex-direction: column; */
   @media screen and (min-width: 1280px) {
-    margin-top: 10px;
-    margin-left: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
   }
 `;
 
 export const SidebarBox = styled.div`
-  width: 320px;
+  display: none;
 
-  @media screen and (max-width: 1280px) {
-    display: none;
+  @media screen and (min-width: 1280px) {
+    display: block;
+    width: 320px;
   }
 `;
 
 export const Header = styled.header`
-  color: ${props => props.theme.black};
-  background-color: ${props => props.theme.white};
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
 
   @media screen and (max-width: 1280px) {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 45px;
-    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
-    transition: opacity 0.3s, transform 0.3s;
-    z-index: 999;
+    color: ${props => props.theme.black};
+    background-color: ${props => props.theme.white};
   }
 `;
 
@@ -83,7 +84,7 @@ export const HeaderSvg = styled.svg`
     right: 20px;
   } */
 
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1280px) {
     display: none;
   }
 `;
@@ -109,7 +110,7 @@ export const Logo = styled.p`
   margin-top: 10px;
   margin-left: 20px;
 
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1280px) {
     position: fixed;
     font-size: 45px;
     letter-spacing: -3.2px;
@@ -285,7 +286,6 @@ export const SocialsListItem = styled.li`
   & > * {
     /* fill: currentColor; */
     fill: ${props => props.theme.black};
-
   }
 `;
 

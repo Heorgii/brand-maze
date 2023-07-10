@@ -10,7 +10,7 @@ export const Button = styled.button`
   color: ${props => props.theme.white};
   text-align: center;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -47,7 +47,7 @@ export const ButtonLink = styled(NavLink)`
 
   color: ${props => props.theme.white};
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

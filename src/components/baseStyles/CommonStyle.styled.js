@@ -28,10 +28,11 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  display: inline;
-  margin: 0 0 15px 0;
-  animation: ${puffInCenterAnimation} 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-  
+  display: inline-block;
+  margin: 40px 0 15px 0;
+  animation: ${puffInCenterAnimation} 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+    both;
+
   font-size: 32px;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
