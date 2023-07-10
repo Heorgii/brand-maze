@@ -272,7 +272,7 @@ export const SocialsList = styled.ul`
 export const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
-  color: ${props => props.theme.black};
+  /* color: ${props => props.theme.black}; */
 
   &:not(:last-child) {
     margin-right: 20px;
@@ -282,18 +282,21 @@ export const SocialsListItem = styled.li`
     fill: ${props => props.theme.accentRed};
   }
 
-  &.svg {
-    fill: currentColor;
+  & > * {
+    /* fill: currentColor; */
+    fill: ${props => props.theme.black};
+
   }
 `;
 
 export const SocialsListItemLink = styled.a`
+  /* color: ${props => props.theme.black};
+
   text-decoration: none;
   & > *:hover,
   & > *:focus {
     fill: ${props => props.theme.accentRed};
   }
   &:active {
-  text-decoration: none;
-}
+  text-decoration: none; */
 `;
