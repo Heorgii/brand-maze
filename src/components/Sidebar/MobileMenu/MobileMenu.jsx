@@ -16,7 +16,6 @@ import instagram from 'images/sprite.svg';
 import telegram from 'images/sprite.svg';
 import linkedin from 'images/sprite.svg';
 import close from 'images/sprite.svg';
-import { FaTiktok } from 'react-icons/fa';
 import { useLocation } from 'react-router';
 
 export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
