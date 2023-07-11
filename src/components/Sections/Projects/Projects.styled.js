@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const scaleInCenter = keyframes`
   0% {
@@ -19,8 +19,9 @@ const SlideContainer = styled.div`
   font-style: normal;
   /* width: 90%; */
   min-height: 441px;
+  height:calc(100vh - 300px);
   overflow: hidden;
-  animation: ${scaleInCenter} 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: ${scaleInCenter} 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @media screen and (max-width: 768px) {
     min-height: 200px;
