@@ -29,10 +29,16 @@ export const Button = styled.button`
     box-shadow: 1px -1px 10px -2px ${props => props.theme.blackOpacity} inset;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 160px;
     height: 45px;
     font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    height: 55px;
+    font-size: 20px;
   }
 `;
 
@@ -67,9 +73,15 @@ export const ButtonLink = styled(NavLink)`
     box-shadow: 1px -1px 10px -2px ${props => props.theme.blackOpacity} inset;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 160px;
     height: 45px;
     font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    height: 55px;
+    font-size: 20px;
   }
 `;
