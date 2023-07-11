@@ -107,21 +107,35 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
 
             <SocialsList>
               <SocialsListItem>
-                <a href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg width="20" height="20">
                     <use href={instagram + '#instagram'}></use>
                   </svg>
                 </a>
               </SocialsListItem>
               <SocialsListItem>
-                <a href="https://t.me/brandmaze" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://t.me/brandmaze"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg width="22" height="22">
                     <use href={telegram + '#telegram'}></use>
                   </svg>
                 </a>
               </SocialsListItem>
               <SocialsListItem>
-                <FaTiktok />
+                <a
+                  href="https://www.tiktok.com/@brand.maze?_t=8du33OG9NJN&_r=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTiktok />
+                </a>
               </SocialsListItem>
               <SocialsListItem>
                 <svg width="20" height="20">
