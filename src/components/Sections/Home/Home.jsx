@@ -17,7 +17,6 @@ import {
 } from './Home.styled';
 import logo2 from '../../../images/home/logo2.svg'
 import logo3 from '../../../images/home/logo3.svg'
-import logo1 from '../../../images/home/logo1.svg'
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';

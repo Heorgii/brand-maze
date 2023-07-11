@@ -147,32 +147,32 @@ export const About = () => {
           <JobItem>Full-Stack Developer</JobItem>
           <SocialsList>
             <SocialsListItem>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#github'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#linkedin'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#telegram'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <a href="">
+              {/* <a href=""> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#envelop'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
           </SocialsList>
         </ItemWrap>
@@ -182,32 +182,32 @@ export const About = () => {
           <JobItem>Full-Stack Engineer</JobItem>
           <SocialsList>
             <SocialsListItem>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#github'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#linkedin'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <a href="" target="_blank" rel="noopener noreferrer">
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#telegram'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <a href="">
+              {/* <a href=""> */}
                 <svg width="20" height="20">
                   <use href={sprite + '#envelop'}></use>
                 </svg>
-              </a>
+              {/* </a> */}
             </SocialsListItem>
           </SocialsList>
         </ItemWrap>
