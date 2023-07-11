@@ -148,85 +148,109 @@ export const About = () => {
       <ContainerForTeam>
         <ItemWrap data-aos="flip-up" data-aos-delay="150">
           <ImgWrap>
-          <ImgForTeam src={vlad} alt="vlad" />
-          <ImgForTeamColor src={vladColor} alt="vlad" />
+            <ImgForTeam src={vlad} alt="vlad" />
+            <ImgForTeamColor src={vladColor} alt="vlad" />
           </ImgWrap>
-          <TitleItem>Vlad popov</TitleItem>
+          <TitleItem>Vlad Popov</TitleItem>
           <JobItem>Full-Stack Developer</JobItem>
           <SocialsList>
             <SocialsListItem>
-            <SocialsListLink href="https://github.com/StudentVlad5" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#github'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="https://www.linkedin.com/in/vladyslav-popov-a491232a/" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="https://t.me/Vinforam" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#telegram'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="mailto:vlad_np@ukr.net">
-              <svg width="20" height="20">
-                <use href={sprite + '#envelop'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-          </SocialsList>
-        </ItemWrap>
-        <ItemWrap data-aos="flip-up" data-aos-delay="150">
-          <ImgWrap>
-          <ImgForTeam src={julia} alt="julia" />
-          <ImgForTeamColor src={juliaColor} alt="julia" />
-          </ImgWrap>
-          <TitleItem>Julia golban</TitleItem>
-          <JobItem>Full-Stack Engineer</JobItem>
-          <SocialsList>
-            <SocialsListItem>
-              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+              <SocialsListLink
+                href="https://github.com/StudentVlad5"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg width="20" height="20">
                   <use href={sprite + '#github'}></use>
                 </svg>
-              {/* </a> */}
+              </SocialsListLink>
             </SocialsListItem>
             <SocialsListItem>
-              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+              <SocialsListLink
+                href="https://www.linkedin.com/in/vladyslav-popov-a491232a/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg width="20" height="20">
                   <use href={sprite + '#linkedin'}></use>
                 </svg>
-              {/* </a> */}
+              </SocialsListLink>
             </SocialsListItem>
             <SocialsListItem>
-              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+              <SocialsListLink
+                href="https://t.me/Vinforam"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg width="20" height="20">
                   <use href={sprite + '#telegram'}></use>
                 </svg>
-              {/* </a> */}
+              </SocialsListLink>
             </SocialsListItem>
             <SocialsListItem>
-              {/* <a href=""> */}
+              <SocialsListLink href="mailto:vlad_np@ukr.net">
                 <svg width="20" height="20">
                   <use href={sprite + '#envelop'}></use>
                 </svg>
-              {/* </a> */}
+              </SocialsListLink>
             </SocialsListItem>
           </SocialsList>
         </ItemWrap>
         <ItemWrap data-aos="flip-up" data-aos-delay="150">
           <ImgWrap>
-          <ImgForTeam src={heorhii} alt="heorhii" />
+            <ImgForTeam src={julia} alt="julia" />
+            <ImgForTeamColor src={juliaColor} alt="julia" />
           </ImgWrap>
-          <TitleItem>Heorhii rushchak</TitleItem>
+          <TitleItem>Julia Golban</TitleItem>
+          <JobItem>Full-Stack Engineer</JobItem>
+          <SocialsList>
+            <SocialsListItem>
+              <a
+                href="https://github.com/JuliaGolban"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#github'}></use>
+                </svg>
+              </a>
+            </SocialsListItem>
+            <SocialsListItem>
+              <a
+                href="https://www.linkedin.com/in/julia-golban/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#linkedin'}></use>
+                </svg>
+              </a>
+            </SocialsListItem>
+            <SocialsListItem>
+              <a
+                href="https://www.t.me/JuliaGolban"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#telegram'}></use>
+                </svg>
+              </a>
+            </SocialsListItem>
+            <SocialsListItem>
+              <a href="mailto:julia.j.shcherban@gmail.com">
+                <svg width="20" height="20">
+                  <use href={sprite + '#envelop'}></use>
+                </svg>
+              </a>
+            </SocialsListItem>
+          </SocialsList>
+        </ItemWrap>
+        <ItemWrap data-aos="flip-up" data-aos-delay="150">
+          <ImgWrap>
+            <ImgForTeam src={heorhii} alt="heorhii" />
+          </ImgWrap>
+          <TitleItem>Heorhii Rushchak</TitleItem>
           <JobItem>Full-Stack Developer</JobItem>
           <SocialsList>
             <SocialsListItem>
@@ -288,71 +312,51 @@ export const About = () => {
           <SwiperSlide>
             <ItemWrap>
               <ImgWrap>
-              <ImgForTeam src={vlad} alt="vlad" />
-              <ImgForTeamColor src={vladColor} alt="vlad" />
+                <ImgForTeam src={vlad} alt="vlad" />
+                <ImgForTeamColor src={vladColor} alt="vlad" />
               </ImgWrap>
-              <TitleItem>Vlad popov</TitleItem>
+              <TitleItem>Vlad Popov</TitleItem>
               <JobItem>Full-Stack Developer</JobItem>
               <SocialsList>
-            <SocialsListItem>
-            <SocialsListLink href="https://github.com/StudentVlad5" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#github'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="https://www.linkedin.com/in/vladyslav-popov-a491232a/" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="https://t.me/Vinforam" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#telegram'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="mailto:vlad_np@ukr.net">
-              <svg width="20" height="20">
-                <use href={sprite + '#envelop'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-          </SocialsList>
-            </ItemWrap>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ItemWrap>
-              <ImgWrap>
-              <ImgForTeam src={julia} alt="julia" />
-              <ImgForTeamColor src={juliaColor} alt="julia" />
-              </ImgWrap>
-              <TitleItem>Julia golban</TitleItem>
-              <JobItem>Full-Stack Engineer</JobItem>
-              <SocialsList>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#github'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://github.com/StudentVlad5"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#github'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://www.linkedin.com/in/vladyslav-popov-a491232a/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#linkedin'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://t.me/Vinforam"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#telegram'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#envelop'}></use>
-                  </svg>
+                  <SocialsListLink href="mailto:vlad_np@ukr.net">
+                    <svg width="20" height="20">
+                      <use href={sprite + '#envelop'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
               </SocialsList>
             </ItemWrap>
@@ -360,9 +364,61 @@ export const About = () => {
           <SwiperSlide>
             <ItemWrap>
               <ImgWrap>
-              <ImgForTeam src={heorhii} alt="heorhii" />
+                <ImgForTeam src={julia} alt="julia" />
+                <ImgForTeamColor src={juliaColor} alt="julia" />
               </ImgWrap>
-              <TitleItem>Heorhii rushchak</TitleItem>
+              <TitleItem>Julia Golban</TitleItem>
+              <JobItem>Full-Stack Engineer</JobItem>
+              <SocialsList>
+                <SocialsListItem>
+                  <SocialsListLink
+                    href="https://github.com/JuliaGolban"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#github'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <SocialsListLink
+                    href="https://www.linkedin.com/in/julia-golban/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#linkedin'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <SocialsListLink
+                    href="https://www.t.me/JuliaGolban"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#telegram'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <SocialsListLink href="mailto:julia.j.shcherban@gmail.com">
+                    <svg width="20" height="20">
+                      <use href={sprite + '#envelop'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+              </SocialsList>
+            </ItemWrap>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ItemWrap>
+              <ImgWrap>
+                <ImgForTeam src={heorhii} alt="heorhii" />
+              </ImgWrap>
+              <TitleItem>Heorhii Rushchak</TitleItem>
               <JobItem>Full-Stack Developer</JobItem>
               <SocialsList>
                 <SocialsListItem>
@@ -403,72 +459,52 @@ export const About = () => {
           <SwiperSlide>
             <ItemWrap>
               <ImgWrap>
-              <ImgForTeam src={vlad} alt="vlad" />
-              <ImgForTeamColor src={vladColor} alt="vlad" />
+                <ImgForTeam src={vlad} alt="vlad" />
+                <ImgForTeamColor src={vladColor} alt="vlad" />
               </ImgWrap>
               <ImgForTeam src={vlad} alt="vlad" />
-              <TitleItem>Vlad popov</TitleItem>
+              <TitleItem>Vlad Popov</TitleItem>
               <JobItem>Full-Stack Developer</JobItem>
               <SocialsList>
-            <SocialsListItem>
-            <SocialsListLink href="https://github.com/StudentVlad5" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#github'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="https://www.linkedin.com/in/vladyslav-popov-a491232a/" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="https://t.me/Vinforam" target="_blank" rel="noreferrer">
-              <svg width="20" height="20">
-                <use href={sprite + '#telegram'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-            <SocialsListItem>
-            <SocialsListLink href="mailto:vlad_np@ukr.net">
-              <svg width="20" height="20">
-                <use href={sprite + '#envelop'}></use>
-              </svg>
-            </SocialsListLink>
-            </SocialsListItem>
-          </SocialsList>
-            </ItemWrap>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ItemWrap>
-              <ImgWrap>
-              <ImgForTeam src={julia} alt="julia" />
-              <ImgForTeamColor src={juliaColor} alt="julia" />
-              </ImgWrap>
-              <TitleItem>Julia golban</TitleItem>
-              <JobItem>Full-Stack Engineer</JobItem>
-              <SocialsList>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#github'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://github.com/StudentVlad5"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#github'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://www.linkedin.com/in/vladyslav-popov-a491232a/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#linkedin'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://t.me/Vinforam"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#telegram'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#envelop'}></use>
-                  </svg>
+                  <SocialsListLink href="mailto:vlad_np@ukr.net">
+                    <svg width="20" height="20">
+                      <use href={sprite + '#envelop'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
               </SocialsList>
             </ItemWrap>
@@ -476,9 +512,61 @@ export const About = () => {
           <SwiperSlide>
             <ItemWrap>
               <ImgWrap>
-              <ImgForTeam src={heorhii} alt="heorhii" />
+                <ImgForTeam src={julia} alt="julia" />
+                <ImgForTeamColor src={juliaColor} alt="julia" />
               </ImgWrap>
-              <TitleItem>Heorhii rushchak</TitleItem>
+              <TitleItem>Julia Golban</TitleItem>
+              <JobItem>Full-Stack Engineer</JobItem>
+              <SocialsList>
+                <SocialsListItem>
+                  <SocialsListLink
+                    href="https://github.com/JuliaGolban"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#github'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <SocialsListLink
+                    href="https://www.linkedin.com/in/julia-golban/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#linkedin'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <SocialsListLink
+                    href="https://www.t.me/JuliaGolban"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#telegram'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+                <SocialsListItem>
+                  <SocialsListLink href="mailto:julia.j.shcherban@gmail.com">
+                    <svg width="20" height="20">
+                      <use href={sprite + '#envelop'}></use>
+                    </svg>
+                  </SocialsListLink>
+                </SocialsListItem>
+              </SocialsList>
+            </ItemWrap>
+          </SwiperSlide>
+          <SwiperSlide>
+            <ItemWrap>
+              <ImgWrap>
+                <ImgForTeam src={heorhii} alt="heorhii" />
+              </ImgWrap>
+              <TitleItem>Heorhii Rushchak</TitleItem>
               <JobItem>Full-Stack Developer</JobItem>
               <SocialsList>
                 <SocialsListItem>
