@@ -251,8 +251,24 @@ const ImgForTeam = styled.img`
   width: 150px;
   height: 257px;
   @media screen and (min-width: 490px) {
-  width: 250px;
-  height: 357px;
+    width: 250px;
+    height: 357px;
+  }
+`;
+const ImgForTeamColor = styled.img`
+  display: block;
+  position: relative;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 150px;
+  height: 257px;
+  @media screen and (min-width: 490px) {
+    width: 250px;
+    height: 357px;
   }
 `;
 
@@ -281,6 +297,22 @@ const ItemWrap = styled.div`
   width: 100%;
   overflow: hidden;
   padding: 20px 30px;
+`;
+
+const ImgWrap = styled.div`
+  display: block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  @media screen and (min-width: 490px) {
+    width: 250px;
+    height: 357px;
+  }
+  &:hover ${ImgForTeamColor} {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 1;
+  }
 `;
 
 const TitleItem = styled.h4`
@@ -332,6 +364,20 @@ const SocialsListItem = styled.li`
     fill: ${props => props.theme.black};
   }
 `;
+const SocialsListLink = styled.a`
+  cursor: pointer;
+  padding: 2px;
+  color: ${(props) => props.theme.black};
+
+  & > *:hover,
+  & > *:focus {
+    fill: ${(props) => props.theme.accentRed};
+  }
+
+  & svg {
+    fill: currentColor;
+  }
+`;
 
 export {
   ContainerForAbout,
@@ -353,4 +399,7 @@ export {
   ContainerForTeamForTablet,
   TitleTeam,
   ContainerForAboutItem,
+  ImgForTeamColor,
+  ImgWrap,
+  SocialsListLink,
 };
