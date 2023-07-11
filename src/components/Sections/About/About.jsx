@@ -193,24 +193,32 @@ export const About = () => {
           <JobItem>Full-Stack Engineer</JobItem>
           <SocialsList>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#github'}></use>
-              </svg>
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+                <svg width="20" height="20">
+                  <use href={sprite + '#github'}></use>
+                </svg>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+                <svg width="20" height="20">
+                  <use href={sprite + '#linkedin'}></use>
+                </svg>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#telegram'}></use>
-              </svg>
+              {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
+                <svg width="20" height="20">
+                  <use href={sprite + '#telegram'}></use>
+                </svg>
+              {/* </a> */}
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#envelop'}></use>
-              </svg>
+              {/* <a href=""> */}
+                <svg width="20" height="20">
+                  <use href={sprite + '#envelop'}></use>
+                </svg>
+              {/* </a> */}
             </SocialsListItem>
           </SocialsList>
         </ItemWrap>
@@ -222,24 +230,44 @@ export const About = () => {
           <JobItem>Full-Stack Developer</JobItem>
           <SocialsList>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#github'}></use>
-              </svg>
+              <a
+                href="https://github.com/Heorgii"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#github'}></use>
+                </svg>
+              </a>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
+              <a
+                href="https://www.linkedin.com/in/heorgii-rushchak-19884a245"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#linkedin'}></use>
+                </svg>
+              </a>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#telegram'}></use>
-              </svg>
+              <a
+                href="https://t.me/heorhi1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="20" height="20">
+                  <use href={sprite + '#telegram'}></use>
+                </svg>
+              </a>
             </SocialsListItem>
             <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#envelop'}></use>
-              </svg>
+              <a href="mailto:rushchakheorgii@gmail.com">
+                <svg width="20" height="20">
+                  <use href={sprite + '#envelop'}></use>
+                </svg>
+              </a>
             </SocialsListItem>
           </SocialsList>
         </ItemWrap>
@@ -306,7 +334,7 @@ export const About = () => {
               <TitleItem>Julia golban</TitleItem>
               <JobItem>Full-Stack Engineer</JobItem>
               <SocialsList>
-              <SocialsListItem>
+                <SocialsListItem>
                   <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>
@@ -422,7 +450,7 @@ export const About = () => {
               <TitleItem>Julia golban</TitleItem>
               <JobItem>Full-Stack Engineer</JobItem>
               <SocialsList>
-              <SocialsListItem>
+                <SocialsListItem>
                   <svg width="20" height="20">
                     <use href={sprite + '#github'}></use>
                   </svg>

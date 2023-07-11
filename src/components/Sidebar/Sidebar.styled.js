@@ -34,9 +34,7 @@ const fadeInTopAnimation = keyframes`
   }
 `;
 
-export const SidebarContainer = styled.div`
-  /* display: flex;
-  flex-direction: column; */
+export const SidebarContainer = styled.aside`
   @media screen and (min-width: 1280px) {
     padding-top: 10px;
     padding-left: 20px;
@@ -53,7 +51,9 @@ export const SidebarBox = styled.div`
 `;
 
 export const Header = styled.header`
-  display: flex;
+  /* Якщо зробити так то хедер завжди буде зникати
+   а при скролі зявлятись і на мобілці і на десктопі 
+   display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -67,6 +67,22 @@ export const Header = styled.header`
     color: ${props => props.theme.black};
     background-color: ${props => props.theme.white};
   }
+   */
+
+  color: ${props => props.theme.black};
+  background-color: ${props => props.theme.white};
+
+  @media screen and (max-width: 1279.9px) {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 999;
+  }
 `;
 
 export const HeaderSvg = styled.svg`
@@ -76,13 +92,6 @@ export const HeaderSvg = styled.svg`
   top: 20px;
   right: 20px;
   animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-
-  /* @media screen and (max-width: 1280px) {
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  } */
 
   @media screen and (min-width: 1280px) {
     display: none;
@@ -105,8 +114,6 @@ export const Logo = styled.p`
 
   cursor: pointer;
   text-decoration: none;
-
-  /* position: fixed; */
   margin-top: 10px;
   margin-left: 20px;
 
@@ -114,6 +121,8 @@ export const Logo = styled.p`
     position: fixed;
     font-size: 45px;
     letter-spacing: -3.2px;
+    margin-top: 0;
+    margin-left: 0;
   }
 `;
 
@@ -145,25 +154,6 @@ export const NavListLink = styled(NavLink)`
   line-height: 35px;
   text-transform: uppercase;
   text-decoration: none;
-  &:nth-child(1) {
-    animation: ${fadeInLeftAnimation} 0.5s ease-in both;
-  }
-
-  &:nth-child(2) {
-    animation: ${fadeInLeftAnimation} 0.6s ease-in both;
-  }
-
-  &:nth-child(3) {
-    animation: ${fadeInLeftAnimation} 0.7s ease-in both;
-  }
-
-  &:nth-child(4) {
-    animation: ${fadeInLeftAnimation} 0.8s ease-in both;
-  }
-
-  &:nth-child(5) {
-    animation: ${fadeInLeftAnimation} 0.9s ease-in both;
-  }
 
   @media screen and (max-width: 768px) {
     &:not(:first-child) {
@@ -174,8 +164,29 @@ export const NavListLink = styled(NavLink)`
   @media screen and (min-width: 400px) and (max-width: 1279.9px) {
     font-size: 20px;
   }
+
   @media screen and (min-width: 1280px) {
     font-size: 25px;
+
+    &:nth-child(1) {
+      animation: ${fadeInLeftAnimation} 0.5s ease-in both;
+    }
+
+    &:nth-child(2) {
+      animation: ${fadeInLeftAnimation} 0.6s ease-in both;
+    }
+
+    &:nth-child(3) {
+      animation: ${fadeInLeftAnimation} 0.7s ease-in both;
+    }
+
+    &:nth-child(4) {
+      animation: ${fadeInLeftAnimation} 0.8s ease-in both;
+    }
+
+    &:nth-child(5) {
+      animation: ${fadeInLeftAnimation} 0.9s ease-in both;
+    }
   }
 
   &:not(:first-child) {
@@ -242,13 +253,13 @@ export const ContactListItem = styled.li`
 export const ContactListLink = styled.a`
   text-decoration: none;
   color: ${props => props.theme.black};
-  font-size: 14px;
+  font-size: 20px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 300;
 
-  @media screen and (max-width: 1280px) {
-    font-size: 20px;
+  @media screen and (min-width: 1280px) {
+    font-size: 14px;
   }
 
   &:hover,
@@ -287,16 +298,4 @@ export const SocialsListItem = styled.li`
     /* fill: currentColor; */
     fill: ${props => props.theme.black};
   }
-`;
-
-export const SocialsListItemLink = styled.a`
-  /* color: ${props => props.theme.black};
-
-  text-decoration: none;
-  & > *:hover,
-  & > *:focus {
-    fill: ${props => props.theme.accentRed};
-  }
-  &:active {
-  text-decoration: none; */
 `;

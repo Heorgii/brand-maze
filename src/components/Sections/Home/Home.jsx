@@ -1,7 +1,6 @@
 import {
   List,
   ListItem,
-  ListItemImg,
   ListItemText,
   ProductionText,
   CompList,
@@ -14,10 +13,10 @@ import {
   ListItemTextSwiper,
   TitleHome,
   ListBox,
-  // SwiperSvg,
+  SwiperSvg,
 } from './Home.styled';
-import homePage from '../../../images/homePage.png';
-// import _Шар_2 from '../../../images/home/icon.svg'
+import logo2 from '../../../images/home/logo2.svg'
+import logo3 from '../../../images/home/logo3.svg'
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
@@ -46,7 +45,9 @@ export const Home = () => {
       <ListBox>
         <List>
           <ListItem>
-            <ListItemImg src={homePage} alt="" />
+            <SwiperSvg width="240" height="240" fill='#1d1d1b'>
+              <use href={logo3 + '#logo3'}></use>
+            </SwiperSvg>
 
             <ListItemText>
               We work tirelessly to develop long-term relationships with our
@@ -62,10 +63,9 @@ export const Home = () => {
               achieve this goal:<span> we build better brands. </span>
             </ListItemText>
 
-            <ListItemImg src={homePage} alt="" />
-            {/* <SwiperSvg width="240" height="240">
-              <use href={_Шар_2 + '#_Шар_2'}></use>
-            </SwiperSvg> */}
+            <SwiperSvg width="240" height="240">
+              <use href={logo2 + '#logo2'}></use>
+            </SwiperSvg>
           </ListItem>
         </List>
       </ListBox>
@@ -84,7 +84,9 @@ export const Home = () => {
           loopedSlides={1}
         >
           <SwiperSlide>
-            <ListItemImg src={homePage} alt="" />
+            <SwiperSvg width="240" height="240">
+              <use href={logo3 + '#logo3'}></use>
+            </SwiperSvg>
           </SwiperSlide>
 
           <SwiperSlide>
@@ -96,10 +98,9 @@ export const Home = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <ListItemImg src={homePage} alt="" />
-            {/* <SwiperSvg width="240" height="240">
-              <use href={_Шар_2 + '#_Шар_2'}></use>
-            </SwiperSvg> */}
+            <SwiperSvg width="240" height="240">
+              <use href={logo2 + '#logo2'}></use>
+            </SwiperSvg>
           </SwiperSlide>
 
           <SwiperSlide>

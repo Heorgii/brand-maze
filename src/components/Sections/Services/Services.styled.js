@@ -100,11 +100,13 @@ export const ListSkills = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 20px;
   text-align: center;
   animation: ${fadeInRightAnimation} 0.5s ease-in both;
 
   @media screen and (min-width: 768px) {
     width: 40%;
+    padding: 30px 0 0 0;
     gap: 30px;
   }
 
@@ -232,7 +234,12 @@ export const TextCenter = styled(Text)`
 `;
 
 export const TextSlider = styled(Text)`
+  width: 70%;
   padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const TableHeading = styled.th`

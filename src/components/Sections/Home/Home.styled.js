@@ -46,8 +46,6 @@ const fadeInRightAnimation = keyframes`
   }
 `;
 
-export const Box = styled.div``;
-
 export const List = styled.ul`
   display: flex;
   flex-direction: row;
@@ -59,12 +57,9 @@ export const TitleHome = styled(Title)`
   line-height: 35px;
   flex-wrap: wrap;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) {
     line-height: 65px;
   }
-  /* @media screen and (min-width: 320px) and(max-width: 768px) {
-    line-height: 35px;
-  } */
 `;
 
 export const ListBox = styled.div`
@@ -85,10 +80,23 @@ export const ListBoxSwaper = styled.div`
 `;
 
 export const SwiperSvg = styled.svg`
-  fill: ${props => props.theme.blackOpacity};
+  fill: ${props => props.theme.black};
+  &:nth-child(1) {
+    animation: ${ flipInVerRightAnimation} 0.9s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  &:nth-child(2) {
+    animation: ${flipInVerLeftAnimation} 0.9s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
 `;
 
 export const ListItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &:nth-child(2) {
     margin-left: 20px;
   }
@@ -101,22 +109,22 @@ export const ListItemImg = styled.img`
   }
 
   &:nth-child(1) {
-    margin-bottom: 88px;
-    animation: ${flipInVerLeftAnimation} 0.7s
-      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    margin-bottom: 20px;
 
-    @media screen and (max-width: 1279.9px) {
-      margin-bottom: 20px;
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 88px;
+      animation: ${flipInVerLeftAnimation} 0.7s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   }
 
   &:nth-child(2) {
-    margin-top: 88px;
-    animation: ${flipInVerRightAnimation} 0.7s
-      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    margin-bottom: 20px;
 
-    @media screen and (max-width: 1279.9px) {
-      margin-bottom: 20px;
+    @media screen and (min-width: 1280px) {
+      margin-top: 88px;
+      animation: ${flipInVerRightAnimation} 0.7s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     }
   }
 `;
@@ -126,12 +134,16 @@ export const ListItemText = styled.p`
   flex-wrap: wrap;
   width: 369px;
   color: ${props => props.theme.blackOpacity};
-  font-size: 21px;
+  font-size: 15px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 35px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 21px;
+  }
 
   &:nth-child(1) {
     animation: ${fadeInRightAnimation} 0.5s ease-in both;
@@ -139,6 +151,7 @@ export const ListItemText = styled.p`
 
   &:nth-child(2) {
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
+    margin-top: 35px;
   }
 
   & > * {
@@ -152,11 +165,6 @@ export const ListItemText = styled.p`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-  }
-
-  @media screen and (max-width: 767.9px) {
-    font-size: 15px;
-    font-weight: 400;
   }
 `;
 
@@ -166,11 +174,16 @@ export const ListItemTextSwiper = styled.p`
   justify-content: center;
   text-align: center;
   color: ${props => props.theme.blackOpacity};
-  font-size: 21px;
+  font-size: 15px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+
+  @media screen and (min-width: 768px) {
+    font-size: 21px;
+  }
+
   & > * {
     font-weight: bold;
     background: linear-gradient(
@@ -182,11 +195,6 @@ export const ListItemTextSwiper = styled.p`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-  }
-
-  @media screen and (max-width: 767.9px) {
-    font-size: 15px;
-    font-weight: 400;
   }
 `;
 
@@ -196,12 +204,21 @@ export const ConclusionText = styled.p`
   margin-top: 35px;
   text-align: center;
   color: ${props => props.theme.blackOpacity};
-  font-size: 35px;
+  font-size: 15px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
-  margin-bottom: 80px;
+  margin-bottom: 55px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 35px;
+    margin-bottom: 80px;
+
+    & > * {
+      font-size: 35px;
+    }
+  }
 
   & > * {
     font-weight: bold;
@@ -214,16 +231,6 @@ export const ConclusionText = styled.p`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-  }
-
-  @media screen and (max-width: 767.9px) {
-    font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 55px;
-
-    & > * {
-      font-size: 20px;
-    }
   }
 `;
 
@@ -251,7 +258,6 @@ export const CompList = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* width: 663px; */
 `;
 
 export const CompListItem = styled.li`
@@ -270,7 +276,6 @@ export const ItemNumber = styled(Number)`
   font-size: 30px;
   font-family: 'Inter', sans-serif;
   letter-spacing: 0;
-  /* color: ${props => props.theme.black}; */
   @media screen and (min-width: 768px) {
     font-size: 80px;
   }
