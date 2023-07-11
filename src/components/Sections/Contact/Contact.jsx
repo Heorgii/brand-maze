@@ -33,14 +33,20 @@ export const Contact = () => {
   }, []);
 
   const handleSubmit = () => {
-    setUserFirstName('');
-    setUserLastName('');
-    setUserEmail('');
-    setUserPhone('');
-    setUserMessage('');
-    setFile('');
-    document.querySelectorAll('.file-return')[0].innerHTML =
-      '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
+    // setUserFirstName('');
+    // setUserLastName('');
+    // setUserEmail('');
+    // setUserPhone('');
+    // setUserMessage('');
+    // setFile('');
+    // document.querySelectorAll('.file-return')[0].innerHTML =
+    //   '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
+
+    return (
+      <div style={{ backgroundColor: 'red' }}>
+        <h1>Thanks</h1>
+      </div>
+    );
   };
   console.log(handleSubmit, file);
 
@@ -83,8 +89,7 @@ export const Contact = () => {
         className="contact-form"
         name="form-contacts"
         autoComplete="on"
-        // onSubmit={e => {
-        //   e.preventDefault();
+        // onSubmit={() => {
         //   handleSubmit();
         // }}
       >
@@ -111,12 +116,12 @@ export const Contact = () => {
             />
             <NameOfItem>Last Name</NameOfItem>
           </LabelOfItem>
-          <input type="hidden" name="_captcha" value="true" />
-          <input type="hidden" name="_subject" value="New Message!!!!" />
+          {/* <input type="hidden" name="_captcha" value="true" /> */}
+          <input type="hidden" name="_subject" value="New Message!!!!!" />
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/brand-maze/home"
+            value="http://localhost:3000/brand-maze/contact"
           />
           <LabelOfItem aria-label="Email">
             <InputOfItem
@@ -201,9 +206,7 @@ export const Contact = () => {
           </TextForInputForFile>
         </ContainerForInputForFile>
         {/* onClick={handleSuccess} */}
-        <ButtonSend type="submit" >
-          Send message
-        </ButtonSend>
+        <ButtonSend type="submit">Send message</ButtonSend>
         {/* {showSuccess && (
           <div style={{ backgroundColor: 'red' }}>
             <h1>We received your message and will answer you soon</h1>

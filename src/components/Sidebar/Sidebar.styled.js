@@ -69,7 +69,6 @@ export const Header = styled.header`
     background-color: ${props => props.theme.white};
   }
    */
-
   color: ${props => props.theme.black};
   background-color: ${props => props.theme.white};
 
@@ -84,6 +83,8 @@ export const Header = styled.header`
     transition: opacity 0.3s, transform 0.3s;
     z-index: 999;
   }
+
+
 `;
 
 export const HeaderSvg = styled.svg`
@@ -122,8 +123,8 @@ export const Logo = styled.p`
     position: fixed;
     font-size: 45px;
     letter-spacing: -3.2px;
-    margin-top: 0;
-    margin-left: 0;
+    /* margin-top: 0;
+    margin-left: 0; */
   }
 `;
 
@@ -302,8 +303,8 @@ export const SocialsListItem = styled.li`
 `;
 
 export const TikTok = styled(FaTiktok)`
-    fill: ${props => props.theme.black};
-    &:hover,
+  fill: ${props => props.theme.black};
+  &:hover,
   &:focus {
     fill: ${props => props.theme.accentRed};
   }

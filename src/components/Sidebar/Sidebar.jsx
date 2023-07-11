@@ -48,7 +48,7 @@ export const Sidebar = () => {
   };
 
   return (
-    <SidebarContainer>
+    <>
       <Header isVisible={visible}>
         <LogoBox href="/brand-maze" aria-label="logo company">
           <Logo>Brand maze</Logo>
@@ -65,106 +65,109 @@ export const Sidebar = () => {
           />
         </MobileMenuBox>
       </Header>
+      <SidebarContainer>
+        <SidebarBox>
+          <NavList>
+            <NavListLink
+              className={`link ${location.pathname === '/' ? 'active' : ''}`}
+              to="/"
+              aria-label="Home"
+            >
+              Home
+            </NavListLink>
+            <NavListLink
+              className={`link ${
+                location.pathname === '/about' ? 'active' : ''
+              }`}
+              to="/about"
+              aria-label="About"
+            >
+              About
+            </NavListLink>
+            <NavListLink
+              className={`link ${
+                location.pathname === '/services' ? 'active' : ''
+              }`}
+              to="/services"
+              aria-label="Services"
+            >
+              Services
+            </NavListLink>
+            <NavListLink
+              className={`link ${
+                location.pathname === '/projects' ? 'active' : ''
+              }`}
+              to="/projects"
+              aria-label="Projects"
+            >
+              Projects
+            </NavListLink>
+            <NavListLink
+              className={`link ${
+                location.pathname === '/contact' ? 'active' : ''
+              }`}
+              to="/contact"
+              aria-label="Contact"
+            >
+              Contact
+            </NavListLink>
+          </NavList>
+          <ContactList>
+            <ul>
+              <li>
+                <ContactListLink href="tel:+38011111111">
+                  +38011111111
+                </ContactListLink>
+              </li>
 
-      <SidebarBox>
-        <NavList>
-          <NavListLink
-            className={`link ${location.pathname === '/' ? 'active' : ''}`}
-            to="/"
-            aria-label="Home"
-          >
-            Home
-          </NavListLink>
-          <NavListLink
-            className={`link ${location.pathname === '/about' ? 'active' : ''}`}
-            to="/about"
-            aria-label="About"
-          >
-            About
-          </NavListLink>
-          <NavListLink
-            className={`link ${
-              location.pathname === '/services' ? 'active' : ''
-            }`}
-            to="/services"
-            aria-label="Services"
-          >
-            Services
-          </NavListLink>
-          <NavListLink
-            className={`link ${
-              location.pathname === '/projects' ? 'active' : ''
-            }`}
-            to="/projects"
-            aria-label="Projects"
-          >
-            Projects
-          </NavListLink>
-          <NavListLink
-            className={`link ${
-              location.pathname === '/contact' ? 'active' : ''
-            }`}
-            to="/contact"
-            aria-label="Contact"
-          >
-            Contact
-          </NavListLink>
-        </NavList>
-        <ContactList>
-          <ul>
-            <li>
-              <ContactListLink href="tel:+38011111111">
-                +38011111111
-              </ContactListLink>
-            </li>
+              <ContactListItem>
+                <ContactListLink href="mailto:contact@brandmaze.com">
+                  contact@brandmaze.com
+                </ContactListLink>
+              </ContactListItem>
+            </ul>
 
-            <ContactListItem>
-              <ContactListLink href="mailto:contact@brandmaze.com">
-                contact@brandmaze.com
-              </ContactListLink>
-            </ContactListItem>
-          </ul>
-
-          <SocialsList>
-            <SocialsListItem>
-              <a
-                href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <SocialsList>
+              <SocialsListItem>
+                <a
+                  href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg width="20" height="20">
+                    <use href={sprite + '#instagram'}></use>
+                  </svg>
+                </a>
+              </SocialsListItem>
+              <SocialsListItem>
+                <a
+                  href="https://t.me/brandmaze"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg width="20" height="20">
+                    <use href={sprite + '#telegram'}></use>
+                  </svg>
+                </a>
+              </SocialsListItem>
+              <SocialsListItem>
+                <a
+                  href="https://www.tiktok.com/@brand.maze?_t=8du33OG9NJN&_r=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TikTok />
+                </a>
+              </SocialsListItem>
+              <SocialsListItem>
                 <svg width="20" height="20">
-                  <use href={sprite + '#instagram'}></use>
+                  <use href={sprite + '#linkedin'}></use>
                 </svg>
-              </a>
-            </SocialsListItem>
-            <SocialsListItem>
-              <a
-                href="https://t.me/brandmaze"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg width="20" height="20">
-                  <use href={sprite + '#telegram'}></use>
-                </svg>
-              </a>
-            </SocialsListItem>
-            <SocialsListItem>
-              <a
-                href="https://www.tiktok.com/@brand.maze?_t=8du33OG9NJN&_r=1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <TikTok />
-              </a>
-            </SocialsListItem>
-            <SocialsListItem>
-              <svg width="20" height="20">
-                <use href={sprite + '#linkedin'}></use>
-              </svg>
-            </SocialsListItem>
-          </SocialsList>
-        </ContactList>
-      </SidebarBox>
-    </SidebarContainer>
+              </SocialsListItem>
+            </SocialsList>
+          </ContactList>
+        </SidebarBox>
+      </SidebarContainer>
+    </>
   );
 };
