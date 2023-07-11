@@ -3,6 +3,7 @@ import {
   ContactListLink,
   SocialsList,
   SocialsListItem,
+  TikTok,
 } from '../Sidebar.styled';
 import {
   ContactListMobile,
@@ -134,7 +135,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaTiktok />
+                  <TikTok />
                 </a>
               </SocialsListItem>
               <SocialsListItem>

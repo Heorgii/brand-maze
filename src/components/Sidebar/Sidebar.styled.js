@@ -1,3 +1,4 @@
+import { FaTiktok } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
@@ -297,5 +298,13 @@ export const SocialsListItem = styled.li`
   & > * {
     /* fill: currentColor; */
     fill: ${props => props.theme.black};
+  }
+`;
+
+export const TikTok = styled(FaTiktok)`
+    fill: ${props => props.theme.black};
+    &:hover,
+  &:focus {
+    fill: ${props => props.theme.accentRed};
   }
 `;

@@ -13,6 +13,7 @@ import {
   HeaderSvg,
   Header,
   LogoBox,
+  TikTok,
 } from './Sidebar.styled';
 import sprite from '../../images/sprite.svg';
 import menu from 'images/sprite.svg';
@@ -154,7 +155,7 @@ export const Sidebar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaTiktok />
+                <TikTok />
               </a>
             </SocialsListItem>
             <SocialsListItem>
