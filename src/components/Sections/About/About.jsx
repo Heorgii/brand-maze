@@ -462,7 +462,6 @@ export const About = () => {
                 <ImgForTeam src={vlad} alt="vlad" />
                 <ImgForTeamColor src={vladColor} alt="vlad" />
               </ImgWrap>
-              <ImgForTeam src={vlad} alt="vlad" />
               <TitleItem>Vlad Popov</TitleItem>
               <JobItem>Full-Stack Developer</JobItem>
               <SocialsList>
