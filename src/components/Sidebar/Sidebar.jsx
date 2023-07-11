@@ -25,9 +25,6 @@ import { SwitchTheme } from 'components/ThemeStatus/SwitcherTheme/SwitchTheme';
 export const Sidebar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  // const [scrollPos, setScrollPos] = useState(0);
-  // const [visible, setVisible] = useState(true);
-
   const [visible, setVisible] = useState(true);
   const [scrollPos, setScrollPos] = useState(window.pageYOffset);
 
@@ -52,7 +49,6 @@ export const Sidebar = () => {
 
   return (
     <SidebarContainer>
-      {/* className={visible ? 'scroll-up' : 'scroll-down'} */}
       <Header isVisible={visible}>
         <LogoBox href="/brand-maze" aria-label="logo company">
           <Logo>Brand maze</Logo>

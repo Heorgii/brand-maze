@@ -328,8 +328,8 @@ const SocialsListItem = styled.li`
     fill: ${(props) => props.theme.accentRed};
   }
 
-  & svg {
-    fill: currentColor;
+  & > * {
+    fill: ${props => props.theme.black};
   }
 `;
 

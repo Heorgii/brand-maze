@@ -80,10 +80,23 @@ export const ListBoxSwaper = styled.div`
 `;
 
 export const SwiperSvg = styled.svg`
-  fill: ${props => props.theme.blackOpacity};
+  fill: ${props => props.theme.black};
+  &:nth-child(1) {
+    animation: ${ flipInVerRightAnimation} 0.9s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  &:nth-child(2) {
+    animation: ${flipInVerLeftAnimation} 0.9s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
 `;
 
 export const ListItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &:nth-child(2) {
     margin-left: 20px;
   }
@@ -138,6 +151,7 @@ export const ListItemText = styled.p`
 
   &:nth-child(2) {
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
+    margin-top: 35px;
   }
 
   & > * {
@@ -190,7 +204,7 @@ export const ConclusionText = styled.p`
   margin-top: 35px;
   text-align: center;
   color: ${props => props.theme.blackOpacity};
-  font-size: 15px;;
+  font-size: 15px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
