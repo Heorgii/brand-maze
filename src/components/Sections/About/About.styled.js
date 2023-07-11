@@ -248,8 +248,8 @@ const Img = styled.img`
 `;
 
 const ImgForTeam = styled.img`
-  width: 150px;
-  height: 257px;
+  width: 100%;
+  height: 250px;
   @media screen and (min-width: 490px) {
     width: 250px;
     height: 357px;
@@ -264,8 +264,8 @@ const ImgForTeamColor = styled.img`
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 150px;
-  height: 257px;
+  width: 100%;
+  height: 250px;
   @media screen and (min-width: 490px) {
     width: 250px;
     height: 357px;
@@ -296,7 +296,7 @@ const ItemWrap = styled.div`
   font-style: normal;
   width: 100%;
   overflow: hidden;
-  padding: 20px 30px;
+  margin-top: 30px;
 `;
 
 const ImgWrap = styled.div`
@@ -304,6 +304,8 @@ const ImgWrap = styled.div`
   position: relative;
   cursor: pointer;
   overflow: hidden;
+  width: 200px;
+  height: 250px;
   @media screen and (min-width: 490px) {
     width: 250px;
     height: 357px;
@@ -361,7 +363,7 @@ const SocialsListItem = styled.li`
   }
 
   & > * {
-    fill: ${props => props.theme.black};
+    fill: ${(props) => props.theme.black};
   }
 `;
 const SocialsListLink = styled.a`
