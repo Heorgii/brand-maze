@@ -1,7 +1,7 @@
+import { Logo } from 'components/Header/Header.styled';
 import {
   ContactListItem,
   ContactListLink,
-  Logo,
   SocialsList,
   SocialsListItem,
   TikTok,
@@ -18,9 +18,11 @@ import telegram from 'images/sprite.svg';
 import linkedin from 'images/sprite.svg';
 import close from 'images/sprite.svg';
 import { useLocation } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   if (isOpen) {
     document.addEventListener('keydown', e => {
@@ -42,7 +44,6 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
 
       {isOpen && (
         <MobileBox>
-
           <NavListMobile>
             <NavListMobileItem
               className={`link ${location.pathname === '/' ? 'active' : ''}`}
@@ -50,7 +51,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
               aria-label="Home"
               onClick={toggleMenu}
             >
-              Home
+              {t('Home')}
             </NavListMobileItem>
             <NavListMobileItem
               className={`link ${
@@ -60,7 +61,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
               aria-label="About"
               onClick={toggleMenu}
             >
-              About
+              {t('About')}
             </NavListMobileItem>
             <NavListMobileItem
               className={`link ${
@@ -70,7 +71,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
               aria-label="Services"
               onClick={toggleMenu}
             >
-              Services
+              {t('Services')}
             </NavListMobileItem>
             <NavListMobileItem
               className={`link ${
@@ -80,7 +81,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
               aria-label="Projects"
               onClick={toggleMenu}
             >
-              Projects
+              {t('Projects')}
             </NavListMobileItem>
             <NavListMobileItem
               className={`link ${
@@ -90,7 +91,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
               aria-label="Contact"
               onClick={toggleMenu}
             >
-              Contact
+              {t('Contact')}
             </NavListMobileItem>
           </NavListMobile>
           <ContactListMobile>
@@ -111,7 +112,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
             <SocialsList>
               <SocialsListItem>
                 <a
-                  href="https://www.instagram.com/invites/contact/?i=1wcw0x66x4cku&utm_content=rwvytfj"
+                  href="https://instagram.com/brand.maze?igshid=MzRlODBiNWFlZA=="
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -141,9 +142,15 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
                 </a>
               </SocialsListItem>
               <SocialsListItem>
-                <svg width="20" height="20">
-                  <use href={linkedin + '#linkedin'}></use>
-                </svg>
+                <a
+                  href="https://www.linkedin.com/in/brand-maze-935584283"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg width="20" height="20">
+                    <use href={linkedin + '#linkedin'}></use>
+                  </svg>
+                </a>
               </SocialsListItem>
             </SocialsList>
           </ContactListMobile>

@@ -2,7 +2,6 @@ import {
   List,
   ListItem,
   ListItemText,
-  ProductionText,
   CompList,
   CompListItem,
   ItemTitle,
@@ -16,8 +15,8 @@ import {
   SwiperSvg,
   ListItemImg,
 } from './Home.styled';
-import logo2 from '../../../images/home/logo2.svg'
-import projectsHome from '../../../images/home/projectsHome.webp'
+import logo2 from '../../../images/home/logo2.svg';
+import brand from '../../../images/home/brand.webp';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
@@ -27,9 +26,11 @@ import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
   Aos.init();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo({
@@ -41,28 +42,26 @@ export const Home = () => {
 
   return (
     <Container>
-      <TitleHome>BUILDING BETTER BRANDS</TitleHome>
+      <TitleHome>{t('BUILDING BETTER BRANDS')}</TitleHome>
 
       <ListBox>
         <List>
           <ListItem>
-            <ListItemImg src={projectsHome} alt="" />
-            {/* <SwiperSvg width="240" height="240" fill='#1d1d1b'>
-              <use href={logo3 + '#logo3'}></use>
-            </SwiperSvg> */}
+            <ListItemImg src={brand} alt="" />
 
             <ListItemText>
-              We work tirelessly to develop long-term relationships with our
-              partners, just as you strive to create strong bonds with the
-              customers who purchase your products or use your services.
+              {t(
+                'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services.'
+              )}
             </ListItemText>
           </ListItem>
 
           <ListItem>
             <ListItemText>
-              We are creators of exceptional brands. This is the embodiment of
-              our business. Under one virtual roof, we do incredible things to
-              achieve this goal:<span> we build better brands. </span>
+              {t(
+                'We are creators of exceptional brands. This is the embodiment of our business. Under one virtual roof, we do incredible things to achieve this goal:'
+              )}
+              <span> {t('we build better brands.')} </span>
             </ListItemText>
 
             <SwiperSvg width="240" height="240">
@@ -86,18 +85,14 @@ export const Home = () => {
           loopedSlides={1}
         >
           <SwiperSlide>
-            {/* <SwiperSvg width="240" height="240">
-              <use href={logo3 + '#logo3'}></use>
-            </SwiperSvg> */}
-            <ListItemImg src={projectsHome} alt="" />
-
+            <ListItemImg src={brand} alt="" />
           </SwiperSlide>
 
           <SwiperSlide>
             <ListItemTextSwiper>
-              We work tirelessly to develop long-term relationships with our
-              partners, just as you strive to create strong bonds with the
-              customers who purchase your products or use your services.
+              {t(
+                'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services.'
+              )}
             </ListItemTextSwiper>
           </SwiperSlide>
 
@@ -109,46 +104,50 @@ export const Home = () => {
 
           <SwiperSlide>
             <ListItemTextSwiper>
-              We are creators of exceptional brands. This is the embodiment of
-              our business. Under one virtual roof, we do incredible things to
-              achieve this goal:
-              <span> we build better brands. </span>
+              {t(
+                'We are creators of exceptional brands. This is the embodiment of our business. Under one virtual roof, we do incredible things to achieve this goal:'
+              )}
+              <span> {t('we build better brands.')} </span>
             </ListItemTextSwiper>
           </SwiperSlide>
         </Swiper>
       </ListBoxSwaper>
 
       <ConclusionText>
-        <span>At Brand Maze </span> - we carefully implement a well-designed
-        process that helps us achieve excellence in everything we do.
+        <span>{t('At')} Brand Maze </span> -{' '}
+        {t(
+          'we carefully implement a well-designed process that helps us achieve excellence in everything we do.'
+        )}
       </ConclusionText>
-      <ProductionText>©brand maze productions</ProductionText>
 
       <CompList>
         <CompListItem data-aos="zoom-in-left" data-aos-delay="150">
           <ItemNumber>01</ItemNumber>
-          <ItemTitle>Logo</ItemTitle>
+          <ItemTitle>{t('Logo')}</ItemTitle>
           <ItemDiscr>
-            It is a key element, helps to establish brand identity, enhances
-            recognition and contributes to creating a positive impression.
+            {t(
+              'It is a key element, helps to establish brand identity, enhances recognition and contributes to creating a positive impression.'
+            )}
           </ItemDiscr>
         </CompListItem>
 
         <CompListItem data-aos="zoom-in-right" data-aos-delay="250">
           <ItemNumber>02</ItemNumber>
-          <ItemTitle>Web designs</ItemTitle>
+          <ItemTitle>{t('Web designs')}</ItemTitle>
           <ItemDiscr>
-            It is responsible for creating an attractive and user-friendly
-            interface that affects the first impression of the user.
+            {t(
+              'It is responsible for creating an attractive and user-friendly interface that affects the first impression of the user.'
+            )}
           </ItemDiscr>
         </CompListItem>
 
         <CompListItem data-aos="zoom-in-left" data-aos-delay="350">
           <ItemNumber>03</ItemNumber>
-          <ItemTitle>Web development</ItemTitle>
+          <ItemTitle>{t('Web development')}</ItemTitle>
           <ItemDiscr>
-            Allows you to create interactive and dynamic websites that attract
-            customers, improve user interaction and achieve business goals.
+            {t(
+              'Allows you to create interactive and dynamic websites that attract customers, improve user interaction and achieve business goals.'
+            )}
           </ItemDiscr>
         </CompListItem>
 
@@ -156,9 +155,9 @@ export const Home = () => {
           <ItemNumber>04</ItemNumber>
           <ItemTitle>Instagram</ItemTitle>
           <ItemDiscr>
-            Allows you to effectively promote products or services, demonstrate
-            a unique style, establish contacts with consumers and develop
-            faithful to the brand.
+            {t(
+              'Allows you to effectively promote products or services, demonstrate a unique style, establish contacts with consumers and develop faithful to the brand.'
+            )}
           </ItemDiscr>
         </CompListItem>
 
@@ -166,9 +165,9 @@ export const Home = () => {
           <ItemNumber>05</ItemNumber>
           <ItemTitle>TikTok</ItemTitle>
           <ItemDiscr>
-            Allows you to create viral videos, maintain interactivity and
-            communicate with consumers. To attract attention and create a
-            positive image among a wide audience.
+            {t(
+              'Allows you to create viral videos, maintain interactivity and communicate with consumers. To attract attention and create a positive image among a wide audience.'
+            )}
           </ItemDiscr>
         </CompListItem>
       </CompList>
