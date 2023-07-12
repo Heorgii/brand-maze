@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { Logo, NavListLink } from '../Sidebar.styled';
+import { NavListLink } from '../Sidebar.styled';
 
 export const MobileMenuBox = styled.div`
   position: fixed;
@@ -21,10 +21,6 @@ export const MobileMenuBox = styled.div`
   @media screen and (min-width: 1281px) {
     display: none;
   }
-`;
-
-export const LogoMobile = styled.p`
-
 `;
 
 export const HeaderSvgMobile = styled.svg`

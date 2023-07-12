@@ -9,7 +9,6 @@ import {
 import {
   ContactListMobile,
   HeaderSvgMobile,
-  LogoMobile,
   MobileBox,
   NavListMobile,
   NavListMobileItem,
