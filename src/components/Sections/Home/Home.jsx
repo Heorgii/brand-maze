@@ -17,7 +17,6 @@ import {
   ListItemImg,
 } from './Home.styled';
 import logo2 from '../../../images/home/logo2.svg'
-import logo3 from '../../../images/home/logo3.svg'
 import projectsHome from '../../../images/home/projectsHome.webp'
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
