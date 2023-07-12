@@ -1,6 +1,7 @@
 import {
   ContactListItem,
   ContactListLink,
+  Logo,
   SocialsList,
   SocialsListItem,
   TikTok,
@@ -8,6 +9,7 @@ import {
 import {
   ContactListMobile,
   HeaderSvgMobile,
+  LogoMobile,
   MobileBox,
   NavListMobile,
   NavListMobileItem,
@@ -37,9 +39,11 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
       <HeaderSvgMobile width="24" height="24" onClick={toggleMenu}>
         <use href={close + '#close'}></use>
       </HeaderSvgMobile>
+      <Logo>Brand maze</Logo>
 
       {isOpen && (
         <MobileBox>
+
           <NavListMobile>
             <NavListMobileItem
               className={`link ${location.pathname === '/' ? 'active' : ''}`}

@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import { NavListLink } from '../Sidebar.styled';
+import { Logo, NavListLink } from '../Sidebar.styled';
 
 export const MobileMenuBox = styled.div`
   position: fixed;
@@ -23,6 +23,10 @@ export const MobileMenuBox = styled.div`
   }
 `;
 
+export const LogoMobile = styled.p`
+
+`;
+
 export const HeaderSvgMobile = styled.svg`
   fill: currentColor;
   position: absolute;
@@ -38,7 +42,7 @@ export const MobileBox = styled.nav`
 export const NavListMobile = styled.nav`
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 60px;
 `;
 
 export const NavListMobileItem = styled(NavListLink)`
