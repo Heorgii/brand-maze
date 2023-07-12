@@ -14,9 +14,11 @@ import {
   TitleHome,
   ListBox,
   SwiperSvg,
+  ListItemImg,
 } from './Home.styled';
 import logo2 from '../../../images/home/logo2.svg'
 import logo3 from '../../../images/home/logo3.svg'
+import projectsHome from '../../../images/home/projectsHome.webp'
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
@@ -45,9 +47,10 @@ export const Home = () => {
       <ListBox>
         <List>
           <ListItem>
-            <SwiperSvg width="240" height="240" fill='#1d1d1b'>
+            <ListItemImg src={projectsHome} alt="" />
+            {/* <SwiperSvg width="240" height="240" fill='#1d1d1b'>
               <use href={logo3 + '#logo3'}></use>
-            </SwiperSvg>
+            </SwiperSvg> */}
 
             <ListItemText>
               We work tirelessly to develop long-term relationships with our
@@ -84,9 +87,11 @@ export const Home = () => {
           loopedSlides={1}
         >
           <SwiperSlide>
-            <SwiperSvg width="240" height="240">
+            {/* <SwiperSvg width="240" height="240">
               <use href={logo3 + '#logo3'}></use>
-            </SwiperSvg>
+            </SwiperSvg> */}
+            <ListItemImg src={projectsHome} alt="" />
+
           </SwiperSlide>
 
           <SwiperSlide>

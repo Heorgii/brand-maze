@@ -11,6 +11,8 @@ import {
   LabelForInputForFile,
   ButtonSend,
   TextForInputForFile,
+  ThanksBox,
+  ThanksContent,
 } from './Contact.styled';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
 
@@ -20,7 +22,8 @@ export const Contact = () => {
   const [userEmail, setUserEmail] = useState('');
   const [userPhone, setUserPhone] = useState('');
   const [userMessage, setUserMessage] = useState('');
-  const [file, setFile] = useState('');
+  const [setFile] = useState(''); //file,
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   document.querySelector('html').classList.add('js');
 
@@ -42,13 +45,8 @@ export const Contact = () => {
     // document.querySelectorAll('.file-return')[0].innerHTML =
     //   '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
 
-    return (
-      <div style={{ backgroundColor: 'red' }}>
-        <h1>Thanks</h1>
-      </div>
-    );
+    setFormSubmitted(true);
   };
-  console.log(handleSubmit, file);
 
   const handleChange = e => {
     e.preventDefault();
@@ -73,12 +71,6 @@ export const Contact = () => {
     }
   };
 
-  // const [ setShowSuccess] = useState(false);//showSuccess
-
-  // const handleSuccess = () => {
-  //   setShowSuccess(true);
-  // };
-
   return (
     <Container>
       <Title>Contact</Title>
@@ -89,9 +81,9 @@ export const Contact = () => {
         className="contact-form"
         name="form-contacts"
         autoComplete="on"
-        // onSubmit={() => {
-        //   handleSubmit();
-        // }}
+        onSubmit={() => {
+          handleSubmit();
+        }}
       >
         <InputWrapper>
           <LabelOfItem aria-label="Name">
@@ -205,13 +197,21 @@ export const Contact = () => {
             mb)
           </TextForInputForFile>
         </ContainerForInputForFile>
-        {/* onClick={handleSuccess} */}
         <ButtonSend type="submit">Send message</ButtonSend>
-        {/* {showSuccess && (
-          <div style={{ backgroundColor: 'red' }}>
-            <h1>We received your message and will answer you soon</h1>
-          </div>
-        )} */}
+        {formSubmitted && (
+          <ThanksBox>
+            <ThanksContent>
+              <h1 style={{ fontFamily: "'Inter', sans-serif" }}>
+                Your message has been successfully sent
+              </h1>
+              <p
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: '30px' }}
+              >
+                We will contact you. Thank you!
+              </p>
+            </ThanksContent>
+          </ThanksBox>
+        )}
       </ContactForm>
     </Container>
   );

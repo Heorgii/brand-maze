@@ -82,7 +82,7 @@ export const ListBoxSwaper = styled.div`
 export const SwiperSvg = styled.svg`
   fill: ${props => props.theme.black};
   &:nth-child(1) {
-    animation: ${ flipInVerRightAnimation} 0.9s
+    animation: ${flipInVerRightAnimation} 0.9s
       cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
@@ -103,29 +103,15 @@ export const ListItem = styled.li`
 `;
 
 export const ListItemImg = styled.img`
-  @media screen and (max-width: 1279.9px) {
-    width: 200px;
-    height: 150px;
-  }
-
-  &:nth-child(1) {
-    margin-bottom: 20px;
-
-    @media screen and (min-width: 1280px) {
-      margin-bottom: 88px;
-      animation: ${flipInVerLeftAnimation} 0.7s
-        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    }
-  }
-
-  &:nth-child(2) {
-    margin-bottom: 20px;
-
-    @media screen and (min-width: 1280px) {
-      margin-top: 88px;
-      animation: ${flipInVerRightAnimation} 0.7s
-        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    }
+  animation: ${flipInVerLeftAnimation} 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  /* width: 200px;
+  height: 150px; */
+  width: 278px;
+  height: 228px;
+  @media screen and (min-width: 1280px) {
+    width: 368px;
+    height: 287px;
   }
 `;
 
@@ -139,7 +125,7 @@ export const ListItemText = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  margin-bottom: 35px;
+  margin-bottom: 85px;
 
   @media screen and (min-width: 768px) {
     font-size: 21px;
@@ -152,6 +138,7 @@ export const ListItemText = styled.p`
   &:nth-child(2) {
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
     margin-top: 35px;
+    margin-bottom: 0;
   }
 
   & > * {

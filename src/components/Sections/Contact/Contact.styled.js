@@ -90,7 +90,7 @@ const LabelOfItem = styled.label`
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
   }
 
-  &:nth-child(6) {
+  &:nth-child(5) {
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
   }
 
@@ -98,7 +98,7 @@ const LabelOfItem = styled.label`
     animation: ${fadeInRightAnimation} 0.5s ease-in both;
   }
 
-  &:nth-child(7) {
+  &:nth-child(6) {
     animation: ${fadeInRightAnimation} 0.5s ease-in both;
   }
 
@@ -279,6 +279,29 @@ const ButtonSend = styled(Button)`
   animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
 `;
 
+const ThanksBox = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+`;
+
+const ThanksContent = styled.div`
+  background-color: ${props => props.theme.white};
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  & > * {
+    color: ${props => props.theme.black};
+  }
+`;
+
 export {
   ContactForm,
   InputWrapper,
@@ -291,4 +314,6 @@ export {
   ContainerForInputForFile,
   LabelForInputForFile,
   TextForInputForFile,
+  ThanksBox,
+  ThanksContent,
 };
