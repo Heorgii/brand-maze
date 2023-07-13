@@ -266,7 +266,7 @@ export const ItemTitle = styled.h3`
 `;
 
 export const ItemDiscr = styled(Text)`
-  color: ${props => props.theme.black};
+  color: ${props => props.theme.text};
   width: 319px;
   text-align: left;
 
