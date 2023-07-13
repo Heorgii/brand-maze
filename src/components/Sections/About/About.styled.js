@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const fadeInLeftAnimation = keyframes`
   0% {
@@ -39,12 +39,12 @@ const ContainerForAbout = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
   width: 100%;
   overflow: hidden;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -62,13 +62,13 @@ const ContainerForAboutForMobile = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
   width: 100%;
   margin-bottom: 55px;
   overflow: hidden;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -86,7 +86,7 @@ const ContainerForTeamForMobile = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
 
@@ -112,7 +112,7 @@ const ContainerForTeamForTablet = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
 
@@ -137,7 +137,7 @@ const ContainerForTeam = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   width: 100%;
   overflow: hidden;
@@ -164,8 +164,9 @@ const ContainerForAboutItem = styled.div`
   width: 100%;
   margin-bottom: 40px;
 
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
+  color: ${props => props.theme.text};
 
   overflow: hidden;
 
@@ -194,8 +195,9 @@ const ContainerForIcon = styled.div`
   width: 100%;
   margin-bottom: 40px;
 
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
+  color: ${props => props.theme.text};
 
   overflow: hidden;
 
@@ -216,6 +218,7 @@ const ContainerForIcon = styled.div`
 const ContainerForIconText = styled.div`
   animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
   margin-bottom: 40px;
+  color: ${props => props.theme.text};
 `;
 const ContainerForIconTablet = styled.div`
   display: flex;
@@ -234,10 +237,10 @@ const ContainerForIconTablet = styled.div`
 `;
 
 const TitleTeam = styled.h3`
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 24px;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
 `;
 
 const Img = styled.img`
@@ -279,7 +282,7 @@ const ItemImgText = styled.div`
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
 `;
 const PaddingItem = styled.p`
   padding: 16px;
@@ -292,8 +295,9 @@ const ItemWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
+  color: ${props => props.theme.text};
   width: 100%;
   overflow: hidden;
   margin-top: 30px;
@@ -318,13 +322,13 @@ const ImgWrap = styled.div`
 `;
 
 const TitleItem = styled.h4`
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 4%;
   font-weight: 700;
   text-transform: uppercase;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
 
   margin-top: 15px;
   margin-bottom: 4px;
@@ -335,12 +339,12 @@ const TitleItem = styled.h4`
 `;
 
 const JobItem = styled.h5`
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 18px;
   letter-spacing: 4%;
   font-weight: 500;
-  color: ${(props) => props.theme.grey};
+  color: ${props => props.theme.grey};
   min-height: 42px;
 `;
 
@@ -352,28 +356,28 @@ const SocialsList = styled.ul`
 const SocialsListItem = styled.li`
   cursor: pointer;
   padding: 2px;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
 
   &:not(:last-child) {
     margin-right: 20px;
   }
   & > *:hover,
   & > *:focus {
-    fill: ${(props) => props.theme.accentRed};
+    fill: ${props => props.theme.accentRed};
   }
 
   & > * {
-    fill: ${(props) => props.theme.black};
+    fill: ${props => props.theme.black};
   }
 `;
 const SocialsListLink = styled.a`
   cursor: pointer;
   padding: 2px;
-  color: ${(props) => props.theme.black};
+  color: ${props => props.theme.black};
 
   & > *:hover,
   & > *:focus {
-    fill: ${(props) => props.theme.accentRed};
+    fill: ${props => props.theme.accentRed};
   }
 
   & svg {

@@ -64,7 +64,7 @@ export const Services = () => {
         <ListSkills>
           <li>
             <Label htmlFor="file">
-              <span>{t('Website design')}</span>
+              <span>{t('Web design')}</span>
               <span>90%</span>
             </Label>
             <progress id="file" max="100" value="90" />
@@ -290,9 +290,9 @@ export const Services = () => {
         </ListQuestions>
       </WrapperBox>
       <WrapperText>
-        <Subtitle>{t("We look forward to working with you")}</Subtitle>
+        <Subtitle>{t('We look forward to working with you')}</Subtitle>
         <ButtonLink to="/contact" aria-label="Open order form">
-          {t("Order")}
+          {t('Order')}
         </ButtonLink>
       </WrapperText>
     </Container>
