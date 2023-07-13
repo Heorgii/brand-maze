@@ -15,6 +15,7 @@ import {
   ThanksContent,
 } from './Contact.styled';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
+import { useTranslation } from 'react-i18next';
 
 export const Contact = () => {
   const [userFirstName, setUserFirstName] = useState('');
@@ -24,6 +25,7 @@ export const Contact = () => {
   const [userMessage, setUserMessage] = useState('');
   const [setFile] = useState(''); //file,
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const { t } = useTranslation();
 
   document.querySelector('html').classList.add('js');
 
@@ -73,7 +75,7 @@ export const Contact = () => {
 
   return (
     <Container>
-      <Title>Contact</Title>
+      <Title>{t('Contact')}</Title>
       <ContactForm
         action="https://formsubmit.co/drivezone36@gmail.com"
         method="POST"
@@ -91,22 +93,22 @@ export const Contact = () => {
               type="text"
               name="user-firstname"
               required
-              placeholder="John"
+              placeholder={t("John")}
               value={userFirstName}
               onChange={e => handleChange(e)}
             />
-            <NameOfItem>First Name</NameOfItem>
+            <NameOfItem>{t('First Name')}</NameOfItem>
           </LabelOfItem>
           <LabelOfItem aria-label="LastName">
             <InputOfItem
               type="text"
               name="user-lastname"
               required
-              placeholder="Watson"
+              placeholder={t("Watson")}
               value={userLastName}
               onChange={e => handleChange(e)}
             />
-            <NameOfItem>Last Name</NameOfItem>
+            <NameOfItem>{t('Last Name')}</NameOfItem>
           </LabelOfItem>
           {/* <input type="hidden" name="_captcha" value="true" /> */}
           <input type="hidden" name="_subject" value="New Message!!!!!" />
@@ -124,7 +126,7 @@ export const Contact = () => {
               value={userEmail}
               onChange={e => handleChange(e)}
             />
-            <NameOfItem>Email</NameOfItem>
+            <NameOfItem>{t('Email')}</NameOfItem>
           </LabelOfItem>
           <LabelOfItem aria-label="Phone">
             <InputOfItem
@@ -135,7 +137,7 @@ export const Contact = () => {
               value={userPhone}
               onChange={e => handleChange(e)}
             />
-            <NameOfItem>Phone number</NameOfItem>
+            <NameOfItem>{t('Phone number')}</NameOfItem>
           </LabelOfItem>
         </InputWrapper>
         <LabelOfItem
@@ -145,11 +147,11 @@ export const Contact = () => {
         >
           <TextareaOfItem
             name="comment"
-            placeholder="Write your message"
+            placeholder={t('Write your message')}
             value={userMessage}
             onChange={e => handleChange(e)}
           />
-          <NameOfItem>Message</NameOfItem>
+          <NameOfItem>{t('Message')}</NameOfItem>
         </LabelOfItem>
         <ContainerForInputForFile>
           <div className="input-file-container">
@@ -189,25 +191,26 @@ export const Contact = () => {
                 }
               }}
             >
-              Add a file...
+              {t('Add a file...')}
             </LabelForInputForFile>
           </div>
           <TextForInputForFile className="file-return">
-            (Allowed file formats - pdf doc docx odt ods. Maximum file size - 5
-            mb)
+            {t(
+              '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)'
+            )}
           </TextForInputForFile>
         </ContainerForInputForFile>
-        <ButtonSend type="submit">Send message</ButtonSend>
+        <ButtonSend type="submit">{t('Send message')}</ButtonSend>
         {formSubmitted && (
           <ThanksBox>
             <ThanksContent>
               <h1 style={{ fontFamily: "'Inter', sans-serif" }}>
-                Your message has been successfully sent
+                {t('Your message has been successfully sent')}
               </h1>
               <p
                 style={{ fontFamily: "'Inter', sans-serif", fontSize: '30px' }}
               >
-                We will contact you. Thank you!
+                {t('We will contact you. Thank you!')}
               </p>
             </ThanksContent>
           </ThanksBox>

@@ -24,8 +24,6 @@ const fadeInBottomAnimation = keyframes`
   }
 `;
 
-
-
 export const SidebarContainer = styled.aside`
   @media screen and (min-width: 1280px) {
     padding-top: 10px;
@@ -41,12 +39,6 @@ export const SidebarBox = styled.div`
     width: 320px;
   }
 `;
-
-
-
-
-
-
 
 export const NavList = styled.nav`
   display: none;
@@ -180,6 +172,10 @@ export const ContactListLink = styled.a`
     font-size: 14px;
   }
 
+  &:nth-child(1){
+    margin-bottom: 5px;
+  }
+
   &:hover,
   &:focus {
     background: linear-gradient(
@@ -192,6 +188,11 @@ export const ContactListLink = styled.a`
     background-clip: text;
     color: transparent;
   }
+`;
+
+export const ContactListItemPhone = styled.li`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const SocialsList = styled.ul`

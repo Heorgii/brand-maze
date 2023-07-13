@@ -10,6 +10,7 @@ import {
   SocialsListItem,
   SidebarContainer,
   TikTok,
+  ContactListItemPhone,
 } from './Sidebar.styled';
 import sprite from '../../images/sprite.svg';
 import { useTranslation } from 'react-i18next';
@@ -66,11 +67,15 @@ export const Sidebar = () => {
         </NavList>
         <ContactList>
           <ul>
-            <li>
+            <ContactListItemPhone>
               <ContactListLink href="tel:+380959309876">
                 +38 095 930 98 76
               </ContactListLink>
-            </li>
+
+              <ContactListLink href="tel:+4368110541148">
+                +43 681 10541148
+              </ContactListLink>
+            </ContactListItemPhone>
 
             <ContactListItem>
               <ContactListLink href="mailto:contact@brandmaze.com">

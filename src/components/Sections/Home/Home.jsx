@@ -16,7 +16,7 @@ import {
   ListItemImg,
 } from './Home.styled';
 import logo2 from '../../../images/home/logo2.svg';
-import brand from '../../../images/home/brand.webp';
+import brandBuild from '../../../images/home/brandBuild.webp';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
@@ -47,7 +47,7 @@ export const Home = () => {
       <ListBox>
         <List>
           <ListItem>
-            <ListItemImg src={brand} alt="" />
+            <ListItemImg src={brandBuild} alt="" />
 
             <ListItemText>
               {t(
@@ -85,7 +85,7 @@ export const Home = () => {
           loopedSlides={1}
         >
           <SwiperSlide>
-            <ListItemImg src={brand} alt="" />
+            <ListItemImg src={brandBuild} alt="" />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -133,7 +133,7 @@ export const Home = () => {
 
         <CompListItem data-aos="zoom-in-right" data-aos-delay="250">
           <ItemNumber>02</ItemNumber>
-          <ItemTitle>{t('Web designs')}</ItemTitle>
+          <ItemTitle>{t('Web design')}</ItemTitle>
           <ItemDiscr>
             {t(
               'It is responsible for creating an attractive and user-friendly interface that affects the first impression of the user.'

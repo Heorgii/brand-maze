@@ -35,7 +35,8 @@ import chartpie from '../../../images/about/mdi_light_chart-pie.svg';
 import flask from '../../../images/about/mdi_light_flask.svg';
 import gift from '../../../images/about/mdi_light_gift.svg';
 
-import heorhii from '../../../images/about/team/heorhii.jpg';
+import heorhii from '../../../images/about/team/heorhii_blackAndWhite.webp';
+import heorhiiColor from '../../../images/about/team/heorhii.webp';
 import julia from '../../../images/about/team/julia_blackAndWhite.webp';
 import juliaColor from '../../../images/about/team/julia.webp';
 import vlad from '../../../images/about/team/vlad_blackAndWhite.webp';
@@ -45,8 +46,11 @@ import sprite from '../../../images/sprite.svg';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 export const About = () => {
+  const { t } = useTranslation();
+
   Aos.init();
   useEffect(() => {
     window.scrollTo({
@@ -58,27 +62,24 @@ export const About = () => {
 
   return (
     <Container>
-      <Title>ABOUT</Title>
+      <Title>{t('About')}</Title>
       <ContainerForAbout>
         <ContainerForAboutItem>
           <p>
-            Our approach to marketing is a holistic approach that includes
-            strategic planning, creative design, effective marketing campaigns
-            and an emphasis on building lasting relationships with clients. We
-            work tirelessly to ensure the success and growth of our clients.
+            {t(
+              'Our approach to marketing is a holistic approach that includes strategic planning, creative design, effective marketing campaigns and an emphasis on building lasting relationships with clients. We work tirelessly to ensure the success and growth of our clients.'
+            )}
           </p>
           <p>
-            At Brand Maze, we pride ourselves on our ability to create
-            exceptional brands that capture attention, demonstrate quality and
-            leave a lasting impression. Our team of talented professionals work
-            together, combining strategy, creativity and technology to achieve
-            the best results for our clients.
+            {t(
+              'At Brand Maze, we pride ourselves on our ability to create exceptional brands that capture attention, demonstrate quality and leave a lasting impression. Our team of talented professionals work together, combining strategy, creativity and technology to achieve the best results for our clients.'
+            )}
           </p>
         </ContainerForAboutItem>
         <ContainerForIconText>
-          Join us at Brand Maze and let us be your trusted partner in developing
-          your brand. Together we can create the magic that will make your brand
-          stand out and attract more success.
+          {t(
+            'Join us at Brand Maze and let us be your trusted partner in developing your brand. Together we can create the magic that will make your brand stand out and attract more success.'
+          )}
         </ContainerForIconText>
       </ContainerForAbout>
       <ContainerForAboutForMobile>
@@ -96,26 +97,23 @@ export const About = () => {
         >
           <SwiperSlide>
             <p style={{ width: '70%' }}>
-              Our approach to marketing is a holistic approach that includes
-              strategic planning, creative design, effective marketing campaigns
-              and an emphasis on building lasting relationships with clients. We
-              work tirelessly to ensure the success and growth of our clients.
+              {t(
+                'Our approach to marketing is a holistic approach that includes strategic planning, creative design, effective marketing campaigns and an emphasis on building lasting relationships with clients. We work tirelessly to ensure the success and growth of our clients.'
+              )}
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p style={{ width: '70%' }}>
-              At Brand Maze, we pride ourselves on our ability to create
-              exceptional brands that capture attention, demonstrate quality and
-              leave a lasting impression. Our team of talented professionals
-              work together, combining strategy, creativity and technology to
-              achieve the best results for our clients.
+              {t(
+                'At Brand Maze, we pride ourselves on our ability to create exceptional brands that capture attention, demonstrate quality and leave a lasting impression. Our team of talented professionals work together, combining strategy, creativity and technology to achieve the best results for our clients.'
+              )}
             </p>
           </SwiperSlide>
           <SwiperSlide>
             <p style={{ width: '70%' }}>
-              Join us at Brand Maze and let us be your trusted partner in
-              developing your brand. Together we can create the magic that will
-              make your brand stand out and attract more success.
+              {t(
+                'Join us at Brand Maze and let us be your trusted partner in developing your brand. Together we can create the magic that will make your brand stand out and attract more success.'
+              )}
             </p>
           </SwiperSlide>
         </Swiper>
@@ -124,26 +122,26 @@ export const About = () => {
         <ContainerForIconTablet className="containerJustifyEnd">
           <ItemImgText>
             <Img src={gift} alt="gift" />
-            <PaddingItem>Experienced team</PaddingItem>
+            <PaddingItem>{t('Experienced team')}</PaddingItem>
           </ItemImgText>
           <ItemImgText>
             <Img src={chartpie} alt="chartpie" />
-            <PaddingItem>Business Strategy</PaddingItem>
+            <PaddingItem>{t('Business Strategy')}</PaddingItem>
           </ItemImgText>
         </ContainerForIconTablet>
         <ContainerForIconTablet className="containerJustifyStart">
           <ItemImgText>
             <Img src={chartbar} alt="chartbar" />
-            <PaddingItem>Amazing Growth</PaddingItem>
+            <PaddingItem>{t('Amazing Growth')}</PaddingItem>
           </ItemImgText>
           <ItemImgText>
             <Img src={flask} alt="flask" />
-            <PaddingItem>Technical Supervision</PaddingItem>
+            <PaddingItem>{t('Technical Supervision')}</PaddingItem>
           </ItemImgText>
         </ContainerForIconTablet>
       </ContainerForIcon>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <TitleTeam>OUR PROFESSIONAL TEAM</TitleTeam>
+        <TitleTeam>{t('OUR PROFESSIONAL TEAM')}</TitleTeam>
       </div>
       <ContainerForTeam>
         <ItemWrap data-aos="flip-up" data-aos-delay="150">
@@ -151,7 +149,7 @@ export const About = () => {
             <ImgForTeam src={vlad} alt="vlad" />
             <ImgForTeamColor src={vladColor} alt="vlad" />
           </ImgWrap>
-          <TitleItem>Vlad Popov</TitleItem>
+          <TitleItem>{t('Vlad Popov')}</TitleItem>
           <JobItem>Full-Stack Developer</JobItem>
           <SocialsList>
             <SocialsListItem>
@@ -201,7 +199,7 @@ export const About = () => {
             <ImgForTeam src={julia} alt="julia" />
             <ImgForTeamColor src={juliaColor} alt="julia" />
           </ImgWrap>
-          <TitleItem>Julia Golban</TitleItem>
+          <TitleItem>{t('Julia Golban')}</TitleItem>
           <JobItem>Full-Stack Engineer</JobItem>
           <SocialsList>
             <SocialsListItem>
@@ -249,8 +247,9 @@ export const About = () => {
         <ItemWrap data-aos="flip-up" data-aos-delay="150">
           <ImgWrap>
             <ImgForTeam src={heorhii} alt="heorhii" />
+            <ImgForTeamColor src={heorhiiColor} alt="heorhii" />
           </ImgWrap>
-          <TitleItem>Heorhii Rushchak</TitleItem>
+          <TitleItem>{t('Heorhii Rushchak')}</TitleItem>
           <JobItem>Full-Stack Developer</JobItem>
           <SocialsList>
             <SocialsListItem>
@@ -417,6 +416,7 @@ export const About = () => {
             <ItemWrap>
               <ImgWrap>
                 <ImgForTeam src={heorhii} alt="heorhii" />
+                <ImgForTeamColor src={heorhiiColor} alt="heorhii" />
               </ImgWrap>
               <TitleItem>Heorhii Rushchak</TitleItem>
               <JobItem>Full-Stack Developer</JobItem>

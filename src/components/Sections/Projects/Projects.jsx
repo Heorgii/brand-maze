@@ -10,17 +10,18 @@ import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { useEffect } from 'react';
 import { ButtonLink } from 'components/baseStyles/Button.styled';
 import { TitleHome } from '../Home/Home.styled';
-
+import { useTranslation } from 'react-i18next';
 
 export const Project = () => {
-  
-  useEffect(()=>{
+  const { t } = useTranslation();
+
+  useEffect(() => {
     window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    })
-    },[])
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   const hendleClickProject = e => {
     e.preventDefault();
@@ -60,41 +61,41 @@ export const Project = () => {
       original: Barber_img,
       thumbnail: Barber_img,
       description:
-        'A convenient service for hairdressers, massage salons, which helps users make online reservations for the selected service',
+        t('A convenient service for hairdressers, massage salons, which helps users make online reservations for the selected service'),
       originalAlt: 'barbershop project',
       title:
-        'A convenient service for hairdressers, massage salons, which helps users make online reservations for the selected service',
+        t('A convenient service for hairdressers, massage salons, which helps users make online reservations for the selected service'),
     },
     {
       original: Animal_welfare_img,
       thumbnail: Animal_welfare_img,
       description:
-        'A project that helps to find a pet for youself or place a homeless animal in good hands',
+        t('A project that helps to find a pet for yourself or place a homeless animal in good hands'),
       originalAlt: 'animal welfare project',
       title:
-        'A project that helps to find a pet for youself or place a homeless animal in good handsProject #2',
+        t('A project that helps to find a pet for yourself or place a homeless animal in good handsProject #2'),
     },
     {
       original: Filmoteka_img,
       thumbnail: Filmoteka_img,
       originalAlt: 'filmoteka project',
       description:
-        'This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family',
+        t('This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family'),
       title:
-        'This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family',
+        t('This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family'),
     },
     {
       original: Ice_cream_img,
       thumbnail: Ice_cream_img,
       originalAlt: 'ice cream project',
-      description: 'A project for ordering delicious and cold ice cream',
+      description: t('A project for ordering delicious and cold ice cream'),
       title: 'A project for ordering delicious and cold ice cream',
     },
   ];
 
   return (
     <Container>
-      <TitleHome>EXPLORE OUR WORKS</TitleHome>
+      <TitleHome>{t("EXPLORE OUR WORKS")}</TitleHome>
       <SlideContainer>
         <ImageGallery
           autoPlay={true}
@@ -112,7 +113,7 @@ export const Project = () => {
         aria-label="Open order form"
         style={{ marginTop: '50px' }}
       >
-        Order
+        {t('Order')}
       </ButtonLink>
     </Container>
   );
