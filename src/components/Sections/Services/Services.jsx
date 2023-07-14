@@ -186,6 +186,10 @@ export const Services = () => {
               <TableHeading>Database</TableHeading>
               <TableData>MongoDB</TableData>
             </tr>
+            <tr>
+              <TableHeading>Design</TableHeading>
+              <TableData>Adobe Photoshop / Adobe Illustrator / Figma</TableData>
+            </tr>
           </tbody>
         </table>
       </WrapperText>
