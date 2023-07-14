@@ -27,7 +27,7 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
-import ph from '../../../images/home/ph.png'
+import ph from '../../../images/home/ph.png';
 
 export const Home = () => {
   Aos.init();
@@ -86,7 +86,9 @@ export const Home = () => {
           loopedSlides={1}
         >
           <SwiperSlide>
-            <ListItemImg src={ph} alt="" />
+            <SwiperSvg width="240" height="240">
+              <use href={logo2 + '#logo2'}></use>
+            </SwiperSvg>
           </SwiperSlide>
 
           <SwiperSlide>
@@ -98,9 +100,7 @@ export const Home = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <SwiperSvg width="240" height="240">
-              <use href={logo2 + '#logo2'}></use>
-            </SwiperSvg>
+            <ListItemImg src={ph} alt="" />
           </SwiperSlide>
 
           <SwiperSlide>
