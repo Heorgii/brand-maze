@@ -16,7 +16,7 @@ import {
   ListItemImg,
 } from './Home.styled';
 import logo2 from '../../../images/home/logo2.svg';
-import brandBuild from '../../../images/home/brandBuild.webp';
+// import brandBuild from '../../../images/home/brandBuild.webp';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/navigation';
@@ -27,6 +27,7 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
+import ph from '../../../images/home/ph.png'
 
 export const Home = () => {
   Aos.init();
@@ -47,7 +48,7 @@ export const Home = () => {
       <ListBox>
         <List>
           <ListItem>
-            <ListItemImg src={brandBuild} alt="" />
+            <ListItemImg src={ph} alt="" />
 
             <ListItemText>
               {t(
@@ -85,7 +86,7 @@ export const Home = () => {
           loopedSlides={1}
         >
           <SwiperSlide>
-            <ListItemImg src={brandBuild} alt="" />
+            <ListItemImg src={ph} alt="" />
           </SwiperSlide>
 
           <SwiperSlide>
