@@ -27,7 +27,6 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
-import { Video } from 'components/Video/Video';
 
 export const Home = () => {
   Aos.init();
@@ -48,8 +47,8 @@ export const Home = () => {
       <ListBox>
         <List>
           <ListItem>
-            {/* <ListItemImg src={brandBuild} alt="" /> */}
-            <Video />
+            <ListItemImg src={brandBuild} alt="" />
+
             <ListItemText>
               {t(
                 'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services.'
