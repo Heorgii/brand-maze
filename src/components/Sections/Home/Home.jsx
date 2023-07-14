@@ -27,7 +27,7 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
-import video from './video.mp4';
+import { Video } from 'components/Video/Video';
 
 export const Home = () => {
   Aos.init();
@@ -49,21 +49,7 @@ export const Home = () => {
         <List>
           <ListItem>
             {/* <ListItemImg src={brandBuild} alt="" /> */}
-            {/* 
-            <video width="278" height="278" controls>
-              <source src={video} type="video/mp4" />
-            </video> */}
-
-            <video
-              class="video"
-            
-              muted
-              width="540"
-              height="250"
-            >
-              <source src={video} type="video/mp4" />
-            </video>
-
+            <Video />
             <ListItemText>
               {t(
                 'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services.'
