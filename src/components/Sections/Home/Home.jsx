@@ -27,6 +27,7 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
+import video from './video.mp4';
 
 export const Home = () => {
   Aos.init();
@@ -47,7 +48,21 @@ export const Home = () => {
       <ListBox>
         <List>
           <ListItem>
-            <ListItemImg src={brandBuild} alt="" />
+            {/* <ListItemImg src={brandBuild} alt="" /> */}
+            {/* 
+            <video width="278" height="278" controls>
+              <source src={video} type="video/mp4" />
+            </video> */}
+
+            <video
+              class="video"
+            
+              muted
+              width="540"
+              height="250"
+            >
+              <source src={video} type="video/mp4" />
+            </video>
 
             <ListItemText>
               {t(
