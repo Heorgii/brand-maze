@@ -143,7 +143,7 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
               </SocialsListItem>
               <SocialsListItem>
                 <a
-                  href="https://www.linkedin.com/in/brand-maze-935584283"
+                  href="https://www.linkedin.com/company/brand-maze/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
