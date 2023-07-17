@@ -9,11 +9,11 @@ import Language from 'components/Language/Language';
 export const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [visible, setVisible] = useState(true);
-  const [scrollPos, setScrollPos] = useState(window.pageYOffset);
+  const [scrollPos, setScrollPos] = useState(window.scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       const isScrollingUp = currentScrollPos < scrollPos;
 
       setVisible(isScrollingUp || currentScrollPos === 0);
