@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/brand-maze/static/css/main.095281ad.css",
-    "main.js": "/brand-maze/static/js/main.6697c9e3.js",
+    "main.js": "/brand-maze/static/js/main.7a5a6573.js",
     "static/media/IMG_4775.MOV": "/brand-maze/static/media/IMG_4775.0b2b58f20089f78d34e8.MOV",
     "static/media/ph.png": "/brand-maze/static/media/ph.a94c50f2aefac565c0d8.png",
     "static/media/heorhii_blackAndWhite.webp": "/brand-maze/static/media/heorhii_blackAndWhite.00fd070ca62edfc84da0.webp",
@@ -22,10 +22,10 @@
     "static/media/mdi_light_chart-pie.svg": "/brand-maze/static/media/mdi_light_chart-pie.8ab8da0cea2054c17744fd4120678ed3.svg",
     "static/media/mdi_light_chart-bar.svg": "/brand-maze/static/media/mdi_light_chart-bar.4b99fcbf4f0881024811e2bd5961c271.svg",
     "main.095281ad.css.map": "/brand-maze/static/css/main.095281ad.css.map",
-    "main.6697c9e3.js.map": "/brand-maze/static/js/main.6697c9e3.js.map"
+    "main.7a5a6573.js.map": "/brand-maze/static/js/main.7a5a6573.js.map"
   },
   "entrypoints": [
     "static/css/main.095281ad.css",
-    "static/js/main.6697c9e3.js"
+    "static/js/main.7a5a6573.js"
   ]
 }
