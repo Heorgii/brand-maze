@@ -169,6 +169,7 @@ export const ListItemTextSwiper = styled.p`
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  width: 80%;
   color: ${props => props.theme.blackOpacity};
   font-size: 15px;
   font-family: 'Inter', sans-serif;

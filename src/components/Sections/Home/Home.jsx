@@ -52,7 +52,7 @@ export const Home = () => {
 
             <ListItemText>
               {t(
-                'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services.'
+                'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services'
               )}
             </ListItemText>
           </ListItem>
@@ -60,9 +60,9 @@ export const Home = () => {
           <ListItem>
             <ListItemText>
               {t(
-                'We are creators of exceptional brands. This is the embodiment of our business. Under one virtual roof, we do incredible things to achieve this goal:'
+                'We help create of exceptional brands. This is the embodiment of our business. Under one virtual roof, we do incredible things to achieve this goal:'
               )}
-              <span> {t('we build better brands.')} </span>
+              <span> {t('building better brands')} </span>
             </ListItemText>
 
             <SwiperSvg width="240" height="240">
@@ -117,7 +117,7 @@ export const Home = () => {
       <ConclusionText>
         <span>{t('At')} Brand Maze </span> -{' '}
         {t(
-          'we carefully implement a well-designed process that helps us achieve excellence in everything we do.'
+          'we carefully implement a well-designed process that helps us achieve excellence in everything we do'
         )}
       </ConclusionText>
 
