@@ -42,6 +42,7 @@ const ContainerForAbout = styled.div`
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
+  line-height: 1.5;
   width: 100%;
   overflow: hidden;
   color: ${props => props.theme.black};
@@ -65,6 +66,7 @@ const ContainerForAboutForMobile = styled.div`
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
+  line-height: 1.5;
   width: 100%;
   margin-bottom: 55px;
   overflow: hidden;
@@ -89,7 +91,7 @@ const ContainerForTeamForMobile = styled.div`
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
-
+  line-height: 1.5;
   width: 100%;
   overflow: hidden;
   /* padding: 20px 30px; */
@@ -115,7 +117,7 @@ const ContainerForTeamForTablet = styled.div`
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-size: 14px;
-
+  line-height: 1.5;
   width: 100%;
   overflow: hidden;
   /* padding: 20px 30px; */
@@ -139,6 +141,7 @@ const ContainerForTeam = styled.div`
   flex-wrap: nowrap;
   font-family: 'Inter', sans-serif;
   font-style: normal;
+  line-height: 1.5;
   width: 100%;
   overflow: hidden;
   @media screen and (min-width: 1000px) {
@@ -301,6 +304,7 @@ const ItemWrap = styled.div`
   width: 100%;
   overflow: hidden;
   margin-top: 30px;
+  margin-bottom: 15px;
 `;
 
 const ImgWrap = styled.div`

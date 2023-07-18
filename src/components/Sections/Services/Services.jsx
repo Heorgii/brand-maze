@@ -103,7 +103,7 @@ export const Services = () => {
         <Subtitle>{t('Who are our customers?')}</Subtitle>
         <TextCenter>
           {t(
-            "We develop websites for a wide range of clients and businesses. Whether you're a small startup, medium-sized business, or large corporation, we work with you to create a website that meets your needs and goals."
+            "Whether you're a small startup, medium-sized business, or large corporation, we work with you to create a website that meets your needs and goals."
           )}
           <br />
           {t(
