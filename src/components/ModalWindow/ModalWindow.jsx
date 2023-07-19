@@ -4,11 +4,14 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { closeModalWindow } from "hooks/ModalWindow";
 import ReactPlayer from 'react-player';
 import video from '../../images/video/IMG_4775.MOV'
+import { useState } from "react";
 
 export const ModalWindow = () => {
-  
-    function closeModal(e) {
+  const [isPlaying, setPlaying] = useState(false)
+    
+  function closeModal(e) {
         e.preventDefault();
+        setPlaying(false)
         closeModalWindow(e);
       }
 
@@ -18,8 +21,8 @@ export const ModalWindow = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <div style={{display:"flex", justifyContent:"center", alignItems:"start", margin:"20px 0"}}>
-                <ReactPlayer url={video} playing={true} controls  width="600px" height="400px"/>
-                <AiFillCloseCircle
+                <ReactPlayer url={video} playing={isPlaying} controls  width="90%" height="90%" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}/>
+                <AiFillCloseCircle style={{width:"25px", height:"25px"}}
                   type="button"
                   onClick={closeModal}
                   aria-label="Close modal"
