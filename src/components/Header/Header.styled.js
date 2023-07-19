@@ -75,6 +75,7 @@ export const Logo = styled.p`
 
 export const LogoBox = styled.a`
   text-decoration: none;
+  cursor: pointer;
 `;
 
 export const HeaderSvg = styled.svg`
