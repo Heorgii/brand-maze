@@ -5,6 +5,8 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { MdCheck } from 'react-icons/md';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
 import { ButtonLink } from 'components/baseStyles/Button.styled';
@@ -36,10 +38,11 @@ import {
   DetailsList,
   DetailsItem,
 } from './Services.styled';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 
 export const Services = () => {
+  const [showDetails, setShowDetails] = useState(false);
+  const toggleDetails = () => setShowDetails(state => !state);
+
   const { t } = useTranslation();
 
   AOS.init();
@@ -146,21 +149,40 @@ export const Services = () => {
               )}
             </TextSlider>
             <DetailsWrapper>
-              <DetailsButton type="button">{t('Details')}</DetailsButton>
-              <DetailsList>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Discussion of the client questionnaire')}</span>
-                </DetailsItem>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>
-                    {t(
-                      'Definition of the topic and the main goal of the project'
-                    )}
-                  </span>
-                </DetailsItem>
-                {/* <DetailsItem>
+              {!showDetails ? (
+                <DetailsButton
+                  type="button"
+                  aria-label="Open details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Details')}
+                </DetailsButton>
+              ) : (
+                <DetailsButton
+                  type="button"
+                  aria-label="Hide details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Hide')}
+                </DetailsButton>
+              )}
+              {showDetails && (
+                <DetailsList>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Discussion of the client questionnaire')}</span>
+                  </DetailsItem>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>
+                      {t(
+                        'Definition of the topic and the main goal of the project'
+                      )}
+                    </span>
+                  </DetailsItem>
+                  {/* <DetailsItem>
                   <MdCheck size={15} />
                   <span>{t('Commercial offer')}</span>
                 </DetailsItem>
@@ -168,7 +190,8 @@ export const Services = () => {
                   <MdCheck size={15} />
                   <span>{t('Contract execution')}</span>
                 </DetailsItem> */}
-              </DetailsList>
+                </DetailsList>
+              )}
             </DetailsWrapper>
           </SwiperSlide>
           <SwiperSlide>
@@ -180,23 +203,43 @@ export const Services = () => {
               )}
             </TextSlider>
             <DetailsWrapper>
-              <DetailsButton type="button">{t('Details')}</DetailsButton>
-              <DetailsList>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>
-                    {t('Development and approval of a technical task')}
-                  </span>
-                </DetailsItem>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Prototyping, layout and design')}</span>
-                </DetailsItem>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Layout correction and approval')}</span>
-                </DetailsItem>
-              </DetailsList>
+              {!showDetails ? (
+                <DetailsButton
+                  type="button"
+                  aria-label="Open details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Details')}
+                </DetailsButton>
+              ) : (
+                <DetailsButton
+                  type="button"
+                  aria-label="Hide details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Hide')}
+                </DetailsButton>
+              )}
+              {showDetails && (
+                <DetailsList>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>
+                      {t('Development and approval of a technical task')}
+                    </span>
+                  </DetailsItem>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Prototyping, layout and design')}</span>
+                  </DetailsItem>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Layout correction and approval')}</span>
+                  </DetailsItem>
+                </DetailsList>
+              )}
             </DetailsWrapper>
           </SwiperSlide>
           <SwiperSlide>
@@ -208,21 +251,41 @@ export const Services = () => {
               )}
             </TextSlider>
             <DetailsWrapper>
-              <DetailsButton type="button">{t('Details')}</DetailsButton>
-              <DetailsList>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Layout')}</span>
-                </DetailsItem>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Website development')}</span>
-                </DetailsItem>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Content filling')}</span>
-                </DetailsItem>
-              </DetailsList>
+              {!showDetails ? (
+                <DetailsButton
+                  type="button"
+                  aria-label="Open details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Details')}
+                </DetailsButton>
+              ) : (
+                <DetailsButton
+                  type="button"
+                  aria-label="Hide details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Hide')}
+                </DetailsButton>
+              )}
+              {showDetails && (
+                <DetailsList>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Layout')}</span>
+                  </DetailsItem>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Website development')}</span>
+                  </DetailsItem>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Content filling')}</span>
+                  </DetailsItem>
+                </DetailsList>
+              )}
             </DetailsWrapper>
           </SwiperSlide>
           <SwiperSlide>
@@ -234,21 +297,41 @@ export const Services = () => {
               )}
             </TextSlider>
             <DetailsWrapper>
-              <DetailsButton type="button">{t('Details')}</DetailsButton>
-              <DetailsList>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Testing')}</span>
-                </DetailsItem>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Handing over the finished project')}</span>
-                </DetailsItem>
-                <DetailsItem>
-                  <MdCheck size={15} />
-                  <span>{t('Project launch')}</span>
-                </DetailsItem>
-              </DetailsList>
+              {!showDetails ? (
+                <DetailsButton
+                  type="button"
+                  aria-label="Open details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Details')}
+                </DetailsButton>
+              ) : (
+                <DetailsButton
+                  type="button"
+                  aria-label="Hide details"
+                  aria-expanded="false"
+                  onClick={toggleDetails}
+                >
+                  {t('Hide')}
+                </DetailsButton>
+              )}
+              {showDetails && (
+                <DetailsList>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Testing')}</span>
+                  </DetailsItem>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Handing over the finished project')}</span>
+                  </DetailsItem>
+                  <DetailsItem>
+                    <MdCheck size={15} />
+                    <span>{t('Project launch')}</span>
+                  </DetailsItem>
+                </DetailsList>
+              )}
             </DetailsWrapper>
           </SwiperSlide>
         </Swiper>
