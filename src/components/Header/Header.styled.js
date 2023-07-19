@@ -1,4 +1,5 @@
 import { keyframes, styled } from "styled-components";
+import { FcFilmReel } from "react-icons/fc";
 
 const fadeInTopAnimation = keyframes`
   0% {
@@ -25,12 +26,12 @@ export const Header = styled.header`
   z-index: 999;
 
   @media screen and (max-width: 1280px) {
-    color: ${props => props.theme.black};
-    background-color: ${props => props.theme.white};
+    color: ${(props) => props.theme.black};
+    background-color: ${(props) => props.theme.white};
   }
    */
-  color: ${props => props.theme.black};
-  background-color: ${props => props.theme.white};
+  color: ${(props) => props.theme.black};
+  background-color: ${(props) => props.theme.white};
 
   @media screen and (max-width: 1279.9px) {
     display: flex;
@@ -46,8 +47,8 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.p`
-  color: ${props => props.theme.black};
-  font-family: 'Roboto', sans-serif;
+  color: ${(props) => props.theme.black};
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
@@ -88,5 +89,26 @@ export const HeaderSvg = styled.svg`
 
   @media screen and (min-width: 1280px) {
     display: none;
+  }
+`;
+export const MovieIcon = styled(FcFilmReel)`
+  position: fixed;
+  left: 170px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    left: 180px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    left: 300px;
+    top: 15px;
+    width: 45px;
+    height: 45px;
   }
 `;
