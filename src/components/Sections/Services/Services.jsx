@@ -5,6 +5,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
+import { MdCheck } from 'react-icons/md';
 import { Container, Title } from 'components/baseStyles/CommonStyle.styled';
 import { ButtonLink } from 'components/baseStyles/Button.styled';
 import {
@@ -30,6 +31,10 @@ import {
   WrapperBox,
   WrapperBoxSkills,
   WrapperText,
+  DetailsWrapper,
+  DetailsButton,
+  DetailsList,
+  DetailsItem,
 } from './Services.styled';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -140,6 +145,31 @@ export const Services = () => {
                 "During our first meeting, we will have an introductory conversation where we will learn about your goals, objectives and expectations. We'll also find out what role your website should play. This information will be extremely useful for us as it will help us to develop a detailed plan of work in the future."
               )}
             </TextSlider>
+            <DetailsWrapper>
+              <DetailsButton type="button">{t('Details')}</DetailsButton>
+              <DetailsList>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Discussion of the client questionnaire')}</span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>
+                    {t(
+                      'Definition of the topic and the main goal of the project'
+                    )}
+                  </span>
+                </DetailsItem>
+                {/* <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Commercial offer')}</span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Contract execution')}</span>
+                </DetailsItem> */}
+              </DetailsList>
+            </DetailsWrapper>
           </SwiperSlide>
           <SwiperSlide>
             <Number>02</Number>
@@ -149,6 +179,25 @@ export const Services = () => {
                 'At this stage, the main role is played by the designer, who carefully examines the technical task and reproduces his artistic vision of the project. His creativity allows you to create the interface of your website to be the best in the world.'
               )}
             </TextSlider>
+            <DetailsWrapper>
+              <DetailsButton type="button">{t('Details')}</DetailsButton>
+              <DetailsList>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>
+                    {t('Development and approval of a technical task')}
+                  </span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Prototyping, layout and design')}</span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Layout correction and approval')}</span>
+                </DetailsItem>
+              </DetailsList>
+            </DetailsWrapper>
           </SwiperSlide>
           <SwiperSlide>
             <Number>03</Number>
@@ -158,6 +207,23 @@ export const Services = () => {
                 "The role of the programmer is to ensure flawless operation of the site's functionality, maintaining its coherence with the design. The work of the coder is crucial and affects many aspects of the project. We make sure that our maestro can work without rushing to achieve the best results."
               )}
             </TextSlider>
+            <DetailsWrapper>
+              <DetailsButton type="button">{t('Details')}</DetailsButton>
+              <DetailsList>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Layout')}</span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Website development')}</span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Content filling')}</span>
+                </DetailsItem>
+              </DetailsList>
+            </DetailsWrapper>
           </SwiperSlide>
           <SwiperSlide>
             <Number>04</Number>
@@ -167,6 +233,23 @@ export const Services = () => {
                 'We provide harmony in our symphony. By conducting tests, we make sure that the application works flawlessly and does not have any bugs when the site opens to everyone.'
               )}
             </TextSlider>
+            <DetailsWrapper>
+              <DetailsButton type="button">{t('Details')}</DetailsButton>
+              <DetailsList>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Testing')}</span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Handing over the finished project')}</span>
+                </DetailsItem>
+                <DetailsItem>
+                  <MdCheck size={15} />
+                  <span>{t('Project launch')}</span>
+                </DetailsItem>
+              </DetailsList>
+            </DetailsWrapper>
           </SwiperSlide>
         </Swiper>
       </WrapperText>

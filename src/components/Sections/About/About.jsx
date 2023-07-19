@@ -98,7 +98,7 @@ export const About = () => {
           <SwiperSlide>
             <p style={{ width: '80%', marginBottom: '20px' }}>
               {t(
-                'Our approach to marketing is a holistic approach that includes strategic planning, creative design, effective marketing campaigns and an emphasis on building lasting relationships with clients. We work tirelessly to ensure the success and growth of our clients.'
+                'Our approach to project delivery is a holistic approach that includes strategic planning, creative design, rapid website development and an emphasis on building lasting relationships with clients. We work tirelessly to ensure the success and growth of our clients.'
               )}
             </p>
           </SwiperSlide>
