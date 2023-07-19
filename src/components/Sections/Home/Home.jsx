@@ -29,7 +29,6 @@ import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
 import ph from '../../../images/home/ph.png';
 
-
 export const Home = () => {
   Aos.init();
   const { t } = useTranslation();
@@ -94,7 +93,7 @@ export const Home = () => {
           <SwiperSlide>
             <ListItemTextSwiper>
               {t(
-                'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services.'
+                'We work tirelessly to develop long-term relationships with our partners, just as you strive to create strong bonds with the customers who purchase your products or use your services'
               )}
             </ListItemTextSwiper>
           </SwiperSlide>
@@ -106,9 +105,9 @@ export const Home = () => {
           <SwiperSlide>
             <ListItemTextSwiper>
               {t(
-                'We are creators of exceptional brands. This is the embodiment of our business. Under one virtual roof, we do incredible things to achieve this goal:'
+                'We help create of exceptional brands. This is the embodiment of our business. Under one virtual roof, we do incredible things to achieve this goal:'
               )}
-              <span> {t('we build better brands.')} </span>
+              <span> {t('building better brands')} </span>
             </ListItemTextSwiper>
           </SwiperSlide>
         </Swiper>
