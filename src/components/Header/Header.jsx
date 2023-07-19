@@ -5,6 +5,8 @@ import { MobileMenuBox } from 'components/Sidebar/MobileMenu/MobileMenu.styled';
 import { SwitchTheme } from 'components/ThemeStatus/SwitcherTheme/SwitchTheme';
 import { Header, HeaderSvg, Logo, LogoBox } from './Header.styled';
 import Language from 'components/Language/Language';
+import { openModalWindow } from "../../hooks/ModalWindow";
+import { ModalWindow } from '../ModalWindow/ModalWindow'
 
 export const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,8 +33,9 @@ export const HeaderComp = () => {
   };
 
   return (
+    <>
     <Header isVisible={visible}>
-      <LogoBox href="/brand-maze" aria-label="logo company">
+      <LogoBox href="/brand-maze" aria-label="logo company" onClick={openModalWindow}>
         <Logo>Brand maze</Logo>
       </LogoBox>
       <Language />
@@ -48,5 +51,7 @@ export const HeaderComp = () => {
         />
       </MobileMenuBox>
     </Header>
+    <ModalWindow/>
+    </>
   );
 };
