@@ -391,3 +391,50 @@ export const ListQuestions = styled.ul`
     gap: 40px;
   }
 `;
+
+export const DetailsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 80%;
+  margin-bottom: 20px;
+`;
+
+export const DetailsButton = styled.button`
+  padding: 0;
+
+  color: ${props => props.theme.accentRed};
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: start;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+`;
+
+export const DetailsList = styled.ul`
+  width: 100%;
+`;
+
+export const DetailsItem = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: ${props => props.theme.text};
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: start;
+
+  & > svg {
+    fill: ${props => props.theme.accentRed};
+  }
+`;
