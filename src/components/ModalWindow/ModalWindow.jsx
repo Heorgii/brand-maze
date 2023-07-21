@@ -3,7 +3,7 @@ import {BackDrop, ItemContainer} from "./ModalWindow.styled";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { closeModalWindow } from "hooks/ModalWindow";
 import ReactPlayer from 'react-player';
-import video from '../../images/video/IMG_4775.MOV'
+import video from '../../images/video/IMG_4810.MOV'
 import { useState } from "react";
 
 export const ModalWindow = () => {

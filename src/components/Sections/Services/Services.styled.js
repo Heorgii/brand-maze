@@ -49,16 +49,16 @@ const trackingInExpandFwdAnimation = keyframes`
 `;
 
 export const WrapperText = styled.div`
-  margin-bottom: 55px;
+  /* margin-bottom: 55px; */
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     margin-bottom: 60px;
-  }
+  } */
 
   @media screen and (min-width: 1280px) {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     max-width: 1200px;
   }
 `;
@@ -243,6 +243,7 @@ export const TextSlider = styled(Text)`
 `;
 
 export const TableHeading = styled.th`
+  display: flex;
   color: ${props => props.theme.black};
   text-align: center;
   font-size: 20px;
