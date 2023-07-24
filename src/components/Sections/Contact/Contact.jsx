@@ -26,7 +26,7 @@ export const Contact = () => {
   const [setFile] = useState(''); //file,
   const [formSubmitted, setFormSubmitted] = useState(false);
   const { t } = useTranslation();
-
+  
   document.querySelector('html').classList.add('js');
 
   useEffect(() => {
@@ -70,7 +70,7 @@ export const Contact = () => {
       <ContactForm
         action="https://formsubmit.co/contact@brand-maze.com"
         method="POST"
-        enctype="multipart/form-data"
+        encType="multipart/form-data"
         className="contact-form"
         name="form-contacts"
         autoComplete="on"
@@ -158,8 +158,9 @@ export const Contact = () => {
                     '.input-file-trigger'
                   )[0].innerHTML = 'Add a file...';
                   document.querySelectorAll('.file-return')[0].innerHTML =
-                    '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)';
-                } else {
+                    '(Allowed file formats - pdf doc docx odt ods png jpeg xml. Maximum file size - 5 mb)';
+                } else if (e.target.files[0].size > 5 * 1024 * 1024) {
+                   alert('File is too big')} else {
                   document.querySelectorAll(
                     '.input-file-trigger'
                   )[0].innerHTML = 'File added';
@@ -187,7 +188,7 @@ export const Contact = () => {
           </div>
           <TextForInputForFile className="file-return">
             {t(
-              '(Allowed file formats - pdf doc docx odt ods. Maximum file size - 5 mb)'
+              '(Allowed file formats - pdf doc docx odt ods png jpeg xml. Maximum file size - 5 mb)'
             )}
           </TextForInputForFile>
         </ContainerForInputForFile>
