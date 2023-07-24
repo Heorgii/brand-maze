@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import * as yup from 'yup'
 import {
   ContactForm,
   InputWrapper,
@@ -25,9 +26,39 @@ export const Contact = () => {
   const [userMessage, setUserMessage] = useState('');
   const [setFile] = useState(''); //file,
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isValidForm, setIsValidForm] = useState(false);
   const { t } = useTranslation();
   
   document.querySelector('html').classList.add('js');
+
+  const userSchema = yup.object().shape({
+    firstName: yup.string().required(),
+    lastName: yup.string().required(),
+    email: yup.string().email().required("Email is required"),
+    message: yup.string().min(3).max(1000).required(),
+    phone: yup.number().min(6).max(14).required("Phone is required"),
+  })
+
+  async function validateForm() {
+
+    let dataObject = {
+      firstName: userFirstName,
+      lastName: userLastName,
+      email: userEmail,
+      message: userMessage,
+      phone: userPhone,
+    }
+
+    const isValid = await userSchema.isValid(dataObject)
+
+    if (isValid) {
+      setIsValidForm(true);
+      setFormSubmitted(true);
+    } else {
+      setIsValidForm(false)
+    }
+  }
+
 
   useEffect(() => {
     window.scrollTo({
@@ -38,13 +69,14 @@ export const Contact = () => {
   }, []);
 
   const handleSubmit = () => {
-    setFormSubmitted(true);
+    return (!isValidForm ? alert('Form is Invalid') : setFormSubmitted(true))
   };
 
   const handleChange = e => {
     e.preventDefault();
     switch (e.target.name) {
       case 'user-firstname':
+
         setUserFirstName(e.target.value);
         break;
       case 'user-lastname':
@@ -124,7 +156,7 @@ export const Contact = () => {
               type="tel"
               name="user-phone"
               required
-              placeholder="+19739476185"
+              placeholder="19739476185"
               value={userPhone}
               onChange={e => handleChange(e)}
             />
@@ -192,7 +224,7 @@ export const Contact = () => {
             )}
           </TextForInputForFile>
         </ContainerForInputForFile>
-        <ButtonSend type="submit">{t('Send message')}</ButtonSend>
+        <ButtonSend type="submit" onClick={() => {validateForm()}}>{t('Send message')}</ButtonSend>
         {formSubmitted && (
           <ThanksBox>
             <ThanksContent>
