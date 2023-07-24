@@ -12,6 +12,7 @@ export const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [visible, setVisible] = useState(true);
   const [scrollPos, setScrollPos] = useState(window.scrollY);
+  const [isPlaying, setPlaying] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +33,11 @@ export const HeaderComp = () => {
     setIsOpen(!isOpen);
   };
 
+  const openWindowForMovie = (e) => {
+    e.preventDefault();
+    setPlaying(true);
+    openModalWindow(e);
+  }
   return (
     <>
     <Header isVisible={visible}>
@@ -39,7 +45,7 @@ export const HeaderComp = () => {
       <LogoBox href="/brand-maze" aria-label="logo company">
         <Logo>Brand maze</Logo>
       </LogoBox>
-      <MovieIcon onClick={openModalWindow}/>
+      <MovieIcon onClick={(e)=>openWindowForMovie(e)}/>
 
       <Language />
       <SwitchTheme />
@@ -54,7 +60,7 @@ export const HeaderComp = () => {
         />
       </MobileMenuBox>
     </Header>
-    <ModalWindow/>
+    <ModalWindow isPlaying={isPlaying} setPlaying={setPlaying}/>
     </>
   );
 };

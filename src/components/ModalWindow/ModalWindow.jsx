@@ -4,14 +4,12 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { closeModalWindow } from "hooks/ModalWindow";
 import ReactPlayer from 'react-player';
 import video from '../../images/video/IMG_4810.MOV'
-import { useState } from "react";
 
-export const ModalWindow = () => {
-  const [isPlaying, setPlaying] = useState(false)
+export const ModalWindow = ({setPlaying, isPlaying}) => {
     
   function closeModal(e) {
         e.preventDefault();
-        setPlaying(false)
+        setPlaying(false);
         closeModalWindow(e);
       }
 
