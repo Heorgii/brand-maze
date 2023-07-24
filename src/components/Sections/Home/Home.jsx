@@ -1,3 +1,15 @@
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css';
+import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import ph from 'images/home/ph.webp';
+import logo2 from 'images/home/logo2.svg';
+// import brandBuild from 'images/home/brandBuild.webp';
 import {
   List,
   ListItem,
@@ -14,20 +26,11 @@ import {
   ListBox,
   SwiperSvg,
   ListItemImg,
+  WrapperText,
+  SubtitleHome,
 } from './Home.styled';
-import logo2 from '../../../images/home/logo2.svg';
-// import brandBuild from '../../../images/home/brandBuild.webp';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css';
-import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
-import { useEffect } from 'react';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useTranslation } from 'react-i18next';
-import ph from '../../../images/home/ph.png';
+import { ButtonLink } from 'components/baseStyles/Button.styled';
 
 export const Home = () => {
   Aos.init();
@@ -47,7 +50,7 @@ export const Home = () => {
       <ListBox>
         <List>
           <ListItem>
-            <ListItemImg src={ph} alt="" />
+            <ListItemImg src={ph} alt="Brand build" />
 
             <ListItemText>
               {t(
@@ -99,7 +102,7 @@ export const Home = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <ListItemImg src={ph} alt="" />
+            <ListItemImg src={ph} alt="Brand build" />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -171,6 +174,13 @@ export const Home = () => {
           </ItemDiscr>
         </CompListItem>
       </CompList>
+
+      <WrapperText>
+        <SubtitleHome>{t('We look forward to working with you')}</SubtitleHome>
+        <ButtonLink to="/contact" aria-label="Open order form">
+          {t('Order')}
+        </ButtonLink>
+      </WrapperText>
     </Container>
   );
 };

@@ -64,4 +64,25 @@ const Title = styled.h1`
   }
 `;
 
-export { Container, Title };
+const Subtitle = styled.h2`
+  position: relative;
+
+  color: ${props => props.theme.heading};
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 45px;
+  }
+`;
+
+export { Container, Title, Subtitle };
