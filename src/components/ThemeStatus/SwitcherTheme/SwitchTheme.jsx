@@ -10,6 +10,7 @@ export const SwitchTheme = () => {
       {({ theme, setMode }) => (
         <SwitcherWrapper>
           <BtnChangeTheme
+            aria-label="Switch theme"
             onClick={e =>
               theme === 'light' ? setMode('dark') : setMode('light')
             }

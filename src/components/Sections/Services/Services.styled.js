@@ -1,3 +1,4 @@
+import { Subtitle } from 'components/baseStyles/CommonStyle.styled';
 import { keyframes, styled } from 'styled-components';
 
 const fadeInLeftAnimation = keyframes`
@@ -49,16 +50,16 @@ const trackingInExpandFwdAnimation = keyframes`
 `;
 
 export const WrapperText = styled.div`
-  /* margin-bottom: 55px; */
+  margin-bottom: 55px;
   margin-left: auto;
   margin-right: auto;
 
-  /* @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin-bottom: 60px;
-  } */
+  }
 
   @media screen and (min-width: 1280px) {
-    /* margin-bottom: 100px; */
+    margin-bottom: 100px;
     max-width: 1200px;
   }
 `;
@@ -91,7 +92,7 @@ export const BoxSkills = styled.div`
   margin-bottom: 34px;
 
   @media screen and (min-width: 768px) {
-    width: 40%;
+    width: 50%;
     margin-bottom: 0;
   }
 `;
@@ -105,7 +106,7 @@ export const ListSkills = styled.ul`
   animation: ${fadeInRightAnimation} 0.5s ease-in both;
 
   @media screen and (min-width: 768px) {
-    width: 40%;
+    width: 45%;
     padding: 30px 0 0 0;
     gap: 30px;
   }
@@ -115,27 +116,10 @@ export const ListSkills = styled.ul`
   }
 `;
 
-export const Subtitle = styled.h2`
-  position: relative;
+export const SubtitleService = styled(Subtitle)`
   margin: 30px 0;
-
-  color: ${props => props.theme.heading};
-  text-align: center;
-  font-size: 26px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
   animation: ${trackingInExpandFwdAnimation} 0.5s
     cubic-bezier(0.215, 0.61, 0.355, 1) both;
-
-  @media screen and (min-width: 768px) {
-    font-size: 34px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 45px;
-  }
 
   &::before {
     @media screen and (min-width: 768px) {
@@ -159,11 +143,18 @@ export const Subtitle = styled.h2`
 `;
 
 export const SubtitleSkills = styled(Subtitle)`
+  margin: 30px 0;
+
   animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  @media screen and (min-width: 768px) {
+    text-transform: none;
+  }
 
   @media screen and (min-width: 1280px) {
     font-size: 40px;
   }
+
   &::before {
     display: none;
   }
@@ -294,7 +285,7 @@ export const StepBenefits = styled(Step)`
     margin-left: 50px;
   }
   @media screen and (min-width: 768px) {
-    width: 50%;
+    width: 80%;
     &:nth-child(2n) {
       margin-left: auto;
     }
@@ -419,6 +410,7 @@ export const DetailsButton = styled.button`
 `;
 
 export const DetailsList = styled.ul`
+  animation: ${fadeInTopAnimation} 0.5s ease-in both;
   width: 100%;
 `;
 

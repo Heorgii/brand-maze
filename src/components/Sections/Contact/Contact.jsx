@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import * as yup from 'yup'
+import * as yup from 'yup';
 import {
   ContactForm,
   InputWrapper,
@@ -28,37 +28,39 @@ export const Contact = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isValidForm, setIsValidForm] = useState(false);
   const { t } = useTranslation();
-  
+
   document.querySelector('html').classList.add('js');
 
   const userSchema = yup.object().shape({
     firstName: yup.string().required(),
     lastName: yup.string().required(),
-    email: yup.string().email().required("Email is required"),
+    email: yup.string().email().required('Email is required'),
     message: yup.string().min(3).max(1000).required(),
-    phone: yup.number().min(6).max(14).required("Phone is required"),
-  })
+    phone: yup
+      .number()
+      .min(10000, 'invalid mobile number')
+      .max(9999999999999, 'invalid mobile number')
+      .required('Phone is required'),
+  });
 
   async function validateForm() {
-
     let dataObject = {
       firstName: userFirstName,
       lastName: userLastName,
       email: userEmail,
       message: userMessage,
       phone: userPhone,
-    }
+    };
 
-    const isValid = await userSchema.isValid(dataObject)
+    const isValid = await userSchema.isValid(dataObject);
 
     if (isValid) {
       setIsValidForm(true);
       setFormSubmitted(true);
     } else {
-      setIsValidForm(false)
+      setIsValidForm(false);
     }
   }
-
 
   useEffect(() => {
     window.scrollTo({
@@ -69,14 +71,13 @@ export const Contact = () => {
   }, []);
 
   const handleSubmit = () => {
-    return (!isValidForm ? alert('Form is Invalid') : setFormSubmitted(true))
+    return !isValidForm ? alert('Form is Invalid') : setFormSubmitted(true);
   };
 
   const handleChange = e => {
     e.preventDefault();
     switch (e.target.name) {
       case 'user-firstname':
-
         setUserFirstName(e.target.value);
         break;
       case 'user-lastname':
@@ -116,7 +117,7 @@ export const Contact = () => {
               type="text"
               name="user-firstname"
               required
-              placeholder={t("John")}
+              placeholder={t('John')}
               value={userFirstName}
               onChange={e => handleChange(e)}
             />
@@ -127,19 +128,12 @@ export const Contact = () => {
               type="text"
               name="user-lastname"
               required
-              placeholder={t("Watson")}
+              placeholder={t('Watson')}
               value={userLastName}
               onChange={e => handleChange(e)}
             />
             <NameOfItem>{t('Last Name')}</NameOfItem>
           </LabelOfItem>
-          {/* <input type="hidden" name="_captcha" value="true" /> */}
-          <input type="hidden" name="_subject" value="New Message!!!!!" />
-          <input
-            type="hidden"
-            name="_next"
-            value="http://localhost:3000/brand-maze/contact"
-          />
           <LabelOfItem aria-label="Email">
             <InputOfItem
               type="email"
@@ -192,7 +186,8 @@ export const Contact = () => {
                   document.querySelectorAll('.file-return')[0].innerHTML =
                     '(Allowed file formats - pdf doc docx odt ods png jpeg xml. Maximum file size - 5 mb)';
                 } else if (e.target.files[0].size > 5 * 1024 * 1024) {
-                   alert('File is too big')} else {
+                  alert('File is too big');
+                } else {
                   document.querySelectorAll(
                     '.input-file-trigger'
                   )[0].innerHTML = 'File added';
@@ -224,7 +219,14 @@ export const Contact = () => {
             )}
           </TextForInputForFile>
         </ContainerForInputForFile>
-        <ButtonSend type="submit" onClick={() => {validateForm()}}>{t('Send message')}</ButtonSend>
+        <ButtonSend
+          type="submit"
+          onClick={() => {
+            validateForm();
+          }}
+        >
+          {t('Send message')}
+        </ButtonSend>
         {formSubmitted && (
           <ThanksBox>
             <ThanksContent>
@@ -239,6 +241,14 @@ export const Contact = () => {
             </ThanksContent>
           </ThanksBox>
         )}
+
+        {/* <input type="hidden" name="_captcha" value="true" /> */}
+        <input type="hidden" name="_subject" value="New Message!!!!!" />
+        <input
+          type="hidden"
+          name="_next"
+          value="http://localhost:3000/brand-maze/contact"
+        />
       </ContactForm>
     </Container>
   );

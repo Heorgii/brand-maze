@@ -23,7 +23,7 @@ import {
   Number,
   NumberSmall,
   StepBenefits,
-  Subtitle,
+  SubtitleService,
   SubtitleSkills,
   Text,
   TextCenter,
@@ -108,7 +108,7 @@ export const Services = () => {
         </ListSkills>
       </WrapperBoxSkills>
       <WrapperText>
-        <Subtitle>{t('Who are our customers?')}</Subtitle>
+        <SubtitleService>{t('Who are our customers?')}</SubtitleService>
         <TextCenter>
           {t(
             "Whether you're a small startup, medium-sized business, or large corporation, we work with you to create a website that meets your needs and goals."
@@ -127,7 +127,7 @@ export const Services = () => {
         </ButtonLink>
       </WrapperText>
       <WrapperText>
-        <Subtitle>{t('Development by Steps')}</Subtitle>
+        <SubtitleService>{t('Development by Steps')}</SubtitleService>
         <Swiper
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           spaceBetween={50}
@@ -337,7 +337,7 @@ export const Services = () => {
         </Swiper>
       </WrapperText>
       <WrapperText>
-        <Subtitle>{t('Technologies')}</Subtitle>
+        <SubtitleService>{t('Technologies')}</SubtitleService>
         <table>
           <tbody>
             <tr>
@@ -360,7 +360,7 @@ export const Services = () => {
         </table>
       </WrapperText>
       <WrapperBox>
-        <Subtitle>{t('Why Brand Maze?')}</Subtitle>
+        <SubtitleService>{t('Why Brand Maze?')}</SubtitleService>
         <ListBenefits>
           <StepBenefits data-aos="zoom-in-left" data-aos-delay="150">
             <HeadingBox>
@@ -417,7 +417,7 @@ export const Services = () => {
         </ListBenefits>
       </WrapperBox>
       <WrapperBox>
-        <Subtitle>{t('What we can also do')}</Subtitle>
+        <SubtitleService>{t('What we can also do')}</SubtitleService>
         <ListQuestions>
           <li>
             <Heading>
@@ -460,7 +460,9 @@ export const Services = () => {
         </ListQuestions>
       </WrapperBox>
       <WrapperText>
-        <Subtitle>{t('We look forward to working with you')}</Subtitle>
+        <SubtitleService>
+          {t('We look forward to working with you')}
+        </SubtitleService>
         <ButtonLink to="/contact" aria-label="Open order form">
           {t('Order')}
         </ButtonLink>

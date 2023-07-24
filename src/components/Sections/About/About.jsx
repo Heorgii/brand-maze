@@ -1,3 +1,7 @@
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css/navigation';
@@ -28,25 +32,24 @@ import {
   ImgForTeamColor,
   ImgWrap,
   SocialsListLink,
+  WrapperText,
+  SubtitleAbout,
 } from './About.styled';
+import { ButtonLink } from 'components/baseStyles/Button.styled';
 
-import chartbar from '../../../images/about/mdi_light_chart-bar.svg';
-import chartpie from '../../../images/about/mdi_light_chart-pie.svg';
-import flask from '../../../images/about/mdi_light_flask.svg';
-import gift from '../../../images/about/mdi_light_gift.svg';
+import chartbar from 'images/about/mdi_light_chart-bar.svg';
+import chartpie from 'images/about/mdi_light_chart-pie.svg';
+import flask from 'images/about/mdi_light_flask.svg';
+import gift from 'images/about/mdi_light_gift.svg';
 
-import heorhii from '../../../images/about/team/heorhii_blackAndWhite.webp';
-import heorhiiColor from '../../../images/about/team/heorhii.webp';
-import julia from '../../../images/about/team/julia_blackAndWhite.webp';
-import juliaColor from '../../../images/about/team/julia.webp';
-import vlad from '../../../images/about/team/vlad_blackAndWhite.webp';
-import vladColor from '../../../images/about/team/vlad_warm_color.webp';
+import heorhii from 'images/about/team/heorhii_blackAndWhite.webp';
+import heorhiiColor from 'images/about/team/heorhii.webp';
+import julia from 'images/about/team/julia_blackAndWhite.webp';
+import juliaColor from 'images/about/team/julia.webp';
+import vlad from 'images/about/team/vlad_blackAndWhite.webp';
+import vladColor from 'images/about/team/vlad_warm_color.webp';
 
-import sprite from '../../../images/sprite.svg';
-import { useEffect } from 'react';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useTranslation } from 'react-i18next';
+import sprite from 'images/sprite.svg';
 
 export const About = () => {
   const { t } = useTranslation();
@@ -140,9 +143,8 @@ export const About = () => {
           </ItemImgText>
         </ContainerForIconTablet>
       </ContainerForIcon>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <TitleTeam>{t('OUR PROFESSIONAL TEAM')}</TitleTeam>
-      </div>
+
+      <TitleTeam>{t('Our professional team')}</TitleTeam>
       <ContainerForTeam>
         <ItemWrap data-aos="flip-up" data-aos-delay="150">
           <ImgWrap>
@@ -593,6 +595,14 @@ export const About = () => {
           </SwiperSlide>
         </Swiper>
       </ContainerForTeamForTablet>
+      <WrapperText>
+        <SubtitleAbout>
+          {t('We look forward to working with you')}
+        </SubtitleAbout>
+        <ButtonLink to="/contact" aria-label="Open order form">
+          {t('Order')}
+        </ButtonLink>
+      </WrapperText>
     </Container>
   );
 };

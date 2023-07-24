@@ -1,6 +1,6 @@
 import { keyframes, styled } from 'styled-components';
 import { Number, Text } from '../Services/Services.styled';
-import { Title } from 'components/baseStyles/CommonStyle.styled';
+import { Subtitle, Title } from 'components/baseStyles/CommonStyle.styled';
 
 const flipInVerLeftAnimation = keyframes`
   0% {
@@ -236,11 +236,17 @@ export const CompList = styled.ul`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  margin-bottom: 55px;
 `;
 
 export const CompListItem = styled.li`
   &:not(:last-child) {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 20px;
+    }
   }
   &:nth-child(2) {
     text-align: -webkit-right;
@@ -285,5 +291,28 @@ export const ItemDiscr = styled(Text)`
 
   @media screen and (min-width: 768px) {
     width: 600px;
+  }
+`;
+
+export const WrapperText = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1200px;
+  }
+`;
+
+export const SubtitleHome = styled(Subtitle)`
+  margin-bottom: 20px;
+  font-size: 24px;
+  animation: ${fadeInBottomAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 40px;
   }
 `;
