@@ -11,7 +11,7 @@ export const ModalWindow = () => {
     
   function closeModal(e) {
         e.preventDefault();
-        setPlaying(false)
+        setPlaying(false);
         closeModalWindow(e);
       }
 
