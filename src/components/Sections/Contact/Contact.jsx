@@ -34,7 +34,7 @@ export const Contact = () => {
   const userSchema = yup.object().shape({
     firstName: yup.string().required(),
     lastName: yup.string().required(),
-    email: yup.string().email().required('Email is required'),
+    email: yup.string().email('invalid Email').required('Email is required'),
     message: yup.string().min(3).max(1000).required(),
     phone: yup
       .number()
