@@ -424,24 +424,44 @@ export const About = () => {
               <JobItem>Full-Stack Developer</JobItem>
               <SocialsList>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#github'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://github.com/Heorgii"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#github'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://www.linkedin.com/in/heorgii-rushchak-19884a245"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#linkedin'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://t.me/heorhi1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#telegram'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#envelop'}></use>
-                  </svg>
+                  <SocialsListLink href="mailto:rushchakheorgii@gmail.com">
+                    <svg width="20" height="20">
+                      <use href={sprite + '#envelop'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
               </SocialsList>
             </ItemWrap>
@@ -571,24 +591,44 @@ export const About = () => {
               <JobItem>Full-Stack Developer</JobItem>
               <SocialsList>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#github'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://github.com/Heorgii"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#github'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#linkedin'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://www.linkedin.com/in/heorgii-rushchak-19884a245"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#linkedin'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#telegram'}></use>
-                  </svg>
+                  <SocialsListLink
+                    href="https://t.me/heorhi1"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg width="20" height="20">
+                      <use href={sprite + '#telegram'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
                 <SocialsListItem>
-                  <svg width="20" height="20">
-                    <use href={sprite + '#envelop'}></use>
-                  </svg>
+                  <SocialsListLink href="mailto:rushchakheorgii@gmail.com">
+                    <svg width="20" height="20">
+                      <use href={sprite + '#envelop'}></use>
+                    </svg>
+                  </SocialsListLink>
                 </SocialsListItem>
               </SocialsList>
             </ItemWrap>
