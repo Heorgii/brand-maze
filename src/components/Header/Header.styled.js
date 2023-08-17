@@ -114,24 +114,3 @@ export const MovieIcon = styled(MdPlayCircleOutline)`
     height: 40px;
   }
 `;
-
-export const MovieIconText = styled.p`
-  position: absolute;
-  top: 56px;
-  left: 185px;
-  transform: translateX(-50%);
-  background-color: rgba(200, 200, 200, 0.8);
-  padding: 5px 10px;
-  border-radius: 5px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
-
-  @media screen and (min-width: 768px) {
-    left: 195px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    top: 70px;
-    left: 322px;
-  }
-`;

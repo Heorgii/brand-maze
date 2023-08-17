@@ -10,7 +10,6 @@ import {
   LogoBox,
   MovieIcon,
   MovieIconBox,
-  MovieIconText,
 } from './Header.styled';
 import Language from 'components/Language/Language';
 import { openModalWindow } from '../../hooks/ModalWindow';
