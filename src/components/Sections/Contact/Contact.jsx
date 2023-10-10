@@ -101,7 +101,7 @@ export const Contact = () => {
     <Container>
       <Title>{t('Contact')}</Title>
       <ContactForm
-        action="https://formsubmit.co/contact@brand-maze.com"
+        action="https://formsubmit.co/brandmaze.info@gmail.com"
         method="POST"
         encType="multipart/form-data"
         className="contact-form"

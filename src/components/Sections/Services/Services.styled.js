@@ -74,9 +74,6 @@ export const WrapperBox = styled.div`
     margin-bottom: 60px;
   }
 
-  @media screen and (min-width: 1280px) {
-    margin-bottom: 100px;
-  }
 `;
 
 export const WrapperBoxSkills = styled(WrapperBox)`

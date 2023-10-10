@@ -26,11 +26,8 @@ import {
   ListBox,
   SwiperSvg,
   ListItemImg,
-  WrapperText,
-  SubtitleHome,
 } from './Home.styled';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
-import { ButtonLink } from 'components/baseStyles/Button.styled';
 
 export const Home = () => {
   Aos.init();
@@ -174,13 +171,6 @@ export const Home = () => {
           </ItemDiscr>
         </CompListItem>
       </CompList>
-
-      <WrapperText>
-        <SubtitleHome>{t('We look forward to working with you')}</SubtitleHome>
-        <ButtonLink to="/contact" aria-label="Open order form">
-          {t('Order')}
-        </ButtonLink>
-      </WrapperText>
     </Container>
   );
 };

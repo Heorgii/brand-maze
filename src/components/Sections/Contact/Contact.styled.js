@@ -90,7 +90,7 @@ const LabelOfItem = styled.label`
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
   }
 
-  &:nth-child(5) {
+  &:nth-child(3) {
     animation: ${fadeInLeftAnimation} 0.5s ease-in both;
   }
 
@@ -98,7 +98,7 @@ const LabelOfItem = styled.label`
     animation: ${fadeInRightAnimation} 0.5s ease-in both;
   }
 
-  &:nth-child(6) {
+  &:nth-child(4) {
     animation: ${fadeInRightAnimation} 0.5s ease-in both;
   }
 

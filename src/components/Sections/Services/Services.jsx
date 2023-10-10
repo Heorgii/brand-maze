@@ -459,14 +459,9 @@ export const Services = () => {
           </li>
         </ListQuestions>
       </WrapperBox>
-      <WrapperText>
-        <SubtitleService>
-          {t('We look forward to working with you')}
-        </SubtitleService>
         <ButtonLink to="/contact" aria-label="Open order form">
           {t('Order')}
         </ButtonLink>
-      </WrapperText>
     </Container>
   );
 };

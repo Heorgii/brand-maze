@@ -32,10 +32,7 @@ import {
   ImgForTeamColor,
   ImgWrap,
   SocialsListLink,
-  WrapperText,
-  SubtitleAbout,
 } from './About.styled';
-import { ButtonLink } from 'components/baseStyles/Button.styled';
 
 import chartbar from 'images/about/mdi_light_chart-bar.svg';
 import chartpie from 'images/about/mdi_light_chart-pie.svg';
@@ -635,14 +632,6 @@ export const About = () => {
           </SwiperSlide>
         </Swiper>
       </ContainerForTeamForTablet>
-      <WrapperText>
-        <SubtitleAbout>
-          {t('We look forward to working with you')}
-        </SubtitleAbout>
-        <ButtonLink to="/contact" aria-label="Open order form">
-          {t('Order')}
-        </ButtonLink>
-      </WrapperText>
     </Container>
   );
 };

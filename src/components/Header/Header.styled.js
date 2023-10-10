@@ -94,6 +94,8 @@ export const MovieIcon = styled(MdPlayCircleOutline)`
   width: 25px;
   height: 25px;
   cursor: pointer;
+  animation: ${fadeInTopAnimation} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
 
   ${props =>
     props.isBouncing &&

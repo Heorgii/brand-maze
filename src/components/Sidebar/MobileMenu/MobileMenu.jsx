@@ -103,8 +103,8 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
               </li>
 
               <ContactListItem>
-                <ContactListLink href="mailto:contact@brand-maze.com">
-                  contact@brand-maze.com
+                <ContactListLink href="mailto:brandmaze.info@gmail.com">
+                  brandmaze.info@gmail.com
                 </ContactListLink>
               </ContactListItem>
             </ul>
