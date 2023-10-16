@@ -1,6 +1,7 @@
 import { Logo } from 'components/Header/Header.styled';
 import {
   ContactListItem,
+  ContactListItemPhone,
   ContactListLink,
   SocialsList,
   SocialsListItem,
@@ -96,11 +97,15 @@ export const MobileMenu = ({ isOpen, toggleMenu, setIsOpen }) => {
           </NavListMobile>
           <ContactListMobile>
             <ul>
-              <li>
-                <ContactListLink href="tel:+38011111111">
-                  +38011111111
+              <ContactListItemPhone>
+                <ContactListLink href="tel:+380959309876">
+                  +38 095 930 98 76
                 </ContactListLink>
-              </li>
+
+                <ContactListLink href="tel:+4368110541148">
+                  +43 681 10541148
+                </ContactListLink>
+              </ContactListItemPhone>
 
               <ContactListItem>
                 <ContactListLink href="mailto:brandmaze.info@gmail.com">
