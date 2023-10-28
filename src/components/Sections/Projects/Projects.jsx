@@ -53,9 +53,6 @@ export const Project = () => {
         break;
       case 'salamandra project':
         window.open('https://salamandra-menu.vercel.app/', '_blank').focus();
-      case 'Anastasia project':
-        window.open('https://web-studio-yvh6.onrender.com/', '_blank').focus();
-        break;
       case 'indoor plants project':
         window.open('https://indoor-plants-alpha.vercel.app/', '_blank').focus();
         break;
