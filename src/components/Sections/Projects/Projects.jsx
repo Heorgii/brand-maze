@@ -5,8 +5,9 @@ import Barber_img from 'images/projects/barber_project.webp';
 import Animal_welfare_img from 'images/projects/animal_welfare_project.webp';
 import Filmoteka_img from 'images/projects/filmoteka_project.webp';
 import Ice_cream_img from 'images/projects/ice_cream_project.webp';
-import Anastasia_img from 'images/projects/anastasia_img.webp'
-import Salamandra_img from 'images/projects/salamandra_img.webp'
+import Anastasia_img from 'images/projects/anastasia_img.webp';
+import Salamandra_img from 'images/projects/salamandra_img.webp';
+import Indoor_plants_img from 'images/projects/indoorPlants.webp';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 // import { Button } from 'components/baseStyles/Button.styled';
 import { useEffect } from 'react';
@@ -50,19 +51,19 @@ export const Project = () => {
       case 'Anastasia project':
         window.open('https://web-studio-yvh6.onrender.com/', '_blank').focus();
         break;
-        case 'salamandra project':
-        window
-          .open(
-            'https://salamandra-menu.vercel.app/',
-            '_blank'
-          )
-          .focus();
+      case 'salamandra project':
+        window.open('https://salamandra-menu.vercel.app/', '_blank').focus();
+      case 'Anastasia project':
+        window.open('https://web-studio-yvh6.onrender.com/', '_blank').focus();
+        break;
+      case 'indoor plants project':
+        window.open('https://indoor-plants-alpha.vercel.app/', '_blank').focus();
         break;
       default:
         break;
     }
   };
-  
+
   const images = [
     {
       original: Barber_img,
@@ -117,6 +118,13 @@ export const Project = () => {
       originalAlt: 'salamandra project',
       description: t('Сafe menu with administrative management'),
       title: 'Сafe menu with administrative management',
+    },
+    {
+      original: Indoor_plants_img,
+      thumbnail: Indoor_plants_img,
+      originalAlt: 'indoor plants project',
+      description: t('Online store where you can buy plants'),
+      title: 'Online store where you can buy plants',
     },
   ];
 
