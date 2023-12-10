@@ -8,6 +8,7 @@ import Ice_cream_img from 'images/projects/ice_cream_project.webp';
 import Anastasia_img from 'images/projects/anastasia_img.webp';
 import Salamandra_img from 'images/projects/salamandra_img.webp';
 import Indoor_plants_img from 'images/projects/indoorPlants.webp';
+import Finance_club_img from 'images/projects/financeClub.webp'
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 // import { Button } from 'components/baseStyles/Button.styled';
 import { useEffect } from 'react';
@@ -40,14 +41,6 @@ export const Project = () => {
           )
           .focus();
         break;
-      case 'ice cream project':
-        window
-          .open('https://studentvlad5.github.io/project_ice-cream/', '_blank')
-          .focus();
-        break;
-      case 'filmoteka project':
-        window.open('https://filmoteka-home.netlify.app/', '_blank').focus();
-        break;
       case 'Anastasia project':
         window.open('https://web-studio-yvh6.onrender.com/', '_blank').focus();
         break;
@@ -58,6 +51,17 @@ export const Project = () => {
         window
           .open('https://indoor-plants-alpha.vercel.app/', '_blank')
           .focus();
+        break;
+      case 'SoFi finance club project':
+        window.open('https://finance-club-amber.vercel.app/', '_blank').focus();
+        break;
+      case 'ice cream project':
+        window
+          .open('https://studentvlad5.github.io/project_ice-cream/', '_blank')
+          .focus();
+        break;
+      case 'filmoteka project':
+        window.open('https://filmoteka-home.netlify.app/', '_blank').focus();
         break;
       default:
         break;
@@ -88,24 +92,6 @@ export const Project = () => {
       ),
     },
     {
-      original: Filmoteka_img,
-      thumbnail: Filmoteka_img,
-      originalAlt: 'filmoteka project',
-      description: t(
-        'This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family'
-      ),
-      title: t(
-        'This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family'
-      ),
-    },
-    {
-      original: Ice_cream_img,
-      thumbnail: Ice_cream_img,
-      originalAlt: 'ice cream project',
-      description: t('A project for ordering delicious and cold ice cream'),
-      title: 'A project for ordering delicious and cold ice cream',
-    },
-    {
       original: Anastasia_img,
       thumbnail: Anastasia_img,
       originalAlt: 'Anastasia project',
@@ -125,6 +111,31 @@ export const Project = () => {
       originalAlt: 'indoor plants project',
       description: t('Online store where you can buy plants'),
       title: 'Online store where you can buy plants',
+    },
+    {
+      original: Finance_club_img,
+      thumbnail: Finance_club_img,
+      originalAlt: 'SoFi finance club project',
+      description: t('Financial club, sale of courses'),
+      title: 'Financial club, sale of courses',
+    },
+    {
+      original: Filmoteka_img,
+      thumbnail: Filmoteka_img,
+      originalAlt: 'filmoteka project',
+      description: t(
+        'This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family'
+      ),
+      title: t(
+        'This site helps to choose movies or cartoons for viewing by the whole family and records the preferences of each individual member of the family'
+      ),
+    },
+    {
+      original: Ice_cream_img,
+      thumbnail: Ice_cream_img,
+      originalAlt: 'ice cream project',
+      description: t('A project for ordering delicious and cold ice cream'),
+      title: 'A project for ordering delicious and cold ice cream',
     },
   ];
 
