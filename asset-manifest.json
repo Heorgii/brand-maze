@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.095281ad.css",
-    "main.js": "/static/js/main.6260b0c4.js",
+    "main.js": "/static/js/main.42ee7403.js",
     "static/media/IMG_4810.MOV": "/static/media/IMG_4810.f108a44414e87d0c43c1.MOV",
     "static/media/anastasia_img.webp": "/static/media/anastasia_img.8ac73ffcc377524e2641.webp",
     "static/media/heorhii_blackAndWhite.webp": "/static/media/heorhii_blackAndWhite.00fd070ca62edfc84da0.webp",
@@ -16,6 +16,7 @@
     "static/media/ph.webp": "/static/media/ph.16e5a66b4e7aeba649ec.webp",
     "static/media/vlad_warm_color.webp": "/static/media/vlad_warm_color.268aa7ed8c294fbc1a5c.webp",
     "static/media/vlad_blackAndWhite.webp": "/static/media/vlad_blackAndWhite.dbb2c583713241cb38bc.webp",
+    "static/media/financeClub.webp": "/static/media/financeClub.6ac1dc8f8cb325aa5e70.webp",
     "static/media/indoorPlants.webp": "/static/media/indoorPlants.e202997dfb79c78a40db.webp",
     "static/media/logo2.svg": "/static/media/logo2.1491924fb6d5ef47be444ed89ae821d9.svg",
     "static/media/sprite.svg": "/static/media/sprite.0367c5dc17fd329c94021438004f9b66.svg",
@@ -25,10 +26,10 @@
     "static/media/mdi_light_chart-pie.svg": "/static/media/mdi_light_chart-pie.8ab8da0cea2054c17744fd4120678ed3.svg",
     "static/media/mdi_light_chart-bar.svg": "/static/media/mdi_light_chart-bar.4b99fcbf4f0881024811e2bd5961c271.svg",
     "main.095281ad.css.map": "/static/css/main.095281ad.css.map",
-    "main.6260b0c4.js.map": "/static/js/main.6260b0c4.js.map"
+    "main.42ee7403.js.map": "/static/js/main.42ee7403.js.map"
   },
   "entrypoints": [
     "static/css/main.095281ad.css",
-    "static/js/main.6260b0c4.js"
+    "static/js/main.42ee7403.js"
   ]
 }
