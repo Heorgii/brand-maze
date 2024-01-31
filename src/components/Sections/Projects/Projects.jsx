@@ -8,7 +8,8 @@ import Ice_cream_img from 'images/projects/ice_cream_project.webp';
 import Anastasia_img from 'images/projects/anastasia_img.webp';
 import Salamandra_img from 'images/projects/salamandra_img.webp';
 import Indoor_plants_img from 'images/projects/indoorPlants.webp';
-import Finance_club_img from 'images/projects/financeClub.webp'
+import Finance_club_img from 'images/projects/financeClub.webp';
+import BloomSkill_img from 'images/projects/bloom-skill.webp';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
 // import { Button } from 'components/baseStyles/Button.styled';
 import { useEffect } from 'react';
@@ -55,13 +56,16 @@ export const Project = () => {
       case 'SoFi finance club project':
         window.open('https://finance-club-amber.vercel.app/', '_blank').focus();
         break;
+      case 'bloomskill project':
+        window.open('https://bloomskill.fr/', '_blank').focus();
+        break;
+      case 'filmoteka project':
+        window.open('https://filmoteka-home.netlify.app/', '_blank').focus();
+        break;
       case 'ice cream project':
         window
           .open('https://studentvlad5.github.io/project_ice-cream/', '_blank')
           .focus();
-        break;
-      case 'filmoteka project':
-        window.open('https://filmoteka-home.netlify.app/', '_blank').focus();
         break;
       default:
         break;
@@ -118,6 +122,16 @@ export const Project = () => {
       originalAlt: 'SoFi finance club project',
       description: t('Financial club, sale of courses'),
       title: 'Financial club, sale of courses',
+    },
+    {
+      original: BloomSkill_img,
+      thumbnail: BloomSkill_img,
+      originalAlt: 'bloomskill project',
+      description: t(
+        'BloomSkill, information about various events and registration for them'
+      ),
+      title:
+        'BloomSkill, information about various events and registration for them',
     },
     {
       original: Filmoteka_img,
